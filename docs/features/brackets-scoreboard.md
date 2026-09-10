@@ -6,11 +6,11 @@
 
 Tournament creator, authorized match reviewer and permitted spectator.
 
-Generate bracket using locked entry list; shuffle seeds before start only. Review match dossier one game at a time. Upload screenshot to private storage, enqueue extraction, show uncertain fields and evidence. Reviewer confirms/corrects values with rationale and accepts game. Only accepted winner contributes series wins. Completed series schedules idempotent Challonge advancement. Manual result entry remains available with explicit source and audit, not an invented OCR success.
+Generate bracket using locked entry list; shuffle seeds before start only. Review match dossier one game at a time. Preserve a valid tournament, Current Team or Match History path to that dossier as [the breadcrumb contract](../screens/BREADCRUMB_CONTEXT.md) defines. Upload screenshot to private storage, snapshot the participating lineup, enqueue local RF-DETR/PaddleOCR/template extraction, and show uncertain fields beside their evidence. The detector owns field geometry, PaddleOCR recognizes detector crops only, and hero templates provide a candidate list only. Reviewer confirms/corrects visible values with rationale and accepts game. Only accepted winner contributes series wins. Completed series schedules idempotent Challonge advancement. Manual result entry remains available with explicit source and audit, not an invented OCR success. No screenshot/provider fallback is permitted.
 
 ## Fields and validation
 
-match series: source, participating team IDs, round, best_of, wins and status; game: number, winner, left/right mapping, kill totals, duration; evidence: object key, checksum, dimensions; extraction: pipeline/catalog version, raw draft, review state; player stats: roster user, raw IGN/tag, hero candidates, K/D/A, gold, MVP type.
+match series: source, participating team IDs, round, best_of, wins and status; game: number, winner, left/right mapping, kill totals, duration; evidence: private asset ID/checksum/orientation-normalized dimensions; extraction: fixed layout profile, RF-DETR checkpoint identity, PaddleOCR/runtime identity, catalog version, immutable diagnostics, raw draft and review state; player stats: frozen-roster user, raw IGN/tag, identity state/basis, hero candidates, selected catalog hero or UNKNOWN, K/D/A, gold, rating and MVP type.
 
 Shared type/default/nullability rules are in [data dictionary](../DATABASE.md). Authentication, role checks and private projections follow [security](../SECURITY.md).
 
@@ -24,7 +24,7 @@ Shared type/default/nullability rules are in [data dictionary](../DATABASE.md). 
 | GET | /matches/{id} | permission context | 200 series, games, evidence and read model |
 | POST | /matches/{id}/games/{gameId}/evidence | asset_id | 201 evidence, 202 extraction job reference |
 | GET | /ocr-runs/{id} | review permission | 200 draft and candidate evidence |
-| POST | /ocr-runs/{id}/review | ACCEPT/REJECT, corrected field table, rationale, version | 200 committed game or rejected draft |
+| POST | /ocr-runs/{id}/review | ACCEPT/REJECT, only detected-row corrections, rationale, version, idempotency key | 200 atomically committed game or rejected draft; incomplete draft remains review-required |
 | POST | /matches/{id}/games/{gameId}/result | winner_team_id, permitted score fields, source MANUAL, version | 200 recorded game |
 | POST | /tournaments/{id}/bracket/reconcile | creator | 202 reconciliation |
 
@@ -39,6 +39,12 @@ Validate session and resource role before body-driven mutations. Apply field rul
 - **AC-MATCH-03:** Unknown/unreadable stats remain null rather than zero.
 - **AC-MATCH-04:** Incomplete/ambiguous player identities block their official stats until resolved.
 - **AC-MATCH-05:** Provider failure preserves accepted local result and exposes pending bracket synchronization.
+- **AC-MATCH-06:** Missing/mismatched local model or catalog/runtime inputs, or absent recorded checkpoint-use approval, leave extraction unavailable without an official write.
+- **AC-MATCH-07:** Oversized/slow-to-decode media is rejected before storage; EXIF orientation is normalized in memory; a valid but unsupported layout becomes `UNSUPPORTED_LAYOUT`/review. Obscured, ambiguous or absent detector/OCR fields stay null or require a clearer screenshot; no contextual guessing occurs.
+- **AC-MATCH-08:** Hero-template ranks and fuzzy IGN matches are review aids only, never automatic official attribution.
+- **AC-MATCH-09:** The local extraction path has no runtime download or external screenshot/model-provider egress.
+- **AC-MATCH-10:** Complete authorized review accepts atomically and idempotently; stale/duplicate review cannot advance a series twice.
+- **AC-MATCH-11:** Approved reference screenshots verify layout/overlay handling manually and never become hard-coded PCC data.
 
 ## Onsite completion
 

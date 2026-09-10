@@ -16,10 +16,21 @@ __pycache__/
 dist/
 target/
 .artifacts/
-models/
+# Keep the approved local-model directory discoverable, but never track a model binary.
+models/*
+!models/.gitkeep
+!models/face-recognition/
+models/face-recognition/*
+!models/face-recognition/.gitkeep
+!models/scoreboard/
+models/scoreboard/*
+!models/scoreboard/.gitkeep
 *.tsbuildinfo
 # Deployment/runtime state
 certbot/
 backups/
 data/
 *.log
+
+# Ephemeral external-reference material may be supplied to an agent ad hoc, but is never retained here.
+docs/reference/SOURCE_MANIFEST.md

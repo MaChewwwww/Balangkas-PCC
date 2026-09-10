@@ -6,7 +6,7 @@
 
 Player, team captain, coach and delegated manager.
 
-Directory search/filter and two-column roster workspace lead to team detail or invite modal. Preserve Current Team active/past lists and context-specific dossiers. Captain creates team and own membership together; captain or delegated manager edits permitted presentation fields. Only captain changes captain/manager assignment. Membership history survives departures. More than one team affiliation is permitted; active selection is a user preference, not a single-team database constraint. Team attachment requires active captain membership in the selected community.
+Directory search/filter and two-column roster workspace lead to team detail or invite modal. Preserve Current Team active/past lists and context-specific dossiers, including the server-safe cross-feature path defined in [the breadcrumb contract](../screens/BREADCRUMB_CONTEXT.md). Captain creates team and own membership together; captain or delegated manager edits permitted presentation fields. Only captain changes captain/manager assignment. Membership history survives departures. More than one team affiliation is permitted; active selection is a user preference, not a single-team database constraint. Team attachment requires active captain membership in the selected community.
 
 ## Fields and validation
 
@@ -40,6 +40,7 @@ Validate session and resource role before body-driven mutations. Apply field rul
 - **AC-TEAM-03:** Duplicate join is idempotent; departing member retains historical match attribution.
 - **AC-TEAM-04:** Last active member departure archives the team; a captain with remaining members transfers leadership first.
 - **AC-TEAM-05:** Historical participation prevents hard deletion.
+- **AC-TEAM-06:** Team create/edit exposes explicit recruiting state in the preserved division/accessibility form group; an empty roster slot never changes that state, and the route retains its source-visible 50/4/300 limits while the server validates canonical limits.
 
 ## Onsite completion
 

@@ -10,7 +10,9 @@ Register, request OTP, verify email, sign in, complete identity/student profile,
 
 ## Fields and validation
 
-email: normalized unique address; password: 12-128 characters, hash only; OTP: six digits, expiring; real_name: 1-120; IGN: 1-64; MLBB account ID: string; primary/secondary roles: EXP_LANE, MID_LANE, GOLD_LANE, JUNGLER, ROAMER; is_student: boolean; institution_id: required exactly when student; top heroes: at most three distinct catalog IDs; visibility: public/private.
+email: normalized unique address; password: 12-128 characters, hash only; OTP: six digits, expiring; real_name: 1-120; IGN: 1-64; MLBB User ID: digits, 1-64; Server / Zone ID: exactly four digits; competitive_rank: MYTHIC_IMMORTAL, MYTHICAL_GLORY, MYTHIC, LEGEND or EPIC; primary/secondary roles: EXP_LANE, MID_LANE, GOLD_LANE, JUNGLER, ROAMER; is_student: boolean; institution_id: required exactly when student; top heroes: at most three distinct catalog IDs; visibility: public/private; bio: optional, stored up to 1000 characters.
+
+The onboarding presentation uses these exact display labels: **Tank / Roamer** = ROAMER, **Mid Laner** = MID_LANE, **Gold Laner** = GOLD_LANE, **EXP Laner** = EXP_LANE, and **Jungler** = JUNGLER. Rank options display as **Mythic Immortal (100+ Stars)**, **Mythical Glory (50-99 Stars)**, **Mythic (0-49 Stars)**, **Legend**, and **Epic**. The onboarding short-description field intentionally stops at 250 characters in the approved form; profile editing may use the canonical 1000-character capacity. A completed onboarding profile requires the User ID, Zone ID, rank and primary role. These gameplay identifiers are profile data, not a claim that a game-account provider has verified ownership.
 
 Shared type/default/nullability rules are in [data dictionary](../DATABASE.md). Authentication, role checks and private projections follow [security](../SECURITY.md).
 
@@ -20,12 +22,12 @@ Shared type/default/nullability rules are in [data dictionary](../DATABASE.md). 
 | --- | --- | --- | --- |
 | POST | /auth/register | email, password, real_name | 201 account ID, verification_required |
 | POST | /auth/request-otp | email | 202 generic delivery acknowledgment |
-| POST | /auth/verify-otp | email, code | 200 email verification state |
-| POST | /auth/login | email, password | 200 session cookie, csrf_token, current user |
+| POST | /auth/verify-otp | email, code | 200 real email verification or explicitly classified staging demo-bypass state |
+| POST | /auth/login | email, password | 200 session cookie, csrf_token, current user with authentication_mode |
 | POST | /auth/logout | CSRF header | 204 revoked session |
 | POST | /auth/password-reset | email | 202 generic acknowledgment |
 | POST | /auth/password-reset/complete | token, new_password | 204 reset and revoke sessions |
-| GET | /auth/me | session | 200 user/profile/readiness |
+| GET | /auth/me | session | 200 user/profile/readiness, csrf_token and authentication_mode |
 | GET | /institutions | q, cursor, limit | 200 matched reference entries |
 | GET | /heroes | q, role, cursor, limit | 200 pinned catalog entries |
 | PUT | /profiles/me | profile fields above | 200 saved profile |
@@ -37,10 +39,11 @@ Validate session and resource role before body-driven mutations. Apply field rul
 ## Acceptance scenarios
 
 - **AC-AUTH-01:** Duplicate normalized email cannot create two accounts.
-- **AC-AUTH-02:** Invalid/expired OTP and exhausted attempts do not verify email.
+- **AC-AUTH-02:** Invalid/expired OTP and exhausted attempts do not verify email. `123456` is invalid except when `PCC_HACKATHON_DEMO_OTP_CODE=123456`, exact staging mode, and the explicit demo flag are all present; that exception creates `DEMO_BYPASS`, not email/provider/biometric/wallet verification evidence.
 - **AC-AUTH-03:** Non-student transition clears institution; student cannot save without a known institution.
 - **AC-AUTH-04:** Reload restores server-owned profile, not a hardcoded first player.
 - **AC-AUTH-05:** Onboarding preserves a valid join destination but never bypasses eligibility/payment.
+- **AC-AUTH-06:** A completed profile cannot omit or misformat MLBB User ID, four-digit Zone ID, rank or primary role; display labels serialize to the canonical role/rank value and do not imply external account verification.
 
 ## Onsite completion
 

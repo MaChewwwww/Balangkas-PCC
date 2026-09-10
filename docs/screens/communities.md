@@ -1,18 +1,26 @@
 # Community directory and command workspace
 
-## Layout and typography
+## Layout contract
 
-Directory cards and create modal with image preset/live preview. Four-tab detail workspace for feed/membership/team/competition information as captioned in controls inventory; right-side metrics and search.
+Apply the shared [layout contract](LAYOUT.md). Community discovery uses responsive entity cards and a create modal with cover presets and live preview. A community record starts with a full masthead, then becomes a three-column desktop command workspace: the selected tab gets two columns of primary width and the supporting metrics/search/action area owns the remaining column. It stacks primary content before the supporting area on narrow screens.
 
-Use public/portal/auth typography and responsive rules from [DESIGN](../DESIGN.md). Preserve captions from [CONTROLS](CONTROLS.md); source paths in [ROUTES](ROUTES.md) identify page wrappers.
+Keep the four tab surfaces distinct, in approved order: **Community Feed**, **Members List**, **Team Rosters**, then **Tournament History**. The final tab is the community's competition/tournament-history projection; retain its approved caption instead of relabelling it simply “Competition”. Feed has composer, chronological posts, image/reaction/comment data; Members has member summaries and search; Teams has squad summaries and search; Tournament History has tournament/stage summaries and search. The summary rail contains compact count/telemetry blocks rather than duplicating every feed field. Community-origin links retain their breadcrumb/active-navigation context only through [the cross-feature breadcrumb contract](BREADCRUMB_CONTEXT.md).
+
+Use public/portal/auth typography and responsive rules from [DESIGN](../DESIGN.md). Preserve captions from [CONTROLS](CONTROLS.md); [ROUTES](ROUTES.md) identifies each approved page assembly.
 
 ## Fields and controls
 
 Name, type, institution, visibility, description, tags, cover; post body/image; comments; UP/DOWN reactions.
 
+### Form arrangement
+
+The source create and manage form begins with visual identity: live 16:9 banner preview, upload and four preset choices. It then presents Community Name (100-character limit), Community Type and Access & Privacy as a desktop pair, conditional canonical HEI autocomplete for `COLLEGIATE`, Description (1000-character limit), and comma-separated Discovery Tags. Preserve that order, the live badge/tag preview and the two-column-to-stack transformation. A `GRASSROOT` selection clears and hides the institution rather than leaving a stale school value.
+
+Assets enter PCC only through the staged-asset flow. The source's browser data-URL preview is visual evidence only; it is not a persistence format. A private invite code appears only in the authorized join flow or the secure server response, never in the directory or community masthead.
+
 ## Actions and navigation
 
-Create/join/edit/archive; add image post, react, comment, follow member/team/event links with fromCommunity context.
+Create/join/edit/archive; add image post, react, comment, follow member/team/event links with the normalized community context defined in [the cross-feature breadcrumb contract](BREADCRUMB_CONTEXT.md).
 
 ## Permission and state behavior
 

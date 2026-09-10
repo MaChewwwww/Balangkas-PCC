@@ -12,7 +12,7 @@ Balangkas means a framework: a connected environment for grassroots and collegia
 
 Journey: establish identity -> join community/team -> register or find scrimmage -> play -> submit/review result -> inspect history -> recognize achievement.
 
-All twelve modules in [requirements](../FRS_NFRS.md) remain required. [Screen specifications](../screens/README.md) preserve the finalized frontend. Practice demonstrations and deployed artifacts do not establish PCC completion.
+All twelve modules in [requirements](../FRS_NFRS.md) remain required. [Screen specifications](../screens/README.md) preserve the finalized frontend. External demonstrations and deployed artifacts do not establish PCC completion.
 
 Accessible infrastructure supports SDG 9, equitable grassroots participation supports SDG 10, and auditable operations supports SDG 16. These are motivations, not measured impact claims. Biometrics reduces duplicate-identity risk; it does not guarantee elimination of cheating.
 

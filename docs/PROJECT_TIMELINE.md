@@ -18,4 +18,4 @@ Aliah reviews continuously; Charlene records scenario results at each checkpoint
 
 The full scope is ambitious for two developers in 48 hours; a schedule does not guarantee delivery. Keep every feature required and report missed checkpoints with remaining work. Check provider entitlements, OCR capacity and chain prerequisites early onsite. Do not replace blocked integrations with success mocks.
 
-Done means persistence/migrations where needed, authorized API, approved screen behavior, unit/integration scenarios, UI parity checks and updated readiness evidence. No practice source import, legacy database stamp or assumed completed foundation.
+Done means persistence/migrations where needed, authorized API, approved screen behavior, unit/integration scenarios, UI parity checks and updated readiness evidence. No external implementation import, legacy database stamp or assumed completed foundation.

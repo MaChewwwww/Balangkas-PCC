@@ -1,10 +1,12 @@
 # Overview, bell and activity
 
-## Layout and typography
+## Layout contract
 
-Portal overview summaries use committed data. Bell trigger with unread badge opens flyout and all/unread tabs; event activity stays inside owning context.
+Apply the shared [layout contract](LAYOUT.md). Portal Overview opens with masthead/action area, four KPI cards, and a main-plus-340px command grid for hosted stages, open practice, operations launchpad, and recent activity. The metric ribbon becomes two columns at 1024px and one at 580px; the command rail stacks after the primary modules at 1024px.
 
-Use public/portal/auth typography and responsive rules from [DESIGN](../DESIGN.md). Preserve captions from [CONTROLS](CONTROLS.md); source paths in [ROUTES](ROUTES.md) identify page wrappers.
+The notification bell is an anchored header flyout, not a new route-sized feed. It has a labelled header with unread count and mark-all action, All/Unread tabs, vertically grouped notification rows, per-row read/dismiss controls, and an explicit empty state. Activity remains a chronological panel in the owning tournament/community/overview context. A narrow view may resize the flyout but keeps trigger, tab, row metadata, and controls reachable.
+
+Use public/portal/auth typography and responsive rules from [DESIGN](../DESIGN.md). Preserve captions from [CONTROLS](CONTROLS.md); [ROUTES](ROUTES.md) identifies each approved page assembly.
 
 ## Fields and controls
 

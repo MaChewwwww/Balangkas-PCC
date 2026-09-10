@@ -1,11 +1,13 @@
 # Screen control and field inventory
 
-Source-derived labels, placeholders, accessible names and handler names support the authored screen descriptions. A handler name is a trace reference, not an implementation prescription. Dynamic captions are captured in the feature/screen specification rather than copied JSX.
+Documented labels, placeholders, accessible names and handler names support the authored screen descriptions. A handler name is a documentation label, not an implementation prescription. Dynamic captions are captured in the feature/screen specification rather than copied JSX.
+
+Legacy demonstration copy is evidence for visual hierarchy and wording rhythm only. It never authorizes PCC to claim a biometric verification, wallet linkage, credential mint, escrow, or provider result that the server cannot prove. Where the prototype says `mint` or `mint address`, PCC keeps the field position and typography but renders **Core asset address** from recorded finalized Metaplex Core evidence. A screen may describe the credential standard as a Metaplex Core NFT, but never calls its address a mint address.
 
 
 ## page
 
-Source: frontend_prototype/src/app/(auth)/login/page.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -19,7 +21,7 @@ Source: frontend_prototype/src/app/(auth)/login/page.tsx
 
 ## page
 
-Source: frontend_prototype/src/app/(auth)/register/page.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -35,7 +37,7 @@ Source: frontend_prototype/src/app/(auth)/register/page.tsx
 
 ## page
 
-Source: frontend_prototype/src/app/(public)/about/page.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -45,7 +47,35 @@ Source: frontend_prototype/src/app/(public)/about/page.tsx
 
 ## page
 
-Source: frontend_prototype/src/app/(public)/page.tsx
+
+
+| Kind | Caption/reference |
+| --- | --- |
+| UI text | The proof behind the play |
+| UI text | Great games. Lasting recognition. |
+| Source UI text | Find a tournament credential by its certificate ID or exact Solana mint address. PCC renders `Core asset address` in the same control. |
+| UI text | Most valuable player |
+| UI text | Championship credential |
+| UI text | Illustrative credentials; this prototype does not perform live blockchain verification. |
+
+## page
+
+
+
+| Kind | Caption/reference |
+| --- | --- |
+| UI text | Certificate lookup |
+| UI text | Certificate of achievement |
+| UI text | A record of achievement |
+| UI text | The story behind the credential. |
+| UI text | Recipient / Team / Award / Issued |
+| UI text | Explore verification information |
+| Source UI text | Network / Credential standard / Sample mint address / Sample transaction reference. PCC renders `Core asset address` and server-recorded finalized evidence. |
+| UI text | Open Devnet Explorer |
+
+## page
+
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -58,7 +88,7 @@ Source: frontend_prototype/src/app/(public)/page.tsx
 
 ## page
 
-Source: frontend_prototype/src/app/(public)/players/[id]/page.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -68,7 +98,7 @@ Source: frontend_prototype/src/app/(public)/players/[id]/page.tsx
 
 ## page
 
-Source: frontend_prototype/src/app/(public)/players/page.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -77,7 +107,7 @@ Source: frontend_prototype/src/app/(public)/players/page.tsx
 
 ## page
 
-Source: frontend_prototype/src/app/(public)/teams/[id]/page.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -86,7 +116,7 @@ Source: frontend_prototype/src/app/(public)/teams/[id]/page.tsx
 
 ## page
 
-Source: frontend_prototype/src/app/(public)/teams/page.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -95,7 +125,7 @@ Source: frontend_prototype/src/app/(public)/teams/page.tsx
 
 ## page
 
-Source: frontend_prototype/src/app/(public)/tournaments/page.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -104,7 +134,7 @@ Source: frontend_prototype/src/app/(public)/tournaments/page.tsx
 
 ## page
 
-Source: frontend_prototype/src/app/onboarding/page.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -115,7 +145,11 @@ Source: frontend_prototype/src/app/onboarding/page.tsx
 | UI text | e.g. Senior varsity Gold Laner aiming for the PCC 2026 National Championship. Specializes in hyper-carry scaling and macro teamfight positioning. |
 | UI text | In-Game Name (IGN) |
 | UI text | Collegiate Institution / School |
+| UI text | MLBB User ID |
+| UI text | Server / Zone ID (4 Digits) |
+| UI text | Primary Roster Role |
 | UI text | Current Competitive Rank |
+| UI text | Short Description |
 | UI text | Build your Athlete Profile |
 | UI text | Anti-Smurf Biometric Integrity Check |
 | UI text | Prize Escrow & Soulbound Credential Wallet |
@@ -124,9 +158,29 @@ Source: frontend_prototype/src/app/onboarding/page.tsx
 | Action reference | handleStartScan |
 | Action reference | handleConnectWallet |
 
+## AuthLayout
+
+
+
+| Kind | Caption/reference |
+| --- | --- |
+| UI text | Back to Balangkas.gg |
+| UI text | Leveling the Bracket for Grassroots Esports. |
+| UI text | Active National Circuit |
+| UI text | Philippine Collegiate Championship 2026 |
+| Legacy visual copy | Anti-Smurf Biometric Fair Play / Metaplex Core Credentials / Smart Escrow Prize Pools — render only policy-backed PCC wording and actual readiness state. |
+
+## CertificateSearchBar
+
+
+
+| Kind | Caption/reference |
+| --- | --- |
+| UI text | Verify Certificate... |
+
 ## CommunitiesWorkspace
 
-Source: frontend_prototype/src/components/portal/CommunitiesWorkspace.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -161,7 +215,7 @@ Source: frontend_prototype/src/components/portal/CommunitiesWorkspace.tsx
 
 ## CreateTeamModal
 
-Source: frontend_prototype/src/components/portal/CreateTeamModal.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -181,7 +235,7 @@ Source: frontend_prototype/src/components/portal/CreateTeamModal.tsx
 
 ## CustomSelect
 
-Source: frontend_prototype/src/components/portal/CustomSelect.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -190,7 +244,7 @@ Source: frontend_prototype/src/components/portal/CustomSelect.tsx
 
 ## JoinTeamModal
 
-Source: frontend_prototype/src/components/portal/JoinTeamModal.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -201,7 +255,7 @@ Source: frontend_prototype/src/components/portal/JoinTeamModal.tsx
 
 ## MatchHistoryWorkspace
 
-Source: frontend_prototype/src/components/portal/MatchHistoryWorkspace.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -214,7 +268,7 @@ Source: frontend_prototype/src/components/portal/MatchHistoryWorkspace.tsx
 
 ## MyTeamWorkspace
 
-Source: frontend_prototype/src/components/portal/MyTeamWorkspace.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -230,7 +284,7 @@ Source: frontend_prototype/src/components/portal/MyTeamWorkspace.tsx
 
 ## OverviewWorkspace
 
-Source: frontend_prototype/src/components/portal/OverviewWorkspace.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -242,7 +296,7 @@ Source: frontend_prototype/src/components/portal/OverviewWorkspace.tsx
 
 ## PlayerDataWorkspace
 
-Source: frontend_prototype/src/components/portal/PlayerDataWorkspace.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -260,7 +314,7 @@ Source: frontend_prototype/src/components/portal/PlayerDataWorkspace.tsx
 
 ## PortalNotifications
 
-Source: frontend_prototype/src/components/portal/PortalNotifications.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -276,7 +330,7 @@ Source: frontend_prototype/src/components/portal/PortalNotifications.tsx
 
 ## PortalShell
 
-Source: frontend_prototype/src/components/portal/PortalShell.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -291,15 +345,25 @@ Source: frontend_prototype/src/components/portal/PortalShell.tsx
 
 ## PortalToolbar
 
-Source: frontend_prototype/src/components/portal/PortalToolbar.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
 | UI text | Clear search |
 
+## OnboardingContext
+
+
+
+| Kind | Caption/reference |
+| --- | --- |
+| UI text | Getting started for [tournament name] |
+| UI text | Back to tournament |
+| Legacy visual copy | The source calls this a mock onboarding journey; PCC retains valid tournament context but must state the actual registration/readiness outcome. |
+
 ## PortfolioWorkspace
 
-Source: frontend_prototype/src/components/portal/PortfolioWorkspace.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -321,7 +385,7 @@ Source: frontend_prototype/src/components/portal/PortfolioWorkspace.tsx
 
 ## SchoolSelect
 
-Source: frontend_prototype/src/components/portal/SchoolSelect.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -335,7 +399,7 @@ Source: frontend_prototype/src/components/portal/SchoolSelect.tsx
 
 ## ScrimmagesWorkspace
 
-Source: frontend_prototype/src/components/portal/ScrimmagesWorkspace.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -363,14 +427,14 @@ Source: frontend_prototype/src/components/portal/ScrimmagesWorkspace.tsx
 | Action reference | handleConfirmChallenge |
 | Action reference | handleAcceptChallenge |
 | Action reference | handleSendChat |
-| Action reference | handleSimulateOcrUpload |
+| Action reference | handleSimulateOcrUpload (documentation label only; PCC uploads private evidence and enqueues local extraction) |
 | Action reference | handleSubmitResult |
 | Action reference | handleCopyLobby |
 | Action reference | handleUpdateManage |
 
 ## TeamDataWorkspace
 
-Source: frontend_prototype/src/components/portal/TeamDataWorkspace.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -379,7 +443,7 @@ Source: frontend_prototype/src/components/portal/TeamDataWorkspace.tsx
 | UI text | Share public team dossier link |
 | UI text | View match details |
 | UI text | Copy certificate identifier |
-| UI text | Copy full mint address |
+| Source UI text | Copy full mint address. PCC renders `Copy Core asset address`. |
 | UI text | Open on Solana Explorer |
 | UI text | Member record synced through team roster |
 | UI text | Team Record Not Found |
@@ -394,7 +458,7 @@ Source: frontend_prototype/src/components/portal/TeamDataWorkspace.tsx
 
 ## TeamsWorkspace
 
-Source: frontend_prototype/src/components/portal/TeamsWorkspace.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -441,7 +505,7 @@ Source: frontend_prototype/src/components/portal/TeamsWorkspace.tsx
 
 ## TournamentCommandCenter
 
-Source: frontend_prototype/src/components/portal/TournamentCommandCenter.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -452,7 +516,7 @@ Source: frontend_prototype/src/components/portal/TournamentCommandCenter.tsx
 | UI text | Custom management role |
 | UI text | e.g. Broadcast Director |
 | UI text | Stage performance |
-| UI text | Tournament history |
+| UI text | Tournament History |
 | UI text | Registered teams |
 | UI text | Team filters |
 | UI text | Registration metrics |
@@ -502,7 +566,7 @@ Source: frontend_prototype/src/components/portal/TournamentCommandCenter.tsx
 
 ## TournamentMatchContext
 
-Source: frontend_prototype/src/components/portal/TournamentMatchContext.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -517,7 +581,7 @@ Source: frontend_prototype/src/components/portal/TournamentMatchContext.tsx
 
 ## TournamentsWorkspace
 
-Source: frontend_prototype/src/components/portal/TournamentsWorkspace.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -583,7 +647,7 @@ Source: frontend_prototype/src/components/portal/TournamentsWorkspace.tsx
 
 ## TournamentTeamContext
 
-Source: frontend_prototype/src/components/portal/TournamentTeamContext.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -595,7 +659,7 @@ Source: frontend_prototype/src/components/portal/TournamentTeamContext.tsx
 
 ## AmbientCyberSpotlight
 
-Source: frontend_prototype/src/components/public/AmbientCyberSpotlight.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -605,7 +669,7 @@ Source: frontend_prototype/src/components/public/AmbientCyberSpotlight.tsx
 
 ## HeroShield
 
-Source: frontend_prototype/src/components/public/HeroShield.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -613,17 +677,17 @@ Source: frontend_prototype/src/components/public/HeroShield.tsx
 
 ## primitives
 
-Source: frontend_prototype/src/components/public/primitives.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
 | UI text | Verified athlete |
 | UI text | Look up certificate |
-| UI text | Certificate ID or mint address |
+| Source UI text | Certificate ID or mint address. PCC renders `Certificate ID or Core asset address`. |
 
 ## PublicShell
 
-Source: frontend_prototype/src/components/public/PublicShell.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |
@@ -636,7 +700,7 @@ Source: frontend_prototype/src/components/public/PublicShell.tsx
 
 ## TournamentExperience
 
-Source: frontend_prototype/src/components/public/TournamentExperience.tsx
+
 
 | Kind | Caption/reference |
 | --- | --- |

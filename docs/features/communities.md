@@ -6,7 +6,7 @@
 
 Player, community member, owner and manager.
 
-Create through the existing modal and live cover preview. Public community permits join; private requires invitation. Preserve four-tab detail composition, member/team links and community-origin breadcrumbs. Member posts may attach approved image; reaction toggles one per user; author can edit/remove own post/comment and owner/manager can moderate. Archive blocks new activity while retaining history and authorized read access.
+Create through the existing modal and live cover preview. Public community permits join; private requires invitation. Preserve four-tab detail composition, member/team links and community-origin breadcrumbs according to [the breadcrumb contract](../screens/BREADCRUMB_CONTEXT.md). Member posts may attach approved image; reaction toggles one per user; author can edit/remove own post/comment and owner/manager can moderate. Archive blocks new activity while retaining history and authorized read access.
 
 ## Fields and validation
 
@@ -44,7 +44,7 @@ Validate session and resource role before body-driven mutations. Apply field rul
 - **AC-COMM-01:** Collegiate community requires a valid institution; grassroots cannot retain one.
 - **AC-COMM-02:** Private membership cannot be granted by client-only code comparison.
 - **AC-COMM-03:** A repeated reaction changes no additional counter; opposite reaction replaces it.
-- **AC-COMM-04:** Member/team/player/tournament links preserve community navigation origin.
+- **AC-COMM-04:** Member/team/player/tournament links preserve a valid community navigation origin under [the cross-feature breadcrumb contract](../screens/BREADCRUMB_CONTEXT.md); URL context itself neither supplies labels nor grants access.
 - **AC-COMM-05:** Archived community retains auditable data and blocks new writes.
 
 ## Onsite completion

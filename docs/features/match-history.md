@@ -6,7 +6,7 @@
 
 Player, authorized team/community member and public-profile reader.
 
-Preserve Matches, Tournament History and Scrimmage History tabs, match feed, expandable team ledgers and right-rail metrics. Every View Match Details action resolves the same canonical dossier with navigation origin. Calculate wins/losses and rates from completed series; calculate hero stats from accepted per-game player rows. Exclude pending/void records. A series is one match in headline match totals; games are counted separately.
+Preserve Matches, Tournament History and Scrimmage History tabs, match feed, expandable team ledgers and right-rail metrics. Every View Match Details action resolves the same canonical dossier with a valid retained navigation origin as [the breadcrumb contract](../screens/BREADCRUMB_CONTEXT.md) defines. Calculate wins/losses and rates from completed series; calculate hero stats from accepted per-game player rows. Exclude pending/void records. A series is one match in headline match totals; games are counted separately.
 
 ## Fields and validation
 

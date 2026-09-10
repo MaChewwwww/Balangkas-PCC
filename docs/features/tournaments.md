@@ -6,7 +6,7 @@
 
 Visitor, registering leader, creator and assigned staff.
 
-Preserve feed/grid/table directory, carousel, share confirmation, creation preview and Director Desk. All tournaments remain publicly discoverable. PRIVATE gates joining only. Creation sets UPCOMING; creator opens registration, configures staffing and seeds; start requires at least two fully registered eligible teams and a bracket consistent with locked entrants. Start locks capacity/format/fees/eligibility/staffing. End requires every required bracket match completed. Completed events expose reward operations; archive removes from active lists but retains direct history.
+Preserve feed/grid/table directory, carousel, share confirmation, creation preview and Director Desk. Cross-feature team/player/match routes retain only the server-safe tournament path defined in [the breadcrumb contract](../screens/BREADCRUMB_CONTEXT.md). All tournaments remain publicly discoverable. PRIVATE gates joining only. Creation sets UPCOMING; creator opens registration, configures staffing and seeds; start requires at least two fully registered eligible teams and a bracket consistent with locked entrants. Start locks capacity/format/fees/eligibility/staffing. End requires every required bracket match completed. Completed events expose reward operations; archive removes from active lists but retains direct history.
 
 ## Fields and validation
 
@@ -45,6 +45,7 @@ Validate session and resource role before body-driven mutations. Apply field rul
 - **AC-TOURN-03:** Open and invitation-only events remain searchable publicly.
 - **AC-TOURN-04:** Tournament start locks sensitive settings and staffing; presentation updates remain available.
 - **AC-TOURN-05:** Withdrawal is retained in history and cannot silently refund a payment.
+- **AC-TOURN-06:** Create/edit presents registration deadline, eligibility and conditional institution selection, plus requirements and conditional prompt in the existing operations form; missing or stale values cannot be replaced by descriptive text or a client-created lifecycle state.
 
 ## Onsite completion
 

@@ -1,10 +1,12 @@
 # Scrimmage board and match room
 
-## Layout and typography
+## Layout contract
 
-Active matchmaking board without settled records; pinned own/ongoing blocks, H2H/Fresh Opponent cards and performance HUD. Detail uses dedicated head-to-head match room with lobby and chat.
+Apply the shared [layout contract](LAYOUT.md). The active board is an 8/4 desktop workspace: pinned active/matched blocks appear before general matchmaking cards in the main 8/12 region, while the sticky 4/12 rail contains search/filter, personal win/loss HUD, and Request Scrimmage CTA. A board card keeps squad identity, availability/rank/format/note data, H2H or Fresh Opponent context, and explicit challenge/detail actions; finalized records leave this board for history.
 
-Use public/portal/auth typography and responsive rules from [DESIGN](../DESIGN.md). Preserve captions from [CONTROLS](CONTROLS.md); source paths in [ROUTES](ROUTES.md) identify page wrappers.
+The matched room has a dedicated 11-column head-to-head masthead (`team A 5/11 | score/status divider 1/11 | team B 5/11`) followed by a 7/5 main/action layout. Main is the participant-only room/lobby/chat stream and quick-message chips; the rail holds management, evidence/result controls and related live data. On narrow screens, stack head-to-head content and place the action rail after the room; never expose lobby credentials or chat in a public summary.
+
+Use public/portal/auth typography and responsive rules from [DESIGN](../DESIGN.md). Preserve captions from [CONTROLS](CONTROLS.md); [ROUTES](ROUTES.md) identifies each approved page assembly.
 
 ## Fields and controls
 

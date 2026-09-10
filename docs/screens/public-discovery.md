@@ -1,10 +1,12 @@
 # Landing and public discovery
 
-## Layout and typography
+## Layout contract
 
-Final editorial landing/about, tournament article/featured sections, directories and detail pages. Preserve images, spacing, Manrope hierarchy and shield scene specification.
+Apply the shared [layout contract](LAYOUT.md). Public discovery is editorial, not portal-card based: the home hero is `1.05fr copy + 1fr shield scene`; featured tournament is `1.1fr image + 1fr copy`; and the journey has copy beside a numbered three-part step list. Text stays before artwork when those layouts collapse. Shield motion has the documented poster/focus/pause fallbacks.
 
-Use public/portal/auth typography and responsive rules from [DESIGN](../DESIGN.md). Preserve captions from [CONTROLS](CONTROLS.md); source paths in [ROUTES](ROUTES.md) identify page wrappers.
+Directory pages use page introduction, search/filter toolbar, compact table labels, and semantically ordered rows. Tournament rows are date, identity/status, prize, capacity, arrow; team rows are rank, shield, identity/school, tier, win rate, matches, arrow; player rows are mark, identity/verification, role, win rate, arrow. Preserve the progressive column reduction and metric reflow in the shared contract rather than replacing rows with opaque cards. Public detail pages use masthead/facts/tabs followed by a 1.3fr primary detail column and 1fr facts column; certificate detail uses its separate 1.5fr/1fr layout.
+
+Use public/portal/auth typography and responsive rules from [DESIGN](../DESIGN.md). Preserve captions from [CONTROLS](CONTROLS.md); [ROUTES](ROUTES.md) identifies each approved page assembly.
 
 ## Fields and controls
 

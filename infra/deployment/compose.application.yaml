@@ -20,6 +20,8 @@ services:
     env_file:
       - path: .env.application
         required: false
+    volumes:
+      - ./models:/models:ro
     expose: ['8000']
     depends_on:
       postgres: {condition: service_healthy}
@@ -35,7 +37,7 @@ services:
       - path: .env.application
         required: false
     environment:
-      OCR_CONCURRENCY: '1'
+      PCC_SCOREBOARD_MAX_CONCURRENT_JOBS: '1'
     depends_on:
       postgres: {condition: service_healthy}
     volumes:
@@ -45,7 +47,7 @@ services:
     cpus: 2
   nginx:
     profiles: [onsite]
-    image: nginx:1.28-alpine
+    image: nginx:1.28-alpine@sha256:a8b39bd9cf0f83869a2162827a0caf6137ddf759d50a171451b335cecc87d236
     restart: unless-stopped
     ports: ['80:80', '443:443']
     environment:
@@ -59,7 +61,7 @@ services:
     mem_limit: 128m
   certbot:
     profiles: [certificate-maintenance]
-    image: certbot/certbot:v4.0.0
+    image: certbot/certbot:v4.0.0@sha256:0e40d51116b9e1058466aa2fd8f342b1d676dfbc17e47877a9e02c3e2460580a
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot

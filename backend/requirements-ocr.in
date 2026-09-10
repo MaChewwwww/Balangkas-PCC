@@ -1,4 +1,6 @@
-# Separate Linux CPU toolchain; no trained model files downloaded.
+# Separate Linux CPU toolchain; compile for Python 3.11/Linux with `--torch-backend cpu`.
+# The dependency image uses PyPI plus PyTorch's trusted CPU package index; hashes lock every wheel.
+# No trained model files are downloaded.
 rfdetr==1.10.1
 paddleocr==3.7.0
 paddlepaddle
@@ -10,3 +12,10 @@ torch
 torchvision
 opencv-python-headless
 onnxruntime
+# Keep support packages above the versions fixed by the dependency audit even when
+# the trusted PyTorch CPU index also publishes older copies.
+certifi>=2026.7.22,<2027
+idna>=3.15,<4
+urllib3>=2.7,<3
+setuptools>=83,<84
+pip>=26.2,<27

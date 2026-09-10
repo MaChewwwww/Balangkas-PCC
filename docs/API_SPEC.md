@@ -6,9 +6,9 @@
 
 | Concern | Contract |
 | --- | --- |
-| Identity | Session cookie and CSRF per [security](SECURITY.md); never trust submitted acting-user IDs. |
+| Identity | Same-origin session cookie and CSRF per [security](SECURITY.md) and the [browser integration contract](API_INTEGRATION.md); never trust submitted acting-user IDs. |
 | Success | Entity response with id, version and operation-specific fields; lists include items and next_cursor. |
-| Errors | code, message, field_errors and request_id; no internal stack or secrets. |
+| Errors | `{ code, message, field_errors, request_id }`; no internal stack or secrets. The normative codes and frontend handling are in [API integration](API_INTEGRATION.md). |
 | HTTP | 401 missing session; 403 forbidden visible action; 404 absent/hidden; 409 state/idempotency conflict; 422 invalid fields; 429 retryable throttle; 503 unavailable integration. |
 | Pagination | Opaque cursor, limit default 20/max 100, stable created_at plus ID ordering; reject malformed cursor. |
 | Dates | ISO-8601 UTC timestamps, inclusive from/exclusive to; UI renders Asia/Manila event time. |
@@ -16,10 +16,19 @@
 | Mutations | Idempotency-Key required for create, results, review, payments and issuance. Scope user+operation; same key/different body 409. Save request digest and resulting reference. |
 | Versions | Mutable aggregate PATCH/commands require version; stale version returns 409 with current version. |
 | Downloads | CSV authorized same as source data; UTF-8, explicit columns, formula-leading text escaped. |
-| Uploads | Multipart POST /assets with purpose and file -> 201 asset ID; GET /assets/{id}/content authorizes owning context. |
-| WebSockets | /ws/events outside /api/v1; see [delivery contract](STORAGE_JOBS.md). |
+| Uploads | Multipart POST /assets with purpose and file -> safe `STAGED` asset projection; GET /assets/{id}/content authorizes owning context. No storage key or unapproved URL reaches the browser. |
+| Portal navigation context | A portal detail read may receive only the allowlisted origin keys in [the breadcrumb-context contract](screens/BREADCRUMB_CONTEXT.md). They never broaden destination authorization or cause a parent lookup. After normal session/permission resolution, a context-aware 200 detail projection may include `navigation_context`: an ordered, permission-filtered root/ancestor projection with fixed kind, server ID and server-safe label. It includes only relation-proven, non-cyclic ancestors; invalid, hidden, unrelated or stale context is omitted without explanation. The browser builds only fixed PCC route URLs from this projection and must not render URL-supplied labels. |
+| WebSockets | /ws/events outside /api/v1; see [delivery contract](STORAGE_JOBS.md) and browser subscribe/unsubscribe wire protocol in [API integration](API_INTEGRATION.md). |
 
 All read models are projections of [DATABASE](DATABASE.md). Field descriptions in feature documents specify inputs; unlisted server/audit fields are not client-editable. Full resource responses include the matching data-dictionary fields filtered by permissions; secrets, hashes and raw face data are always omitted.
+
+## Operational endpoint outside /api/v1
+
+| Method | Path | Input | Result |
+| --- | --- | --- | --- |
+| GET | /api/health | none | 200 non-secret `{ state: ready|maintenance }` readiness projection |
+
+During a documented maintenance state, mutations return `503 MAINTENANCE` with `Retry-After`. Browser behavior and the deliberate read-access policy are defined in [API integration](API_INTEGRATION.md#assets-and-maintenance-behavior).
 
 ## FR-AUTH: Authentication and onboarding
 
@@ -29,15 +38,15 @@ See [field and behavior contract](features/authentication-onboarding.md).
 | --- | --- | --- | --- |
 | POST | /auth/register | email, password, real_name | 201 account ID, verification_required |
 | POST | /auth/request-otp | email | 202 generic delivery acknowledgment |
-| POST | /auth/verify-otp | email, code | 200 email verification state |
-| POST | /auth/login | email, password | 200 session cookie, csrf_token, current user |
+| POST | /auth/verify-otp | email, code | 200 real email verification or explicitly classified staging demo-bypass state |
+| POST | /auth/login | email, password | 200 session cookie, csrf_token, current user with authentication_mode |
 | POST | /auth/logout | CSRF header | 204 revoked session |
 | POST | /auth/password-reset | email | 202 generic acknowledgment |
 | POST | /auth/password-reset/complete | token, new_password | 204 reset and revoke sessions |
-| GET | /auth/me | session | 200 user/profile/readiness |
+| GET | /auth/me | session | 200 user/profile/readiness, csrf_token and authentication_mode |
 | GET | /institutions | q, cursor, limit | 200 matched reference entries |
 | GET | /heroes | q, role, cursor, limit | 200 pinned catalog entries |
-| PUT | /profiles/me | profile fields above | 200 saved profile |
+| PUT | /profiles/me | ign, mlbb_user_id, mlbb_zone_id, competitive_rank, primary_role, optional secondary_role, is_student, institution_id, top_hero IDs, visibility, bio | 200 saved profile |
 
 ## FR-IDENT: Identity, career portfolio and wallet
 
@@ -47,9 +56,10 @@ See [field and behavior contract](features/identity-portfolio.md).
 | --- | --- | --- | --- |
 | GET | /profiles/{id} | visibility-aware ID | 200 profile projection |
 | GET | /profiles/me/portfolio | q, credential_type | 200 profile, calculated metrics and records |
-| POST | /biometrics/enrollment | consent_version, cropped file, liveness evidence | 201 verified enrollment or explicit failure |
-| POST | /biometrics/authorizations | action, resource_id, cropped file, liveness evidence | 201 single-use authorization token |
-| POST | /wallet/challenges | wallet_address | 201 nonce, message, expires_at |
+| POST | /biometrics/liveness-challenges | action, optional resource_type/resource_id | 201 Human blink challenge ID, prompt metadata, required package/policy identities and expiry |
+| POST | /biometrics/enrollment | consent_version, liveness_challenge_id, human_capture_report, capture_pipeline_version, one aligned cropped file | 201 biometric-capture enrollment or explicit failure |
+| POST | /biometrics/authorizations | action, optional resource_type/resource_id, liveness_challenge_id, human_capture_report, capture_pipeline_version, one aligned cropped file | 201 single-use authorization token |
+| POST | /wallet/challenges | Solana Devnet wallet_address | 201 chain, cluster, nonce, exact message, expires_at |
 | PUT | /wallet/me | challenge_id, signature, biometric_authorization | 200 linked wallet projection |
 | POST | /profiles/me/achievements | title, event, date, evidence_asset_id or evidence_url, visibility | 201 self-reported record |
 | PATCH | /profiles/me/achievements/{id} | same editable fields, version | 200 saved record |
@@ -129,7 +139,7 @@ See [field and behavior contract](features/brackets-scoreboard.md).
 | GET | /matches/{id} | permission context | 200 series, games, evidence and read model |
 | POST | /matches/{id}/games/{gameId}/evidence | asset_id | 201 evidence, 202 extraction job reference |
 | GET | /ocr-runs/{id} | review permission | 200 draft and candidate evidence |
-| POST | /ocr-runs/{id}/review | ACCEPT/REJECT, corrected field table, rationale, version | 200 committed game or rejected draft |
+| POST | /ocr-runs/{id}/review | ACCEPT/REJECT, only detected-row corrections, rationale, version, idempotency key | 200 atomically committed game or rejected draft; incomplete draft remains review-required |
 | POST | /matches/{id}/games/{gameId}/result | winner_team_id, permitted score fields, source MANUAL, version | 200 recorded game |
 | POST | /tournaments/{id}/bracket/reconcile | creator | 202 reconciliation |
 
@@ -167,15 +177,18 @@ See [field and behavior contract](features/rewards-entry-fees.md).
 
 | Method | Path | Input | Result |
 | --- | --- | --- | --- |
-| POST | /registrations/{id}/payment | selected configured rail | 202 payment attempt/reference |
-| POST | /registrations/{id}/solana-verification | transaction_signature | 200 settled or 202 confirmation pending |
+| POST | /registrations/{id}/payment | configured `PAYMONGO_TEST_CHECKOUT` rail; Idempotency-Key | 202 test attempt and one-time hosted checkout URL, or `503 INTEGRATION_UNAVAILABLE` |
+| POST | /registrations/{id}/solana-payment-intent | participant, version; Idempotency-Key | 201 short-lived browser-signable Devnet entry transaction/instructions with frozen payer/destination/lamports/memo, or `503 INTEGRATION_UNAVAILABLE` |
+| POST | /registrations/{id}/solana-verification | transaction_signature; Idempotency-Key | 200 paid after exact finalized Devnet verification, 202 confirmation pending, or non-settling mismatch |
 | GET | /registrations/{id}/payment | owner permission | 200 payment state |
 | GET | /tournaments/{id}/rewards | role-aware | 200 allocations and evidence |
 | PUT | /tournaments/{id}/rewards | placement allocations, exact amounts, representative IDs, version | 200 draft allocation |
 | POST | /tournaments/{id}/rewards/finalize | operator, version | 200 immutable allocation |
-| POST | /tournaments/{id}/payouts | finalized allocation ID | 202 payout run |
+| POST | /tournaments/{id}/payouts | finalized allocation ID | 202 permitted non-PayMongo payout run; an E-Wallet allocation returns explicit unavailable |
 | POST | /allocations/{id}/handover | handover_reference, handed_over_at | 200 CASH handover evidence |
-| POST | /webhooks/paymongo | raw signed provider event | 200 accepted duplicate-safe receipt |
+| POST | /tournaments/{id}/escrow/funding-intent | creator, version; Idempotency-Key | 201 short-lived browser-signable Devnet transaction plus expected PDA, or `503 INTEGRATION_UNAVAILABLE` |
+| POST | /tournaments/{id}/escrow/verification | transaction_signature; Idempotency-Key | 200 funded after exact finalized Devnet/PDA verification or 202 pending finality |
+| POST | /webhooks/paymongo/test | raw signed PayMongo test event; no session/CSRF | 200 accepted duplicate-safe receipt after signature gate |
 
 ## FR-CERT: Certificate issuance and public lookup
 
@@ -183,10 +196,10 @@ See [field and behavior contract](features/certificates.md).
 
 | Method | Path | Input | Result |
 | --- | --- | --- | --- |
-| POST | /tournaments/{id}/certificates | recipient_type, recipient ID, award, title, description, metadata | 201 DRAFT |
+| POST | /tournaments/{id}/certificates | recipient_type, recipient ID, award, title, description | 201 DRAFT |
 | POST | /certificates/{id}/issue | issuer, version | 202 issuance job |
-| POST | /certificates/{id}/revoke | reason, issuer, version | 200 REVOKED |
-| GET | /certificates/{lookup} | lookup code or mint | 200 issued/revoked public projection |
+| POST | /certificates/{id}/void | reason category, private note, issuer, version | 200 VOIDED registry record |
+| GET | /certificates/{lookup} | lookup code or Core asset address | 200 issued/pending-reconciliation/voided public projection |
 | GET | /certificates | recipient/tournament filters, cursor, limit | 200 permitted list |
 
 ## FR-NOTIFY: Notifications and activity

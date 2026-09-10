@@ -1,191 +1,195 @@
 # Approved asset transfer manifest
 
-Source paths are relative to the practice repository; target paths to PCC. Byte-preserved approved static assets, not live records or ownership claims. Existing attribution remains alongside the assets. Passive SVG checked for executable content.
+PCC target paths identify the approved static assets, not live records or ownership claims. Existing attribution remains alongside the assets. Passive SVG checked for executable content. The 2026-09-11 onsite-readiness audit found all 51 visual target assets present with matching size and SHA-256; the manifest also pins 136 reference-data files and two font-license files. The manually provisioned W600K-R50 model is deliberately not a static asset and is governed separately by [the face-model record](FACE_RECOGNITION_MODEL.md). See [asset readiness](screens/ASSET_READINESS.md) for use boundaries.
 
-| Source | Target | SHA-256 | Bytes |
-| --- | --- | --- | --- |
-| frontend_prototype/public/fonts/balangkas_font.ttf | assets/public/fonts/balangkas_font.ttf | bcce4d09849ce86fa72981b408ff9372bc67baf64efc9861db939aba6e8afaae | 11268 |
-| frontend_prototype/public/images/ambient-splashes.svg | assets/public/images/ambient-splashes.svg | 168aba0a4a05e227ff230190ac958297ffd85e17c9ee4a9dcb57de8a4682600d | 1381 |
-| frontend_prototype/public/images/arena.svg | assets/public/images/arena.svg | bb16e17996d6d4ae9c61ba0aa8587aabd9dd9c160599632251e5bb57fb8c14cd | 3275 |
-| frontend_prototype/public/images/color_palette.png | assets/public/images/color_palette.png | df00e5b8b826db30b35c902704f511a42b7b6cfb05301169e4e09271e5d6ba65 | 134108 |
-| frontend_prototype/public/images/communities/mlbb-community-heroes.jpg | assets/public/images/communities/mlbb-community-heroes.jpg | efe666a2087ff4472281de011bea97ab607b9b634e06186d4a511c24c5aff596 | 69076 |
-| frontend_prototype/public/images/communities/moonton-student-leaders.jpg | assets/public/images/communities/moonton-student-leaders.jpg | c3d0631cd097b473a62543d6c7a55dd4b5607087e63f31f1c567ee1a9d28b786 | 146948 |
-| frontend_prototype/public/images/communities/philippines-collegiate-championship.jpg | assets/public/images/communities/philippines-collegiate-championship.jpg | bef1b2afde49c6f60825d019f6106fac9f3a09d2e8ad3b5c2d89252ae42998e7 | 100640 |
-| frontend_prototype/public/images/communities/preset-apex-arena.jpg | assets/public/images/communities/preset-apex-arena.jpg | 7d7b282d13ddb553bbe68c8bf61d41098f776402dcd5ad812f4cbe19975d4669 | 1011460 |
-| frontend_prototype/public/images/communities/preset-iron-titan.jpg | assets/public/images/communities/preset-iron-titan.jpg | 0cce3313531f4d953d864ba4536dcd012075fdb8a53091488438d3b745994878 | 836704 |
-| frontend_prototype/public/images/communities/preset-neon-cyber.jpg | assets/public/images/communities/preset-neon-cyber.jpg | 72ecaf87e7085b813a452c75a67b499cc293125cee67b54829b2057c952b2b04 | 979580 |
-| frontend_prototype/public/images/communities/preset-solar-phoenix.jpg | assets/public/images/communities/preset-solar-phoenix.jpg | 057229d70ef5e9220d14d29582fb7c8c84eef0227367b6be0f11a9dad3071c0b | 813647 |
-| frontend_prototype/public/images/communities/siklaw-esports.jpg | assets/public/images/communities/siklaw-esports.jpg | 92aa640fb9abc2efdf708f0f04d6881481fdcf4d20c809887e7ad24b74d992b5 | 99244 |
-| frontend_prototype/public/images/community-arena-cover.png | assets/public/images/community-arena-cover.png | 66ab118c9e85976ccaf41c5a354a54d6ef8734dc8a31ec7f526732df97688dce | 2138865 |
-| frontend_prototype/public/images/logo.png | assets/public/images/logo.png | 5d73dd2823adbf0297ce2abb2dcff6a4f82fabb3191b6078bacbffb31b5c59ab | 1963917 |
-| frontend_prototype/public/images/logo_text.png | assets/public/images/logo_text.png | 286a14095e5115a1dd637f4132fac0fecd4bf37115333e4549cfd3c3d5180517 | 1400838 |
-| frontend_prototype/public/images/match-evidence/match-101-game-1.jpg | assets/public/images/match-evidence/match-101-game-1.jpg | e5e85024116f4cca3504a190ed6c6d97ce8af70dd9d496d51cef6c4276881383 | 192249 |
-| frontend_prototype/public/images/match-evidence/match-101-game-2.jpg | assets/public/images/match-evidence/match-101-game-2.jpg | f0f351a46dc65513b31efe6893cab02448589ac5612c6f8552281774b0ca22b8 | 191483 |
-| frontend_prototype/public/images/match-evidence/match-101-game-3.jpg | assets/public/images/match-evidence/match-101-game-3.jpg | 73b6a9ca9ee3f37a55fff348f6cb053218344bbca235f7cd49946d29016406d2 | 194019 |
-| frontend_prototype/public/images/mlbb/ATTRIBUTION.md | assets/public/images/mlbb/ATTRIBUTION.md | 6b11654e40ed1d23287e7c515fcd541b9bbfd81d2756c33f05a7c08614a279c1 | 484 |
-| frontend_prototype/public/images/mlbb/heroes/1.png | assets/public/images/mlbb/heroes/1.png | f5fd84408905c82cf4668f5886a4d38581783555c48d5d2e7604f281d1b7995f | 41632 |
-| frontend_prototype/public/images/mlbb/heroes/10.png | assets/public/images/mlbb/heroes/10.png | cc913fde38fb6eb722fa4a82536e77c6166110fd46623d7b4a9c28deeeba80c5 | 39362 |
-| frontend_prototype/public/images/mlbb/heroes/100.png | assets/public/images/mlbb/heroes/100.png | 05a3c4e49c8723d51afce62c3bfc00955ce9024d20d80f27c2a1a7fd20e3af32 | 39740 |
-| frontend_prototype/public/images/mlbb/heroes/101.png | assets/public/images/mlbb/heroes/101.png | d725b74c4ad5f308d0d23743aace08a7760e2189ad92f73c6ff8cc7c489b97ca | 45294 |
-| frontend_prototype/public/images/mlbb/heroes/102.png | assets/public/images/mlbb/heroes/102.png | c0af6d00e876e26bf3813848b1d5d7fc02e8a5484acea92ec784614b6b369246 | 40340 |
-| frontend_prototype/public/images/mlbb/heroes/103.png | assets/public/images/mlbb/heroes/103.png | 5fbed745ad7b64759332a1353aa6d2c71bfe06bb8fbf9965a78434670d994f29 | 41202 |
-| frontend_prototype/public/images/mlbb/heroes/105.png | assets/public/images/mlbb/heroes/105.png | 0081c4429fc5f57d72d5a39b848f5d5802edc7422261ebd172d82a371b396253 | 43855 |
-| frontend_prototype/public/images/mlbb/heroes/11.png | assets/public/images/mlbb/heroes/11.png | 3402f4a197993ce31dc92a7a408310f3314a8617e4912aa1e42d79bd9030d50b | 41316 |
-| frontend_prototype/public/images/mlbb/heroes/110.png | assets/public/images/mlbb/heroes/110.png | 87ad41549bde980e641e214f43d9bcaeb45db92bdba2bc947400f63a3ee4cce9 | 46295 |
-| frontend_prototype/public/images/mlbb/heroes/117.png | assets/public/images/mlbb/heroes/117.png | 1ec5cd364f87521dda3eab4a21476264ad4dc0fbb2e7cf6493c692ab1a41a000 | 38892 |
-| frontend_prototype/public/images/mlbb/heroes/12.png | assets/public/images/mlbb/heroes/12.png | c8e86825e6de189fbe58e4bb57298dbfe7e2dadb9d0aab866d54474237b8cdeb | 43777 |
-| frontend_prototype/public/images/mlbb/heroes/13.png | assets/public/images/mlbb/heroes/13.png | 9d3d6f73a353a3f3b6eea515c48f1aa9337beccdac29bc8958addd7df5fed371 | 40656 |
-| frontend_prototype/public/images/mlbb/heroes/15.png | assets/public/images/mlbb/heroes/15.png | 62f620524ed3ee9e0155489961be1bd6161697a659c2c831ef48135ce14b9064 | 43857 |
-| frontend_prototype/public/images/mlbb/heroes/17.png | assets/public/images/mlbb/heroes/17.png | d2a2af5ac4f42a9e84a475cc6ef6c66c63ddac44747121b392342faa11a4370e | 41246 |
-| frontend_prototype/public/images/mlbb/heroes/21.png | assets/public/images/mlbb/heroes/21.png | f58b026d0efdad26b02bc73917c1273d75f27a7031386d6e0a0bc89e9ec186c4 | 39896 |
-| frontend_prototype/public/images/mlbb/heroes/25.png | assets/public/images/mlbb/heroes/25.png | b33d86206fd85d1d64dc71169b55d95ef62fc8dcf8b9bcc8bd8c6148ed179c0b | 36691 |
-| frontend_prototype/public/images/mlbb/heroes/26.png | assets/public/images/mlbb/heroes/26.png | 7fc95ad99c4fd4fa0087f805be4912eacb46fef7cba89a16f9bd1bab9358b51a | 42082 |
-| frontend_prototype/public/images/mlbb/heroes/3.png | assets/public/images/mlbb/heroes/3.png | da835d7bdf2d9f087814c94b1122272cd128c29f275c6f16b1ab391d01a02861 | 47194 |
-| frontend_prototype/public/images/mlbb/heroes/4.png | assets/public/images/mlbb/heroes/4.png | f9c86a1922ac257f86c40650ae62f2c3c2f991a58351d2e2004797d698d5cc69 | 40019 |
-| frontend_prototype/public/images/mlbb/heroes/47.png | assets/public/images/mlbb/heroes/47.png | 5d0fc96499eab0187a15c976a9698d316e992a7541fa90138d362184668e4ea7 | 36915 |
-| frontend_prototype/public/images/mlbb/heroes/5.png | assets/public/images/mlbb/heroes/5.png | 461453f7161d35052a0cd439b7bbbfaac45c7d1a11b0f4d2297072116aea6e0c | 42480 |
-| frontend_prototype/public/images/mlbb/heroes/52.png | assets/public/images/mlbb/heroes/52.png | 7f90c71a6e11d0b7add13f50d2555872b5e33cef520127ec4a1169976bd8f4fa | 44765 |
-| frontend_prototype/public/images/mlbb/heroes/55.png | assets/public/images/mlbb/heroes/55.png | a896c074e2df1dbd480173de8a0548eb772c2fe34e93f7394ff2cc95219e9794 | 38597 |
-| frontend_prototype/public/images/mlbb/heroes/6.png | assets/public/images/mlbb/heroes/6.png | 425ea4a14c61573b3fa0d6f74377d8a9949ca0ffb53354b30e6375b72f4ddaa2 | 43215 |
-| frontend_prototype/public/images/mlbb/heroes/7.png | assets/public/images/mlbb/heroes/7.png | ed8ac6bb6cfeb7e974c5eb323de82b288e26ee823fafbbd0968c116040db8a03 | 44627 |
-| frontend_prototype/public/images/mlbb/heroes/8.png | assets/public/images/mlbb/heroes/8.png | 808ecee92f2d42343b2fd3a6041344c34cc79d2829ffe8b94a41fa8c233c755c | 44181 |
-| frontend_prototype/public/images/mlbb/heroes/84.png | assets/public/images/mlbb/heroes/84.png | 9fd868537dd8416d580a569c13fdade6c3cbf486ab5607418967de2e6642d13a | 40458 |
-| frontend_prototype/public/images/mlbb/heroes/9.png | assets/public/images/mlbb/heroes/9.png | 67b27d5fb7eac724063ac8fc7fd619a40bcde52369bf77803fd3ecf7d00e5443 | 44698 |
-| frontend_prototype/public/images/mlbb/heroes/95.png | assets/public/images/mlbb/heroes/95.png | 820e6cdb3ac95a2b4387892eedb0be84bd91c0d6d944f1e382183bec2f1e722a | 41472 |
-| frontend_prototype/public/images/portal-pattern.svg | assets/public/images/portal-pattern.svg | 84cb7362ec5e5a3e8b13f37d62ffbbc7084c47335de5aca1a37b27a7c75ded88 | 1294 |
-| backend/data/mlbb/heroes/2026-09-09-rone/heroes.json | reference-data/mlbb/heroes/2026-09-09-rone/heroes.json | 03d3746005b5f035327b00d2fec9ee6299add61c7343e5f1141702d4601e6bc3 | 49596 |
-| backend/data/mlbb/heroes/2026-09-09-rone/manifest.json | reference-data/mlbb/heroes/2026-09-09-rone/manifest.json | a3d2e7f5f871d064feef3041363be1759d647367c4d1f16ff34a5e19b43c01a0 | 651 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/1.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/1.png | f5fd84408905c82cf4668f5886a4d38581783555c48d5d2e7604f281d1b7995f | 41632 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/10.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/10.png | cc913fde38fb6eb722fa4a82536e77c6166110fd46623d7b4a9c28deeeba80c5 | 39362 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/100.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/100.png | 05a3c4e49c8723d51afce62c3bfc00955ce9024d20d80f27c2a1a7fd20e3af32 | 39740 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/101.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/101.png | d725b74c4ad5f308d0d23743aace08a7760e2189ad92f73c6ff8cc7c489b97ca | 45294 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/102.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/102.png | c0af6d00e876e26bf3813848b1d5d7fc02e8a5484acea92ec784614b6b369246 | 40340 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/103.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/103.png | 5fbed745ad7b64759332a1353aa6d2c71bfe06bb8fbf9965a78434670d994f29 | 41202 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/104.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/104.png | 59d089808d96427e96ebef41923325c68f9aa05b84c0ccd067bdf35971551667 | 43396 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/105.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/105.png | 0081c4429fc5f57d72d5a39b848f5d5802edc7422261ebd172d82a371b396253 | 43855 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/106.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/106.png | 0742e77c0a3c6df042d12a72a53fb1f369e9cd08e922d0a2cc335ef3e6e9ab47 | 44426 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/107.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/107.png | 25306d02b93ed0aa193258f24855b9e9cb55bf3af873d11d92acc1d3e4d3c1e3 | 41019 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/108.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/108.png | 606345e53569ad09d82b09a986fbef2bf9bdac7a449c399e131137b86687e2e4 | 47182 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/109.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/109.png | cefcdf290d8bd0f4026e2f70b3df49285193c9cb3bb0fffdc8b38052dea5e51a | 43540 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/11.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/11.png | 3402f4a197993ce31dc92a7a408310f3314a8617e4912aa1e42d79bd9030d50b | 41316 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/110.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/110.png | 87ad41549bde980e641e214f43d9bcaeb45db92bdba2bc947400f63a3ee4cce9 | 46295 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/111.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/111.png | d520ff254a2d21c5ff3dad7e5a528f0c099beadcee92f8bc6af9451a482cf02c | 42904 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/112.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/112.png | b193f53b294c12510bd6d3ce5f8f73a0646036354372e6bf4f6ec1987d53e95c | 39317 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/113.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/113.png | 6dfbbf7df723e97b98469e413f8c1a52547f34e12ba668eabb8e023f15e676ae | 43095 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/114.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/114.png | 47f2426937f6ccaab87155795189e281c6f788229a6bb20ae3cb0daae5c2fe5b | 42701 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/115.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/115.png | 50718efffb8718b731ccb8f0d3ebd103a007bb3f1755049b3a9241c8d300ba06 | 39147 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/116.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/116.png | a55c8ab8cc91d88b0e7e717c35c65f8331831c01181a1cfd8bf9906882e91c5b | 37939 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/117.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/117.png | 1ec5cd364f87521dda3eab4a21476264ad4dc0fbb2e7cf6493c692ab1a41a000 | 38892 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/118.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/118.png | 909e60d3e44d80440d0f81d7056b4d2fc9ccad077d0694df0e915aff6e0321ff | 41043 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/119.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/119.png | b4dca4dba1f6b164edb90ae58c06fc5f523066a99757c5aba5b5432035ebf9f8 | 42106 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/12.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/12.png | c8e86825e6de189fbe58e4bb57298dbfe7e2dadb9d0aab866d54474237b8cdeb | 43777 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/120.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/120.png | b5305ec107504b6955c1251d4390047ebdade8587a62128de6e9be8c07933de2 | 43139 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/121.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/121.png | 733199b598c5c8e6f77b9f7691d1a0eb435fd9875bff85834499e9f008abd260 | 39658 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/122.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/122.png | e5175f69aa1e4bd50880086b92a644e5af95ee5e919559cb039c63f0f6e33aae | 41134 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/123.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/123.png | 9b5b84dec28c36ee692a150bf2a3a46bfaefecae7b78ea98bc7fbca048bc1e6b | 44396 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/124.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/124.png | 42458086f8ab68d70060ad38c303b12d79331cd622e22ab8c7f4fea30c70fd44 | 43816 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/125.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/125.png | 1d671a06eb517f9853421dd0be3e12788950b1629b0a5204febb8e1d4f2c8728 | 39657 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/126.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/126.png | 264d1da13f2efe8636b54a3d84a7514fd72717b78a23fbace067f899b7b81a4c | 48349 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/127.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/127.png | 7943ec654dee058161348fc9698c8d2bedb2ed74ed6747fa85cb7eb16752b105 | 45171 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/128.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/128.png | 5d41bee05c37ab87c0aa9bc0c0c0a8938ce3dbb976709f87b8f587bc43069b15 | 46197 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/129.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/129.png | 7b77d49445f591ee53c8f8f0a5bfc91cdd3040c5170182faa08a69394b2ecefc | 42838 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/13.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/13.png | 9d3d6f73a353a3f3b6eea515c48f1aa9337beccdac29bc8958addd7df5fed371 | 40656 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/130.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/130.png | 657c06eb048f593bdc1a7105a66bbd4cef0817cdf81c00a2ad85ce6b99fe4cc5 | 44747 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/131.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/131.png | 5336e518a7c75d0597a046161ecc52272e187c444e5d27c9207797f2dab2c5c0 | 45524 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/132.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/132.png | 50788c6fb3de974d59b378a7f5a258d6ae4d2983c47150e93d9834b40edeca31 | 42832 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/133.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/133.png | 6371b10a764537450253341aefd8cb881177d87ba9e9bbb3ae0c97b52e0d167c | 45189 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/14.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/14.png | 018a3915049386233305b85ec37caeb03a7cc7b5b8cc4b78a28e01841975b07c | 42809 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/15.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/15.png | 62f620524ed3ee9e0155489961be1bd6161697a659c2c831ef48135ce14b9064 | 43857 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/16.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/16.png | d0185d85bad6cd4029c9fe4af2816a74ccc92193f2ea326f4643343563024aae | 41945 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/17.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/17.png | d2a2af5ac4f42a9e84a475cc6ef6c66c63ddac44747121b392342faa11a4370e | 41246 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/18.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/18.png | 43a37b6578a75e6b4a67156fabff39f314f5d4c7e79050c3a32a7d6f75f68f43 | 39665 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/19.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/19.png | eef30221ce80aea7eddcbe0f0f778b0cdb713af21165aa51fdf330e282330af6 | 40521 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/2.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/2.png | 0881787fe9a951728f25911ab40422ae104946d64b80c131a502620812142b25 | 40902 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/20.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/20.png | 24f73035be588c4dd0852009c6ffbc9ded5673971a0117e273cb8814413f82c2 | 36808 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/21.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/21.png | f58b026d0efdad26b02bc73917c1273d75f27a7031386d6e0a0bc89e9ec186c4 | 39896 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/22.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/22.png | 7dd888af870de40f0135beb6c9bd52bd0c3b15230ec979b2b77298f75f169dbc | 46491 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/23.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/23.png | 429dcc9bffb67ec369bbe8846ffc2609ce8c1f670bf21685ccee6399455c41fd | 43174 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/24.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/24.png | 82931fab4b88defc1231bbee8aafac9cc97d7145d7f5febb572a62eb9965e9f3 | 43501 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/25.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/25.png | b33d86206fd85d1d64dc71169b55d95ef62fc8dcf8b9bcc8bd8c6148ed179c0b | 36691 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/26.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/26.png | 7fc95ad99c4fd4fa0087f805be4912eacb46fef7cba89a16f9bd1bab9358b51a | 42082 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/27.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/27.png | 5141e48888d3b63f8274141810e3fa19dbc3c586b8f09d2f945beb1713248368 | 43672 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/28.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/28.png | fe85eaf62d36c18d246aa8a246cfdaf8c6e090bb9023259db840798cc17b199b | 41647 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/29.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/29.png | fb42746e7c858709c8554944a4fa53e11ab7e4f266bc740291324eb3f66be573 | 44009 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/3.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/3.png | da835d7bdf2d9f087814c94b1122272cd128c29f275c6f16b1ab391d01a02861 | 47194 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/30.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/30.png | ef4afdb8bae9b457c3829abaeb2d820272a6eb5c7355a5bbe2adcbf9e7345913 | 40961 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/31.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/31.png | 590354eafc829c0e3752d0c5ccc281bfc5a9333e102033fda9a656e044927ccc | 40201 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/32.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/32.png | 33fdee81e03f0ee1b17aff4b952b398c678882f0a2343be301fe9cf107344647 | 43351 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/33.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/33.png | 030d1ce1b20a059d0af8a69394bc03b0fe5d74c087ba6581a4bf7d7ce9343c1f | 41927 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/34.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/34.png | 19f7cc91e79c6d19a98a307fc3c93161daffeee9497c2607b65aefbb60fdb438 | 43009 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/35.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/35.png | 4d6800c895a3ab44b05840add7d2ae0673e00a5389d9daabceb027bcbf9c61bf | 43260 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/36.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/36.png | 0cf4dad82b47e5b092ae73d7408d5d7d487f3da7848e8b3a6c59904c2efb2647 | 42332 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/37.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/37.png | 8f2ebd3a32306d0325074da7caa12ffc89b80b74a6fb01391e7c8ae62252a3ee | 39768 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/38.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/38.png | 1d62d64f4637b3b73f26d675ca187b914ac7fa794b97e360f211c2484a1eaa40 | 40320 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/39.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/39.png | 1c484c78ad7365909226caa7eb1d18f4f973dc09cb272b8f25679ac34637bbd4 | 45040 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/4.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/4.png | f9c86a1922ac257f86c40650ae62f2c3c2f991a58351d2e2004797d698d5cc69 | 40019 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/40.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/40.png | 23231f039f514836b96137855291e09cb9c26d5786f2df04dafae3330a93bb68 | 40131 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/41.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/41.png | c951f458316ec9e2400b4dfcc7a449763f924be264ec9464716463c13f3f20ed | 40444 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/42.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/42.png | cb12d604e235e2301bcbdcec1257bc3e02d3a9e2dff98a1260825e3139964b0b | 37448 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/43.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/43.png | c63e9c1fc5efed79e28c33bc8d073d3d915aedb181f40315ad74d96ec386f265 | 38768 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/44.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/44.png | 35b0704cd0ec96c5b9235dfd7462610e942c1b44ea6107311cc24fd9dc9e40c9 | 43625 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/45.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/45.png | 6c4a9d404ed015d84ff286fa49866a9c98364573c924076141e7d078f77c2aa7 | 41532 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/46.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/46.png | 509cbfab05f0cb5814dd7dc4cb4d95aad89d8601b1e47397d51ffdf737c35902 | 42904 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/47.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/47.png | 5d0fc96499eab0187a15c976a9698d316e992a7541fa90138d362184668e4ea7 | 36915 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/48.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/48.png | b4d0a8a8a2f0e1bea18ff751e6e138a61401972c7faa342ea115890f5b727863 | 46860 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/49.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/49.png | ef48f4274bd2f9f854df1378face9f825aef748d4a9049abc2e6d0184ae84c09 | 44652 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/5.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/5.png | 461453f7161d35052a0cd439b7bbbfaac45c7d1a11b0f4d2297072116aea6e0c | 42480 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/50.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/50.png | 9cc1e170cf15b22e6b741586963a3085cc6df15def35a16fa3dc5a319b4a5608 | 43992 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/51.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/51.png | 2c291ae04293168e12247493b5bffdec98770c26064d06da7ee33aa6cddc2b92 | 38280 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/52.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/52.png | 7f90c71a6e11d0b7add13f50d2555872b5e33cef520127ec4a1169976bd8f4fa | 44765 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/53.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/53.png | de2c2f6f9f329acf5b0a69846e28d1d1d8c17ec6f5b7a81290b4b1d3a603dc38 | 40583 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/54.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/54.png | 71dac0c20d9fc5fbc2362e729faebd0874e42b28e62c02d820d0c0bb1d77d403 | 43217 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/55.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/55.png | a896c074e2df1dbd480173de8a0548eb772c2fe34e93f7394ff2cc95219e9794 | 38597 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/56.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/56.png | 1dd3ec37caa67f8429d7b966d88b40b1636fc36f14c36970b778d7f61698a9d6 | 42898 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/57.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/57.png | a53c57f695f3e2a74340f5decea1453cc88fb0e2cea1b6436f20a99459b9ff96 | 42421 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/58.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/58.png | 53b84eed2bb0b816f43445172b2b87e9659efc437df35e1a40473a14b0944bbe | 40450 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/59.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/59.png | 64c15a079071f66e6ca4bae52cfd3c149fc27d2649cc1763c0fb94ae9643451b | 39295 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/6.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/6.png | 425ea4a14c61573b3fa0d6f74377d8a9949ca0ffb53354b30e6375b72f4ddaa2 | 43215 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/60.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/60.png | 790b54e8ecc8ca9d0ddab06696a4ac03797e3022f2adfbf0405766938433d5b1 | 37977 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/61.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/61.png | c3370594e28d58bcfae573b6dbd9a734fbd091c8edd2d21bbd0f1a6c1ce5bb07 | 40703 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/62.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/62.png | c5ac93d8ca281bf2eb2b15cdf948db66173ae991d6cbe2ba888c0c574d2b73a1 | 46083 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/63.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/63.png | a19ac3b9007f17729e88cb201c40865ed14bfc75d075700b6b161b6899d8ccfe | 40627 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/64.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/64.png | 06cbf0283bbdee6233af09c646a4cf5deb44c63078ea7d8e6a6102944ae5594e | 40253 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/65.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/65.png | bf3338286ae702a7e3c0fcceefe4905145c12c3f2cf374b1505d2f0c9a2fc6ad | 39301 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/66.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/66.png | 8ed4c7caa035d67c1ba5d6ca010842d0fb69532bc2bd6f0a294fbbe5dc68e2e1 | 43468 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/67.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/67.png | ac5078e775776f6cca0d2b00abf9af175046b414fc435cc7dd869f2cc79d01b5 | 42743 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/68.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/68.png | a65b22305dbfd6e035c113ea51b9011ca80f770c3c7b5a231dcf2bc8628339aa | 45581 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/69.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/69.png | c683193a88f360e522ddc7994b2825a6bad6ac5db7df2f0b561dbf140dbb3018 | 44965 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/7.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/7.png | ed8ac6bb6cfeb7e974c5eb323de82b288e26ee823fafbbd0968c116040db8a03 | 44627 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/70.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/70.png | 704f51738023deed758caf00256a0c890d577ee1f7f597e575cb2d732a7cbe86 | 45371 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/71.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/71.png | 8e6db33b017bac71d8e669f29316907743082d6973ce01ba6cfd45910665589a | 43595 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/72.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/72.png | c46223db96acb95048f6b9a10c2cf676603493f2ddfcdea6ea3867d3803d28ec | 50188 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/73.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/73.png | 9a088660c2805385ccbfba96c346ae8f6e47e6542356ec37af853b01b61eb32b | 43144 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/74.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/74.png | 887cb8155790c58cec5d190a4962a57ac08f4a3dd532948f963abb35aa452da0 | 43374 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/75.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/75.png | cf64aeb7d2959df7752817fc9468ec06ad7e34842a4cede55654649217b9014f | 39083 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/76.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/76.png | d506f936ff4abf87d174ed5846ed3d31969b9405cbf88f192caf8eff93400639 | 47127 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/77.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/77.png | 203f50ccd3895167ba9f7ae15d289408becf64ec0dca30653f91722e4e1581e5 | 47236 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/78.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/78.png | 20dbd301e5883b6239e26b59fde1ea61201a9ae52effbd57563d0198c12afda0 | 46844 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/79.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/79.png | 7f3a3bb1122d757e870d024a799a19fe3fa9f9630d19a77bd80e4f6a00befdc3 | 47005 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/8.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/8.png | 808ecee92f2d42343b2fd3a6041344c34cc79d2829ffe8b94a41fa8c233c755c | 44181 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/80.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/80.png | 9e5ea5edaffdfd1010386b6fe8127aeecc4a2cd926a4379e1a68f49309748861 | 41235 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/81.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/81.png | 4093ec411fd1236930978fb53018019ff8df672d8acadc897d923b3412fcddb6 | 39267 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/82.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/82.png | 1cbb801d0ba32febbeeadea55ed961ee9a34f42554200c0c8f08f39b23a45bc9 | 42965 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/83.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/83.png | e092128f30554e0a577065ae11748f8d13c6824ab1db6ed018a455fd63bab409 | 40842 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/84.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/84.png | 9fd868537dd8416d580a569c13fdade6c3cbf486ab5607418967de2e6642d13a | 40458 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/85.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/85.png | 9cd2a346b387301cfcd2c4763065ca90978b58077b555e5394172165cc326a71 | 45614 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/86.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/86.png | d658498a7c8dc50219d6859c571fd7fe8c879d791f51ebcf491845846db15226 | 44396 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/87.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/87.png | 06976ae4ae4ed51d2830d476c2e67885864d7cd0c86cc3b84cc5ec4adfc4596f | 45263 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/88.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/88.png | a2d152000df505b082fa73ba29c7ba705409c1a5ae63390eb01f4c4fb1681180 | 41747 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/89.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/89.png | 4d3aaed7463ad4858810bff9cb776032d9cf80685d01dfa4de01056aff1331cb | 43123 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/9.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/9.png | 67b27d5fb7eac724063ac8fc7fd619a40bcde52369bf77803fd3ecf7d00e5443 | 44698 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/90.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/90.png | 048846a15ff79da57c1a6f94db9ff783f56eced56a72963e2bd9d08b09f8f1a5 | 39045 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/91.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/91.png | 0a92b977a43ffefbb7ae59bec2140ecc3c3f6106bed877b7564cc1d933892527 | 43381 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/92.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/92.png | 501f944cc9f0deadf65ea7a27bc80a999637a8b72d522d5430cf6a03d4bc6ba8 | 39977 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/93.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/93.png | a80581c648b98970e75caa9f1d96425cdc44f3bf9b17f58ca0e00b7d9eb809b0 | 39679 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/94.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/94.png | 1c2a25451220258f2a38a6842a3d4a052db4d6b670fde8939408b3778fcc5e7d | 45307 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/95.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/95.png | 820e6cdb3ac95a2b4387892eedb0be84bd91c0d6d944f1e382183bec2f1e722a | 41472 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/96.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/96.png | 09dae79115edd49a2a51ca3f407452e05b55d3580771edc319d97272b266567f | 42324 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/97.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/97.png | 81dee289542024ad1baa65924e7973fbcfdea0f3c00b0ea1db4b6152c8cbf750 | 39702 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/98.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/98.png | f441f0756c135cb06b351df419687c6b7b6246f5fb5763297bec3e5838ef4944 | 42887 |
-| backend/data/mlbb/heroes/2026-09-09-rone/portraits/99.png | reference-data/mlbb/heroes/2026-09-09-rone/portraits/99.png | 167dd0eec84ab3fba4b3d51ae861c4062ff3a323989511a5ee8d0059459fe3d1 | 41514 |
-| backend/data/institutions.json | reference-data/institutions.json | c9e1a8e5fc664a815f813767097258dd9e6f60cb510168286abfbf865e2b3270 | 95537 |
+| PCC target | SHA-256 | Bytes |
+| --- | --- | --- |
+| assets/public/fonts/balangkas_font.ttf | bcce4d09849ce86fa72981b408ff9372bc67baf64efc9861db939aba6e8afaae | 11268 |
+| assets/public/fonts/Manrope[wght].ttf | d0639be45d0af36e798172419d7bd173c4bd4f29e2b76cbb69db1d11bf8b0a40 | 165420 |
+| assets/public/fonts/PlusJakartaSans[wght].ttf | 89b3fb38aa0d275d7a731d0d817a4f1622b316b4d7fbdedcf02ee9099ff68bc8 | 176288 |
+| assets/public/fonts/licenses/Manrope-OFL.txt | e01b637272e0cbdfb240184dd98ea5cc671556d9894dae2668d92ab2c906787c | 4384 |
+| assets/public/fonts/licenses/PlusJakartaSans-OFL.txt | 995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99 | 4402 |
+| assets/public/images/ambient-splashes.svg | 168aba0a4a05e227ff230190ac958297ffd85e17c9ee4a9dcb57de8a4682600d | 1381 |
+| assets/public/images/arena.svg | bb16e17996d6d4ae9c61ba0aa8587aabd9dd9c160599632251e5bb57fb8c14cd | 3275 |
+| assets/public/images/color_palette.png | df00e5b8b826db30b35c902704f511a42b7b6cfb05301169e4e09271e5d6ba65 | 134108 |
+| assets/public/images/communities/mlbb-community-heroes.jpg | efe666a2087ff4472281de011bea97ab607b9b634e06186d4a511c24c5aff596 | 69076 |
+| assets/public/images/communities/moonton-student-leaders.jpg | c3d0631cd097b473a62543d6c7a55dd4b5607087e63f31f1c567ee1a9d28b786 | 146948 |
+| assets/public/images/communities/philippines-collegiate-championship.jpg | bef1b2afde49c6f60825d019f6106fac9f3a09d2e8ad3b5c2d89252ae42998e7 | 100640 |
+| assets/public/images/communities/preset-apex-arena.jpg | 7d7b282d13ddb553bbe68c8bf61d41098f776402dcd5ad812f4cbe19975d4669 | 1011460 |
+| assets/public/images/communities/preset-iron-titan.jpg | 0cce3313531f4d953d864ba4536dcd012075fdb8a53091488438d3b745994878 | 836704 |
+| assets/public/images/communities/preset-neon-cyber.jpg | 72ecaf87e7085b813a452c75a67b499cc293125cee67b54829b2057c952b2b04 | 979580 |
+| assets/public/images/communities/preset-solar-phoenix.jpg | 057229d70ef5e9220d14d29582fb7c8c84eef0227367b6be0f11a9dad3071c0b | 813647 |
+| assets/public/images/communities/siklaw-esports.jpg | 92aa640fb9abc2efdf708f0f04d6881481fdcf4d20c809887e7ad24b74d992b5 | 99244 |
+| assets/public/images/community-arena-cover.png | 66ab118c9e85976ccaf41c5a354a54d6ef8734dc8a31ec7f526732df97688dce | 2138865 |
+| assets/public/images/logo.png | 5d73dd2823adbf0297ce2abb2dcff6a4f82fabb3191b6078bacbffb31b5c59ab | 1963917 |
+| assets/public/images/logo_text.png | 286a14095e5115a1dd637f4132fac0fecd4bf37115333e4549cfd3c3d5180517 | 1400838 |
+| assets/public/images/match-evidence/match-101-game-1.jpg | e5e85024116f4cca3504a190ed6c6d97ce8af70dd9d496d51cef6c4276881383 | 192249 |
+| assets/public/images/match-evidence/match-101-game-2.jpg | f0f351a46dc65513b31efe6893cab02448589ac5612c6f8552281774b0ca22b8 | 191483 |
+| assets/public/images/match-evidence/match-101-game-3.jpg | 73b6a9ca9ee3f37a55fff348f6cb053218344bbca235f7cd49946d29016406d2 | 194019 |
+| assets/public/images/mlbb/ATTRIBUTION.md | 6b11654e40ed1d23287e7c515fcd541b9bbfd81d2756c33f05a7c08614a279c1 | 484 |
+| assets/public/images/mlbb/heroes/1.png | f5fd84408905c82cf4668f5886a4d38581783555c48d5d2e7604f281d1b7995f | 41632 |
+| assets/public/images/mlbb/heroes/10.png | cc913fde38fb6eb722fa4a82536e77c6166110fd46623d7b4a9c28deeeba80c5 | 39362 |
+| assets/public/images/mlbb/heroes/100.png | 05a3c4e49c8723d51afce62c3bfc00955ce9024d20d80f27c2a1a7fd20e3af32 | 39740 |
+| assets/public/images/mlbb/heroes/101.png | d725b74c4ad5f308d0d23743aace08a7760e2189ad92f73c6ff8cc7c489b97ca | 45294 |
+| assets/public/images/mlbb/heroes/102.png | c0af6d00e876e26bf3813848b1d5d7fc02e8a5484acea92ec784614b6b369246 | 40340 |
+| assets/public/images/mlbb/heroes/103.png | 5fbed745ad7b64759332a1353aa6d2c71bfe06bb8fbf9965a78434670d994f29 | 41202 |
+| assets/public/images/mlbb/heroes/105.png | 0081c4429fc5f57d72d5a39b848f5d5802edc7422261ebd172d82a371b396253 | 43855 |
+| assets/public/images/mlbb/heroes/11.png | 3402f4a197993ce31dc92a7a408310f3314a8617e4912aa1e42d79bd9030d50b | 41316 |
+| assets/public/images/mlbb/heroes/110.png | 87ad41549bde980e641e214f43d9bcaeb45db92bdba2bc947400f63a3ee4cce9 | 46295 |
+| assets/public/images/mlbb/heroes/117.png | 1ec5cd364f87521dda3eab4a21476264ad4dc0fbb2e7cf6493c692ab1a41a000 | 38892 |
+| assets/public/images/mlbb/heroes/12.png | c8e86825e6de189fbe58e4bb57298dbfe7e2dadb9d0aab866d54474237b8cdeb | 43777 |
+| assets/public/images/mlbb/heroes/13.png | 9d3d6f73a353a3f3b6eea515c48f1aa9337beccdac29bc8958addd7df5fed371 | 40656 |
+| assets/public/images/mlbb/heroes/15.png | 62f620524ed3ee9e0155489961be1bd6161697a659c2c831ef48135ce14b9064 | 43857 |
+| assets/public/images/mlbb/heroes/17.png | d2a2af5ac4f42a9e84a475cc6ef6c66c63ddac44747121b392342faa11a4370e | 41246 |
+| assets/public/images/mlbb/heroes/21.png | f58b026d0efdad26b02bc73917c1273d75f27a7031386d6e0a0bc89e9ec186c4 | 39896 |
+| assets/public/images/mlbb/heroes/25.png | b33d86206fd85d1d64dc71169b55d95ef62fc8dcf8b9bcc8bd8c6148ed179c0b | 36691 |
+| assets/public/images/mlbb/heroes/26.png | 7fc95ad99c4fd4fa0087f805be4912eacb46fef7cba89a16f9bd1bab9358b51a | 42082 |
+| assets/public/images/mlbb/heroes/3.png | da835d7bdf2d9f087814c94b1122272cd128c29f275c6f16b1ab391d01a02861 | 47194 |
+| assets/public/images/mlbb/heroes/4.png | f9c86a1922ac257f86c40650ae62f2c3c2f991a58351d2e2004797d698d5cc69 | 40019 |
+| assets/public/images/mlbb/heroes/47.png | 5d0fc96499eab0187a15c976a9698d316e992a7541fa90138d362184668e4ea7 | 36915 |
+| assets/public/images/mlbb/heroes/5.png | 461453f7161d35052a0cd439b7bbbfaac45c7d1a11b0f4d2297072116aea6e0c | 42480 |
+| assets/public/images/mlbb/heroes/52.png | 7f90c71a6e11d0b7add13f50d2555872b5e33cef520127ec4a1169976bd8f4fa | 44765 |
+| assets/public/images/mlbb/heroes/55.png | a896c074e2df1dbd480173de8a0548eb772c2fe34e93f7394ff2cc95219e9794 | 38597 |
+| assets/public/images/mlbb/heroes/6.png | 425ea4a14c61573b3fa0d6f74377d8a9949ca0ffb53354b30e6375b72f4ddaa2 | 43215 |
+| assets/public/images/mlbb/heroes/7.png | ed8ac6bb6cfeb7e974c5eb323de82b288e26ee823fafbbd0968c116040db8a03 | 44627 |
+| assets/public/images/mlbb/heroes/8.png | 808ecee92f2d42343b2fd3a6041344c34cc79d2829ffe8b94a41fa8c233c755c | 44181 |
+| assets/public/images/mlbb/heroes/84.png | 9fd868537dd8416d580a569c13fdade6c3cbf486ab5607418967de2e6642d13a | 40458 |
+| assets/public/images/mlbb/heroes/9.png | 67b27d5fb7eac724063ac8fc7fd619a40bcde52369bf77803fd3ecf7d00e5443 | 44698 |
+| assets/public/images/mlbb/heroes/95.png | 820e6cdb3ac95a2b4387892eedb0be84bd91c0d6d944f1e382183bec2f1e722a | 41472 |
+| assets/public/images/portal-pattern.svg | 84cb7362ec5e5a3e8b13f37d62ffbbc7084c47335de5aca1a37b27a7c75ded88 | 1294 |
+| reference-data/mlbb/heroes/2026-09-09-rone/heroes.json | 03d3746005b5f035327b00d2fec9ee6299add61c7343e5f1141702d4601e6bc3 | 49596 |
+| reference-data/mlbb/heroes/2026-09-09-rone/manifest.json | a3d2e7f5f871d064feef3041363be1759d647367c4d1f16ff34a5e19b43c01a0 | 651 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/1.png | f5fd84408905c82cf4668f5886a4d38581783555c48d5d2e7604f281d1b7995f | 41632 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/10.png | cc913fde38fb6eb722fa4a82536e77c6166110fd46623d7b4a9c28deeeba80c5 | 39362 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/100.png | 05a3c4e49c8723d51afce62c3bfc00955ce9024d20d80f27c2a1a7fd20e3af32 | 39740 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/101.png | d725b74c4ad5f308d0d23743aace08a7760e2189ad92f73c6ff8cc7c489b97ca | 45294 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/102.png | c0af6d00e876e26bf3813848b1d5d7fc02e8a5484acea92ec784614b6b369246 | 40340 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/103.png | 5fbed745ad7b64759332a1353aa6d2c71bfe06bb8fbf9965a78434670d994f29 | 41202 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/104.png | 59d089808d96427e96ebef41923325c68f9aa05b84c0ccd067bdf35971551667 | 43396 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/105.png | 0081c4429fc5f57d72d5a39b848f5d5802edc7422261ebd172d82a371b396253 | 43855 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/106.png | 0742e77c0a3c6df042d12a72a53fb1f369e9cd08e922d0a2cc335ef3e6e9ab47 | 44426 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/107.png | 25306d02b93ed0aa193258f24855b9e9cb55bf3af873d11d92acc1d3e4d3c1e3 | 41019 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/108.png | 606345e53569ad09d82b09a986fbef2bf9bdac7a449c399e131137b86687e2e4 | 47182 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/109.png | cefcdf290d8bd0f4026e2f70b3df49285193c9cb3bb0fffdc8b38052dea5e51a | 43540 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/11.png | 3402f4a197993ce31dc92a7a408310f3314a8617e4912aa1e42d79bd9030d50b | 41316 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/110.png | 87ad41549bde980e641e214f43d9bcaeb45db92bdba2bc947400f63a3ee4cce9 | 46295 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/111.png | d520ff254a2d21c5ff3dad7e5a528f0c099beadcee92f8bc6af9451a482cf02c | 42904 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/112.png | b193f53b294c12510bd6d3ce5f8f73a0646036354372e6bf4f6ec1987d53e95c | 39317 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/113.png | 6dfbbf7df723e97b98469e413f8c1a52547f34e12ba668eabb8e023f15e676ae | 43095 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/114.png | 47f2426937f6ccaab87155795189e281c6f788229a6bb20ae3cb0daae5c2fe5b | 42701 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/115.png | 50718efffb8718b731ccb8f0d3ebd103a007bb3f1755049b3a9241c8d300ba06 | 39147 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/116.png | a55c8ab8cc91d88b0e7e717c35c65f8331831c01181a1cfd8bf9906882e91c5b | 37939 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/117.png | 1ec5cd364f87521dda3eab4a21476264ad4dc0fbb2e7cf6493c692ab1a41a000 | 38892 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/118.png | 909e60d3e44d80440d0f81d7056b4d2fc9ccad077d0694df0e915aff6e0321ff | 41043 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/119.png | b4dca4dba1f6b164edb90ae58c06fc5f523066a99757c5aba5b5432035ebf9f8 | 42106 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/12.png | c8e86825e6de189fbe58e4bb57298dbfe7e2dadb9d0aab866d54474237b8cdeb | 43777 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/120.png | b5305ec107504b6955c1251d4390047ebdade8587a62128de6e9be8c07933de2 | 43139 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/121.png | 733199b598c5c8e6f77b9f7691d1a0eb435fd9875bff85834499e9f008abd260 | 39658 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/122.png | e5175f69aa1e4bd50880086b92a644e5af95ee5e919559cb039c63f0f6e33aae | 41134 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/123.png | 9b5b84dec28c36ee692a150bf2a3a46bfaefecae7b78ea98bc7fbca048bc1e6b | 44396 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/124.png | 42458086f8ab68d70060ad38c303b12d79331cd622e22ab8c7f4fea30c70fd44 | 43816 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/125.png | 1d671a06eb517f9853421dd0be3e12788950b1629b0a5204febb8e1d4f2c8728 | 39657 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/126.png | 264d1da13f2efe8636b54a3d84a7514fd72717b78a23fbace067f899b7b81a4c | 48349 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/127.png | 7943ec654dee058161348fc9698c8d2bedb2ed74ed6747fa85cb7eb16752b105 | 45171 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/128.png | 5d41bee05c37ab87c0aa9bc0c0c0a8938ce3dbb976709f87b8f587bc43069b15 | 46197 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/129.png | 7b77d49445f591ee53c8f8f0a5bfc91cdd3040c5170182faa08a69394b2ecefc | 42838 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/13.png | 9d3d6f73a353a3f3b6eea515c48f1aa9337beccdac29bc8958addd7df5fed371 | 40656 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/130.png | 657c06eb048f593bdc1a7105a66bbd4cef0817cdf81c00a2ad85ce6b99fe4cc5 | 44747 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/131.png | 5336e518a7c75d0597a046161ecc52272e187c444e5d27c9207797f2dab2c5c0 | 45524 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/132.png | 50788c6fb3de974d59b378a7f5a258d6ae4d2983c47150e93d9834b40edeca31 | 42832 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/133.png | 6371b10a764537450253341aefd8cb881177d87ba9e9bbb3ae0c97b52e0d167c | 45189 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/14.png | 018a3915049386233305b85ec37caeb03a7cc7b5b8cc4b78a28e01841975b07c | 42809 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/15.png | 62f620524ed3ee9e0155489961be1bd6161697a659c2c831ef48135ce14b9064 | 43857 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/16.png | d0185d85bad6cd4029c9fe4af2816a74ccc92193f2ea326f4643343563024aae | 41945 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/17.png | d2a2af5ac4f42a9e84a475cc6ef6c66c63ddac44747121b392342faa11a4370e | 41246 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/18.png | 43a37b6578a75e6b4a67156fabff39f314f5d4c7e79050c3a32a7d6f75f68f43 | 39665 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/19.png | eef30221ce80aea7eddcbe0f0f778b0cdb713af21165aa51fdf330e282330af6 | 40521 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/2.png | 0881787fe9a951728f25911ab40422ae104946d64b80c131a502620812142b25 | 40902 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/20.png | 24f73035be588c4dd0852009c6ffbc9ded5673971a0117e273cb8814413f82c2 | 36808 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/21.png | f58b026d0efdad26b02bc73917c1273d75f27a7031386d6e0a0bc89e9ec186c4 | 39896 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/22.png | 7dd888af870de40f0135beb6c9bd52bd0c3b15230ec979b2b77298f75f169dbc | 46491 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/23.png | 429dcc9bffb67ec369bbe8846ffc2609ce8c1f670bf21685ccee6399455c41fd | 43174 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/24.png | 82931fab4b88defc1231bbee8aafac9cc97d7145d7f5febb572a62eb9965e9f3 | 43501 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/25.png | b33d86206fd85d1d64dc71169b55d95ef62fc8dcf8b9bcc8bd8c6148ed179c0b | 36691 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/26.png | 7fc95ad99c4fd4fa0087f805be4912eacb46fef7cba89a16f9bd1bab9358b51a | 42082 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/27.png | 5141e48888d3b63f8274141810e3fa19dbc3c586b8f09d2f945beb1713248368 | 43672 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/28.png | fe85eaf62d36c18d246aa8a246cfdaf8c6e090bb9023259db840798cc17b199b | 41647 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/29.png | fb42746e7c858709c8554944a4fa53e11ab7e4f266bc740291324eb3f66be573 | 44009 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/3.png | da835d7bdf2d9f087814c94b1122272cd128c29f275c6f16b1ab391d01a02861 | 47194 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/30.png | ef4afdb8bae9b457c3829abaeb2d820272a6eb5c7355a5bbe2adcbf9e7345913 | 40961 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/31.png | 590354eafc829c0e3752d0c5ccc281bfc5a9333e102033fda9a656e044927ccc | 40201 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/32.png | 33fdee81e03f0ee1b17aff4b952b398c678882f0a2343be301fe9cf107344647 | 43351 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/33.png | 030d1ce1b20a059d0af8a69394bc03b0fe5d74c087ba6581a4bf7d7ce9343c1f | 41927 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/34.png | 19f7cc91e79c6d19a98a307fc3c93161daffeee9497c2607b65aefbb60fdb438 | 43009 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/35.png | 4d6800c895a3ab44b05840add7d2ae0673e00a5389d9daabceb027bcbf9c61bf | 43260 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/36.png | 0cf4dad82b47e5b092ae73d7408d5d7d487f3da7848e8b3a6c59904c2efb2647 | 42332 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/37.png | 8f2ebd3a32306d0325074da7caa12ffc89b80b74a6fb01391e7c8ae62252a3ee | 39768 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/38.png | 1d62d64f4637b3b73f26d675ca187b914ac7fa794b97e360f211c2484a1eaa40 | 40320 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/39.png | 1c484c78ad7365909226caa7eb1d18f4f973dc09cb272b8f25679ac34637bbd4 | 45040 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/4.png | f9c86a1922ac257f86c40650ae62f2c3c2f991a58351d2e2004797d698d5cc69 | 40019 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/40.png | 23231f039f514836b96137855291e09cb9c26d5786f2df04dafae3330a93bb68 | 40131 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/41.png | c951f458316ec9e2400b4dfcc7a449763f924be264ec9464716463c13f3f20ed | 40444 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/42.png | cb12d604e235e2301bcbdcec1257bc3e02d3a9e2dff98a1260825e3139964b0b | 37448 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/43.png | c63e9c1fc5efed79e28c33bc8d073d3d915aedb181f40315ad74d96ec386f265 | 38768 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/44.png | 35b0704cd0ec96c5b9235dfd7462610e942c1b44ea6107311cc24fd9dc9e40c9 | 43625 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/45.png | 6c4a9d404ed015d84ff286fa49866a9c98364573c924076141e7d078f77c2aa7 | 41532 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/46.png | 509cbfab05f0cb5814dd7dc4cb4d95aad89d8601b1e47397d51ffdf737c35902 | 42904 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/47.png | 5d0fc96499eab0187a15c976a9698d316e992a7541fa90138d362184668e4ea7 | 36915 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/48.png | b4d0a8a8a2f0e1bea18ff751e6e138a61401972c7faa342ea115890f5b727863 | 46860 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/49.png | ef48f4274bd2f9f854df1378face9f825aef748d4a9049abc2e6d0184ae84c09 | 44652 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/5.png | 461453f7161d35052a0cd439b7bbbfaac45c7d1a11b0f4d2297072116aea6e0c | 42480 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/50.png | 9cc1e170cf15b22e6b741586963a3085cc6df15def35a16fa3dc5a319b4a5608 | 43992 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/51.png | 2c291ae04293168e12247493b5bffdec98770c26064d06da7ee33aa6cddc2b92 | 38280 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/52.png | 7f90c71a6e11d0b7add13f50d2555872b5e33cef520127ec4a1169976bd8f4fa | 44765 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/53.png | de2c2f6f9f329acf5b0a69846e28d1d1d8c17ec6f5b7a81290b4b1d3a603dc38 | 40583 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/54.png | 71dac0c20d9fc5fbc2362e729faebd0874e42b28e62c02d820d0c0bb1d77d403 | 43217 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/55.png | a896c074e2df1dbd480173de8a0548eb772c2fe34e93f7394ff2cc95219e9794 | 38597 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/56.png | 1dd3ec37caa67f8429d7b966d88b40b1636fc36f14c36970b778d7f61698a9d6 | 42898 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/57.png | a53c57f695f3e2a74340f5decea1453cc88fb0e2cea1b6436f20a99459b9ff96 | 42421 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/58.png | 53b84eed2bb0b816f43445172b2b87e9659efc437df35e1a40473a14b0944bbe | 40450 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/59.png | 64c15a079071f66e6ca4bae52cfd3c149fc27d2649cc1763c0fb94ae9643451b | 39295 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/6.png | 425ea4a14c61573b3fa0d6f74377d8a9949ca0ffb53354b30e6375b72f4ddaa2 | 43215 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/60.png | 790b54e8ecc8ca9d0ddab06696a4ac03797e3022f2adfbf0405766938433d5b1 | 37977 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/61.png | c3370594e28d58bcfae573b6dbd9a734fbd091c8edd2d21bbd0f1a6c1ce5bb07 | 40703 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/62.png | c5ac93d8ca281bf2eb2b15cdf948db66173ae991d6cbe2ba888c0c574d2b73a1 | 46083 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/63.png | a19ac3b9007f17729e88cb201c40865ed14bfc75d075700b6b161b6899d8ccfe | 40627 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/64.png | 06cbf0283bbdee6233af09c646a4cf5deb44c63078ea7d8e6a6102944ae5594e | 40253 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/65.png | bf3338286ae702a7e3c0fcceefe4905145c12c3f2cf374b1505d2f0c9a2fc6ad | 39301 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/66.png | 8ed4c7caa035d67c1ba5d6ca010842d0fb69532bc2bd6f0a294fbbe5dc68e2e1 | 43468 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/67.png | ac5078e775776f6cca0d2b00abf9af175046b414fc435cc7dd869f2cc79d01b5 | 42743 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/68.png | a65b22305dbfd6e035c113ea51b9011ca80f770c3c7b5a231dcf2bc8628339aa | 45581 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/69.png | c683193a88f360e522ddc7994b2825a6bad6ac5db7df2f0b561dbf140dbb3018 | 44965 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/7.png | ed8ac6bb6cfeb7e974c5eb323de82b288e26ee823fafbbd0968c116040db8a03 | 44627 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/70.png | 704f51738023deed758caf00256a0c890d577ee1f7f597e575cb2d732a7cbe86 | 45371 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/71.png | 8e6db33b017bac71d8e669f29316907743082d6973ce01ba6cfd45910665589a | 43595 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/72.png | c46223db96acb95048f6b9a10c2cf676603493f2ddfcdea6ea3867d3803d28ec | 50188 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/73.png | 9a088660c2805385ccbfba96c346ae8f6e47e6542356ec37af853b01b61eb32b | 43144 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/74.png | 887cb8155790c58cec5d190a4962a57ac08f4a3dd532948f963abb35aa452da0 | 43374 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/75.png | cf64aeb7d2959df7752817fc9468ec06ad7e34842a4cede55654649217b9014f | 39083 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/76.png | d506f936ff4abf87d174ed5846ed3d31969b9405cbf88f192caf8eff93400639 | 47127 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/77.png | 203f50ccd3895167ba9f7ae15d289408becf64ec0dca30653f91722e4e1581e5 | 47236 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/78.png | 20dbd301e5883b6239e26b59fde1ea61201a9ae52effbd57563d0198c12afda0 | 46844 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/79.png | 7f3a3bb1122d757e870d024a799a19fe3fa9f9630d19a77bd80e4f6a00befdc3 | 47005 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/8.png | 808ecee92f2d42343b2fd3a6041344c34cc79d2829ffe8b94a41fa8c233c755c | 44181 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/80.png | 9e5ea5edaffdfd1010386b6fe8127aeecc4a2cd926a4379e1a68f49309748861 | 41235 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/81.png | 4093ec411fd1236930978fb53018019ff8df672d8acadc897d923b3412fcddb6 | 39267 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/82.png | 1cbb801d0ba32febbeeadea55ed961ee9a34f42554200c0c8f08f39b23a45bc9 | 42965 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/83.png | e092128f30554e0a577065ae11748f8d13c6824ab1db6ed018a455fd63bab409 | 40842 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/84.png | 9fd868537dd8416d580a569c13fdade6c3cbf486ab5607418967de2e6642d13a | 40458 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/85.png | 9cd2a346b387301cfcd2c4763065ca90978b58077b555e5394172165cc326a71 | 45614 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/86.png | d658498a7c8dc50219d6859c571fd7fe8c879d791f51ebcf491845846db15226 | 44396 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/87.png | 06976ae4ae4ed51d2830d476c2e67885864d7cd0c86cc3b84cc5ec4adfc4596f | 45263 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/88.png | a2d152000df505b082fa73ba29c7ba705409c1a5ae63390eb01f4c4fb1681180 | 41747 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/89.png | 4d3aaed7463ad4858810bff9cb776032d9cf80685d01dfa4de01056aff1331cb | 43123 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/9.png | 67b27d5fb7eac724063ac8fc7fd619a40bcde52369bf77803fd3ecf7d00e5443 | 44698 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/90.png | 048846a15ff79da57c1a6f94db9ff783f56eced56a72963e2bd9d08b09f8f1a5 | 39045 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/91.png | 0a92b977a43ffefbb7ae59bec2140ecc3c3f6106bed877b7564cc1d933892527 | 43381 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/92.png | 501f944cc9f0deadf65ea7a27bc80a999637a8b72d522d5430cf6a03d4bc6ba8 | 39977 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/93.png | a80581c648b98970e75caa9f1d96425cdc44f3bf9b17f58ca0e00b7d9eb809b0 | 39679 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/94.png | 1c2a25451220258f2a38a6842a3d4a052db4d6b670fde8939408b3778fcc5e7d | 45307 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/95.png | 820e6cdb3ac95a2b4387892eedb0be84bd91c0d6d944f1e382183bec2f1e722a | 41472 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/96.png | 09dae79115edd49a2a51ca3f407452e05b55d3580771edc319d97272b266567f | 42324 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/97.png | 81dee289542024ad1baa65924e7973fbcfdea0f3c00b0ea1db4b6152c8cbf750 | 39702 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/98.png | f441f0756c135cb06b351df419687c6b7b6246f5fb5763297bec3e5838ef4944 | 42887 |
+| reference-data/mlbb/heroes/2026-09-09-rone/portraits/99.png | 167dd0eec84ab3fba4b3d51ae861c4062ff3a323989511a5ee8d0059459fe3d1 | 41514 |
+| reference-data/institutions.json | c9e1a8e5fc664a815f813767097258dd9e6f60cb510168286abfbf865e2b3270 | 95537 |
