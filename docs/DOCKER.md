@@ -31,6 +31,8 @@ The OCR toolchain is optional because it is large and requires actual Linux/VPS 
 
 `infra/deployment/compose.application.yaml` adds Nginx, frontend, backend and worker only when explicitly combined with the default/staging Compose file and the `onsite` profile. Its default image names deliberately do not exist, which prevents deployment of unfinished code.
 
-Onsite, after image build and `.env.application` preparation, compose application services with the base infrastructure file. `worker` needs provisioned model and secret mounts. The worker is capped to one OCR concurrency, two CPUs and 4 GiB until actual profiling changes those limits.
+Onsite, after the `staging` release record and `.env.application` preparation, compose application services with the base infrastructure file. `FRONTEND_IMAGE`, `BACKEND_IMAGE` and `WORKER_IMAGE` must each be an already-pulled `repository@sha256:<digest>` reference recorded for that release; commit-SHA tags are not sufficient. `worker` needs provisioned model and secret mounts. The worker is capped to one OCR concurrency, two CPUs and 4 GiB until actual profiling changes those limits.
+
+The application must provide a server-enforced maintenance state before an onsite migration: it rejects new writes, permits only the health/administrative checks needed for release, and waits for active requests and worker leases to drain. This state is an onsite implementation requirement, not a claim that the preparation Compose profile already supplies it.
 
 The separate TLS bootstrap configuration only serves ACME challenges and a 503 response. It does not expose a frontend or backend. Certificate issuance and renewal are operational steps defined in [DevOps](DEVOPS.md).

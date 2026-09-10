@@ -9,7 +9,7 @@ Updated: 2026-09-10. This table reports this repository only; it does not inheri
 | Data design | Prepared | Fresh data dictionary and migration acceptance | SQL, ORM models, Alembic revisions, seeders |
 | Local infrastructure | Prepared and locally health-checked | Isolated Compose Postgres/Redis/MinIO with volumes and health checks | Tables/extensions/buckets/application service |
 | Dependency locks | Prepared | Frontend, blockchain and hash-pinned Python/OCR inputs | Application implementation or runtime models |
-| Azure operations | Prepared specification | Single-VPS target, inactive deployment/TLS configs, rollback/backup runbook | Server, domain, secrets, GitHub workflow, remote mutation |
+| Azure operations | Prepared specification | Protected `staging` default branch; single staging VPS target, digest-pinned release, write-quiescing, rollback/backup runbook | Server, domain, secrets, GitHub deployment workflow, remote deployment mutation |
 | Biometrics/OCR | Contract only | Privacy/failure/review specifications and reference catalog | Models/weights, live inference, provider call |
 | Solana/PayMongo | Contract only | Gates, evidence and failure semantics | PCC signer/program/account/transaction/provider capability |
 | Scrimmage finalizer | Excluded by decision | Immediate atomic result contract | Timer, finalizer job, dual-confirmation policy |
