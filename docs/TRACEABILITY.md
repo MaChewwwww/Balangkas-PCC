@@ -4,7 +4,7 @@ Read together with the self-contained [onsite reconstruction blueprint](screens/
 
 | Requirement | Feature and contract | Screen family | Data family | Acceptance | Work package |
 | --- | --- | --- | --- | --- | --- |
-| FR-AUTH | [Authentication and onboarding](features/authentication-onboarding.md) | authentication-onboarding in screen catalogue | AUTH in data dictionary | AC-AUTH-01..06 | WP-AUTH |
+| FR-AUTH | [Authentication and onboarding](features/authentication-onboarding.md) | authentication-onboarding in screen catalogue | AUTH in data dictionary | AC-AUTH-01..07 | WP-AUTH |
 | FR-IDENT | [Identity, career portfolio and wallet](features/identity-portfolio.md) | identity-portfolio in screen catalogue | IDENT in data dictionary | AC-IDENT-01..12 | WP-IDENT |
 | FR-TEAM | [Teams, rosters and affiliations](features/teams.md) | teams in screen catalogue | TEAM in data dictionary | AC-TEAM-01..06 | WP-TEAM |
 | FR-COMM | [Communities and social activity](features/communities.md) | communities in screen catalogue | COMM in data dictionary | AC-COMM-01..05 | WP-COMM |

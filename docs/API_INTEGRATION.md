@@ -33,7 +33,7 @@ For SOL entry fees, the browser uses the server payment snapshot/instructions an
 
 ## Authentication projections and hackathon demo OTP exception
 
-The current-user projection includes `authentication_mode`, whose only client-visible values are `EMAIL_VERIFIED` and `DEMO_BYPASS`. It may include `email_verified_at` only after actual OTP evidence verifies the email. Account readiness, wallet, biometric, payment, settlement and certificate fields remain governed by their own evidence requirements.
+The current-user projection includes `authentication_mode`, whose only client-visible values are `EMAIL_VERIFIED`, `DEMO_BYPASS`, and development-only `SEED_FIXTURE`. It may include `email_verified_at` only after actual OTP evidence verifies the email. Account readiness, wallet, biometric, payment, settlement and certificate fields remain governed by their own evidence requirements.
 
 For the user-authorized hackathon exception, the server reads `PCC_HACKATHON_DEMO_OTP_CODE`, which must be the committed non-secret value `123456`. It is accepted only when all of the following are true:
 
@@ -42,6 +42,13 @@ For the user-authorized hackathon exception, the server reads `PCC_HACKATHON_DEM
 - `PCC_HACKATHON_DEMO_OTP_ENABLED` is exactly `true`.
 
 The code is rejected as an ordinary invalid code otherwise. A successful bypass creates/returns a clearly classified `DEMO_BYPASS` session and records an `otp.demo_bypass_used` audit event with the account/session reference but never the raw OTP. It does **not** set `email_verified_at`, create email/provider verification evidence, grant a Verified identity presentation, or satisfy biometric, wallet, payment, settlement, credential or certificate requirements. The frontend labels it as demo access rather than a verified identity. Disabling the flag revokes/rejects existing demo-bypass sessions; it does not alter real verified sessions. A missing or altered code configuration leaves the bypass unavailable.
+
+The ignored `.env.accounts` catalog may create a `SEED_FIXTURE` session only in
+exact development mode. It identifies a local synthetic account, never sets
+`email_verified_at` or evidence, and is rejected/revoked outside development.
+The frontend must visibly label this state as a local fixture. It cannot be
+serialized as `EMAIL_VERIFIED`, reused as a staging demo bypass, or treated as
+qualification for wallet, biometric, payment, settlement, or certificate work.
 
 ## Assets and maintenance behavior
 

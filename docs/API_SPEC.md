@@ -39,11 +39,11 @@ See [field and behavior contract](features/authentication-onboarding.md).
 | POST | /auth/register | email, password, real_name | 201 account ID, verification_required |
 | POST | /auth/request-otp | email | 202 generic delivery acknowledgment |
 | POST | /auth/verify-otp | email, code | 200 real email verification or explicitly classified staging demo-bypass state |
-| POST | /auth/login | email, password | 200 session cookie, csrf_token, current user with authentication_mode |
+| POST | /auth/login | email, password | 200 session cookie, csrf_token, current user with authentication_mode; a local catalog account is explicitly `SEED_FIXTURE` only in development |
 | POST | /auth/logout | CSRF header | 204 revoked session |
 | POST | /auth/password-reset | email | 202 generic acknowledgment |
 | POST | /auth/password-reset/complete | token, new_password | 204 reset and revoke sessions |
-| GET | /auth/me | session | 200 user/profile/readiness, csrf_token and authentication_mode |
+| GET | /auth/me | session | 200 user/profile/readiness, csrf_token and authentication_mode; `SEED_FIXTURE` is a development-only local-fixture state |
 | GET | /institutions | q, cursor, limit | 200 matched reference entries |
 | GET | /heroes | q, role, cursor, limit | 200 pinned catalog entries |
 | PUT | /profiles/me | ign, mlbb_user_id, mlbb_zone_id, competitive_rank, primary_role, optional secondary_role, is_student, institution_id, top_hero IDs, visibility, bio | 200 saved profile |

@@ -36,6 +36,23 @@ Shared type/default/nullability rules are in [data dictionary](../DATABASE.md). 
 
 Validate session and resource role before body-driven mutations. Apply field rules before any provider request. Use one transaction for related business records, audit event and outbox entry. Capacity/result/issuance operations lock the aggregate; edits check version. Return 409 for stale or incompatible state and 422 for invalid fields. Provider failures preserve committed intent and expose pending/failed state; never fabricate completion. Idempotent retries return the previous reference. Read views use permission-filtered server projections.
 
+## Local auth fixtures
+
+The future local auth seed reads the ignored `.env.accounts` catalog described
+in [configuration](../CONFIGURATION.md#local-auth-fixture-catalog). It creates
+only the 24 synthetic account identities and development-only fixture markers:
+20 players and four organizers. It must use stable fixture keys,
+validate the complete catalog before one transaction, and make a second run a
+no-op for every recognized fixture. It must fail atomically rather than claim
+success if a fixture key or reserved email conflicts with a non-fixture user.
+
+The catalog deliberately does not create profiles, teams, communities,
+tournaments, matches, providers, wallets, biometrics, payments, certificates,
+or real OTP evidence. Each local login reports `SEED_FIXTURE`, remains visibly
+labeled as a fixture, and never becomes `EMAIL_VERIFIED` merely because it was
+seeded. The expanded four-team tournament simulator belongs to the final
+tournament phase after the relevant features are implemented.
+
 ## Acceptance scenarios
 
 - **AC-AUTH-01:** Duplicate normalized email cannot create two accounts.
@@ -44,6 +61,7 @@ Validate session and resource role before body-driven mutations. Apply field rul
 - **AC-AUTH-04:** Reload restores server-owned profile, not a hardcoded first player.
 - **AC-AUTH-05:** Onboarding preserves a valid join destination but never bypasses eligibility/payment.
 - **AC-AUTH-06:** A completed profile cannot omit or misformat MLBB User ID, four-digit Zone ID, rank or primary role; display labels serialize to the canonical role/rank value and do not imply external account verification.
+- **AC-AUTH-07:** A development-only run of the account catalog creates exactly its 24 synthetic users once; the next identical run makes no changes, and a foreign/reserved-email collision fails atomically without overwriting an account or creating feature data.
 
 ## Onsite completion
 

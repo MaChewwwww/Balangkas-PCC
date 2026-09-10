@@ -16,6 +16,7 @@
 | `PCC_HACKATHON_DEMO_OTP_ENABLED` | API | Explicit boolean allowing the configured demo OTP only when `PCC_ENVIRONMENT=staging`. The preparation template preselects it `true` at the user's direction; true in any other environment stops startup. See [API integration](API_INTEGRATION.md#hackathon-demo-otp-exception). |
 | `PCC_HACKATHON_DEMO_OTP_CODE` | API | Committed non-secret hackathon cheat code, fixed to `123456`. It is read only when the demo flag is enabled in exact staging; it must not be exposed through browser configuration or treated as provider, biometric, wallet, payment, or settlement evidence. Missing or altered values leave the bypass unavailable. |
 | `PCC_MAINTENANCE_ENABLED` | API | Explicit operator-controlled maintenance mode. When true, mutations return the documented maintenance response while authorized reads remain available unless a separate approved quiesce is active. |
+| `PCC_AUTH_SEED_ENABLED`, `PCC_AUTH_SEED_SCHEMA_VERSION`, `PCC_AUTH_SEED_ENVIRONMENT`, `PCC_AUTH_SEED_PASSWORD`, `PCC_AUTH_SEED_ACCOUNT_COUNT`, `PCC_AUTH_SEED_ACCOUNT_01` through `PCC_AUTH_SEED_ACCOUNT_24` | Future local auth-seed command only | Ignored `.env.accounts` catalog for development-only auth fixtures. It is not loaded by Compose or deployed to staging. The command must reject absent/malformed values, any non-development environment, and a schema version it does not understand. See [local auth fixture catalog](#local-auth-fixture-catalog). |
 | `PCC_FACE_MODEL_PATH` | biometric API adapter | Absolute in-container path for the manually provisioned, read-only W600K-R50 artifact. The ignored `.env.application` is populated from `.env.application.example` with `/models/face-recognition/w600k_r50.onnx` for the standard Compose mount. It must resolve to the exact file and SHA-256 in [the face-model record](FACE_RECOGNITION_MODEL.md); absence or a mismatch makes biometric operations explicitly unavailable and cannot create a verification record. It is never exposed to the browser. |
 | `PCC_BIOMETRIC_ENABLED` | biometric API adapter | Explicit safety switch. The preparation template preselects it true as user-approved hackathon scope, but a runtime may use it only when every model, external use-approval record and reviewed Human browser-capture gate validates. Any missing/mismatched gate makes biometric endpoints return `503 INTEGRATION_UNAVAILABLE`. |
 | `PCC_BIOMETRIC_USAGE_APPROVED` | biometric API adapter | The preparation template preselects it true at the user's direction. It is never evidence by itself: an actual runtime also requires the operator-maintained applicable InsightFace model-use entitlement and owner-approval record outside the repository; absent evidence prevents biometric use. |
@@ -55,6 +56,46 @@
 | `PCC_SOLANA_ESCROW_ENABLED`, `SOLANA_ESCROW_PROGRAM_ID` | blockchain prize escrow | Separate exact-true gate plus a fresh canonical base58 program ID whose Devnet deployment/IDL/binary/account-owner/authority evidence is recorded outside Git. A pre-existing external program ID is never configured. |
 | `PCC_SOLANA_CERTIFICATES_ENABLED`, `SOLANA_CERTIFICATE_METADATA_SCHEMA_VERSION`, `SOLANA_METADATA_STORAGE`, `SOLANA_IRYS_URL` | Metaplex Core certificates | Separate exact-true gate plus exact `pcc-certificate-v1` and an approved Devnet permanent-metadata store. Metadata/image upload, public-read, URI/hash validation precede a Core NFT asset write; Token Metadata is not an alternative. |
 | `PCC_SOLANA_OPERATOR_SIGNER_PATH`, `SOLANA_TEAM_CUSTODY_ADDRESS` | worker-only operator/certificate signer | The absolute in-container path resolves only in the worker's read-only secret mount. Its derived Devnet public key must equal the configured TEAM custody address; API/frontend containers never mount or load it. |
+
+## Local auth fixture catalog
+
+Copy `.env.accounts.example` to ignored `.env.accounts` only after onsite
+authentication implementation begins. The tracked example has 24 synthetic,
+reserved-domain identities: 20 `PLAYER` accounts, enough for four later
+five-player rosters, and four `ORGANIZER` accounts. It intentionally creates
+no profile, team, community, tournament, match, wallet, biometric, payment, or
+certificate record. Teams and the comprehensive tournament simulator are a
+separate final-phase seed scope.
+
+Each numbered account has the exact pipe-delimited form
+`fixture_key|email|real_name|role`. The fixture key is a stable, catalog-owned
+identifier; every email must be unique after normalization and end in
+`@auth.seed.balangkas.invalid`. The shared password is a local test credential,
+not a secret or provider credential. The checked-in catalog is a safe CI input;
+the ignored local copy may change that password without being committed.
+
+The future auth-seed command has this contract:
+
+- It runs only when both `PCC_ENVIRONMENT` and `PCC_AUTH_SEED_ENVIRONMENT` are
+  exactly `development` and `PCC_AUTH_SEED_ENABLED` is exactly `true`; it
+  refuses staging and production before opening a write transaction.
+- It validates the complete catalog, including count, sequential record names,
+  allowed roles, reserved-domain emails, and duplicate fixture keys/emails,
+  before changing data. It creates the 24 missing fixture users in one
+  transaction with a unique `fixture_key` and an Argon2id password hash. A
+  successful local fixture login creates the `SEED_FIXTURE` session
+  classification. The seed itself must not create an OTP, session, profile,
+  membership, tournament, result, provider, wallet, or biometric row.
+- A rerun finds each user by `fixture_key`, confirms its immutable catalog
+  identity, and leaves it unchanged. A catalog key mismatch, a reserved email
+  already held by a non-fixture user, or an unexpected fixture identity aborts
+  the whole run with no partial records. Reconciliation does not reset
+  passwords, sessions, or downstream state.
+- Fixture login is local test access only: it never sets `email_verified_at`
+  and never creates email, provider, biometric, wallet, payment, settlement,
+  or certificate evidence. The current-user projection labels it
+  `SEED_FIXTURE`; the frontend must show a local-fixture notice rather than a
+  verified identity state.
 
 ## Configuration hygiene
 

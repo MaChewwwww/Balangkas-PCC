@@ -6,7 +6,7 @@ Updated: 2026-09-11. This table reports this repository only; it does not inheri
 | --- | --- | --- | --- |
 | Product specs | Prepared | Requirements, data/API/feature/screen/acceptance traceability and the bounded local face-model record | Application source, model definitions, migrations and tests |
 | Frontend baseline | Prepared | 41 route compositions, 44 documented interaction actions and 123 UI expectation inventories; checksum-verified CRUD audit of all 41 routes and 10 CRUD workspaces; layout/CRUD/visualization/component blueprint including the procedural HeroShield scene, server-safe dynamic cross-feature breadcrumb context and frontend ownership structure; selective version-pinned shadcn/ui Base UI policy; 51 verified visual assets including local UI fonts, 136 pinned reference-data files and manual-UI-report fast-feedback policy | React/CSS/component source or installed shadcn/ui primitives; automated browser E2E/visual-regression suite |
-| Data design | Prepared | Fresh data dictionary and migration acceptance | SQL, ORM models, Alembic revisions, seeders |
+| Data design | Prepared | Fresh data dictionary, migration acceptance, and a development-only 24-account auth-fixture contract | SQL, ORM models, Alembic revisions, seeders |
 | Backend blueprint | Prepared | Domain/transport/integration/worker ownership, exact browser/API protocol, staging configuration contract and empty target directories | FastAPI source, routers, schemas, domain services, migrations, tests or generated clients |
 | Local infrastructure | Prepared and locally health-checked | Isolated Compose Postgres/Redis/MinIO with volumes and health checks | Tables/extensions/buckets/application service |
 | Dependency locks | Prepared | Frontend, blockchain and hash-pinned Python/OCR inputs, digest-pinned Node/Python dependency-image bases, including `@vladmandic/human` 3.3.6, CPU ONNX Runtime, RF-DETR 1.10.1 and PaddleOCR 3.7.0 | Application implementation; reviewed Human browser assets/capture policy, PaddleOCR recognition assets and all runtime models except the separately ignored W600K-R50 and RF-DETR artifacts |
@@ -22,6 +22,7 @@ Updated: 2026-09-11. This table reports this repository only; it does not inheri
 - No external application source, model definitions, migrations, code-based fixtures, secrets or deployed artifacts transfer. The only model-weight exceptions are the ignored, manually verified W600K-R50 artifact documented in [FACE_RECOGNITION_MODEL.md](FACE_RECOGNITION_MODEL.md) and RF-DETR artifact documented in [MLBB_SCOREBOARD_EXTRACTION.md](MLBB_SCOREBOARD_EXTRACTION.md).
 - Default infrastructure has its own Compose name, volumes and loopback ports.
 - Default Compose cannot start unfinished application services; inactive images are intentionally unavailable.
+- The ignored local `.env.accounts` file and tracked `.env.accounts.example` define only a future repeat-safe, 24-account auth fixture catalog; no seeder, profile, team, tournament, or provider data exists yet.
 - No Vercel configuration or deployment dependency remains.
 
 ## Onsite completion gate

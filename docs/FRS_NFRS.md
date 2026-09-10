@@ -4,7 +4,7 @@
 
 | Requirement | Required capability | Acceptance |
 | --- | --- | --- |
-| FR-AUTH | [Authentication and onboarding](features/authentication-onboarding.md) | AC-AUTH-01 through AC-AUTH-06 |
+| FR-AUTH | [Authentication and onboarding](features/authentication-onboarding.md) | AC-AUTH-01 through AC-AUTH-07 |
 | FR-IDENT | [Identity, career portfolio and wallet](features/identity-portfolio.md) | AC-IDENT-01 through AC-IDENT-12 |
 | FR-TEAM | [Teams, rosters and affiliations](features/teams.md) | AC-TEAM-01 through AC-TEAM-06 |
 | FR-COMM | [Communities and social activity](features/communities.md) | AC-COMM-01 through AC-COMM-05 |

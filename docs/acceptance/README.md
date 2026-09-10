@@ -18,6 +18,7 @@ These are written scenarios, not executable tests. Implement tests onsite with t
 | AC-AUTH-04 | Reload restores server-owned profile, not a hardcoded first player. |
 | AC-AUTH-05 | Onboarding preserves a valid join destination but never bypasses eligibility/payment. |
 | AC-AUTH-06 | Completed onboarding rejects a missing/malformed MLBB User ID, four-digit Zone ID, rank or primary role; display selections serialize to canonical values without asserting game-account verification. |
+| AC-AUTH-07 | The development-only local auth catalog creates exactly 24 synthetic users once; a second identical run is a no-op, while a fixture-key or reserved-email collision fails atomically without overwriting an account or creating profile/team/tournament data. |
 | AC-IDENT-01 | Missing, hash-mismatched or failed face model returns unavailable without writing verification. |
 | AC-IDENT-02 | Same wallet may be linked independently by different verified users; no duplicate-wallet uniqueness constraint. |
 | AC-IDENT-03 | Forged/expired/replayed challenge fails before wallet change. |

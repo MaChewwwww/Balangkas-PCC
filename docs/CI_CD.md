@@ -8,7 +8,7 @@ The Azure VPS is the single hackathon **staging** target. `staging` is the sole 
 
 | Stage | Trigger and scope | Required result | Must not do |
 | --- | --- | --- | --- |
-| CI | Pull request targeting `staging` | Run the focused unit, integration and Vitest checks available after onsite activation; mock external providers | Access staging credentials, publish an image, alter the VPS, or run browser E2E/visual-regression suites |
+| CI | Pull request targeting `staging` | Run the focused unit, integration and Vitest checks available after onsite activation; use `.env.accounts.example` only for disposable auth-fixture tests; mock external providers | Access staging credentials, publish an image, load a developer's ignored account catalog, alter the VPS, or run browser E2E/visual-regression suites |
 | Build and publish | A successful merge into `staging` | Build the frontend, backend and worker images; publish them to the selected registry; record the source commit and immutable digest for each image | Deploy by tag, use a personal token for routine GHCR publishing, or treat a successful build as an authorized rollout |
 | Staging deploy | An authorized, manually dispatched deployment of a successful `staging` release | Verify the recorded commit/digest set, run the [staging release sequence](DEVOPS.md#hackathon-staging-release), and record the outcome | Accept arbitrary image references, deploy a pull request, bypass the deployment lock, or change application source on the VPS |
 
@@ -74,7 +74,7 @@ When application development is explicitly activated, create the workflow files 
 6. On the VPS, acquire `/tmp/balangkas-pcc-deploy.lock`, back up and validate restore, quiesce writes, run migrations before the worker, roll out only the selected digest set, and complete the [DevOps verification sequence](DEVOPS.md#hackathon-staging-release). Preserve the prior known-good digest set for rollback.
 7. Publish a non-secret release outcome: source commit, image digests, migration result, health/HTTPS result, rollback target and operator/time. Never include environment values, key paths, tokens, provider responses, or user data.
 
-Focused unit, API/integration and Vitest checks are appropriate once code exists. Browser E2E and visual-regression automation remain out of scope; use the developer [manual UI report](screens/MANUAL_UI_REPORT.md) for UI verification.
+Focused unit, API/integration and Vitest checks are appropriate once code exists. For auth changes, CI copies the tracked `.env.accounts.example` only into a disposable test environment and proves the catalog's repeat-safe behavior; ignored local account files and staging never enter CI. Browser E2E and visual-regression automation remain out of scope; use the developer [manual UI report](screens/MANUAL_UI_REPORT.md) for UI verification.
 
 ## Onsite setup checklist
 

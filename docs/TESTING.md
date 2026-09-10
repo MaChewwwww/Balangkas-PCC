@@ -28,4 +28,14 @@ Validate Markdown links, YAML parseability, dependency lock consistency, asset m
 
 The immediate scrimmage rule requires concurrent acceptance/result tests: one valid participating leader creates one match, same request is idempotent, and different later request gets a conflict. For biometrics, unit/API integration coverage must prove that the frontend Human capture module rejects zero/multiple faces, refuses an incomplete blink/liveness/anti-spoof gate and does not upload before a real capture report; the backend does not repeat detection/counting or pretend it can verify browser landmark output. Test submitted crop byte/type/pixel/animation rejection, model path/SHA-256 absence or mismatch, model load/inference failure, missing InsightFace entitlement, missing/mismatched reviewed Human asset or capture policy, report package/policy mismatch, server-computed crop-digest binding, expired/replayed/cross-scope challenge attempts, one-use authorization expiry, and concurrent duplicate enrollment. Each failure must make biometric work unavailable or return a generic capture/duplicate result without an enrollment/authorization write or privacy leak. Exercise the CPU ONNX session once with a controlled non-user test tensor and record the non-secret result; no raw face fixture is required. Test the staging demo-OTP boundary explicitly: `123456` is rejected unless its configured value is exact, the staging mode is exact, and the explicit enable flag is true; an accepted bypass creates `DEMO_BYPASS`, does not set `email_verified_at`, and loses access when the flag is disabled. A missing or altered OTP-code configuration must leave the bypass unavailable.
 
+When auth implementation starts, CI and local development must create a
+disposable account catalog from `.env.accounts.example`; they must never load a
+developer's ignored `.env.accounts` or a staging catalog. The seed suite runs
+the catalog twice against a disposable migrated database and proves exactly 24
+unique fixture users (20 `PLAYER`, four `ORGANIZER`), no feature rows, no
+`email_verified_at`, and no duplicate writes on the second run. It also proves
+that malformed records, a non-development environment, or a fixture
+key/reserved-email collision fail before any partial write, and that a
+`SEED_FIXTURE` session is rejected outside development.
+
 No executable test suite is added during preparation. Onsite, add focused unit, API/integration and Vitest checks in proportion to changed behavior. Do not spend hackathon time creating automatic browser E2E or visual-regression suites; satisfy browser/UI coverage through the documented manual developer report, then update [readiness](FOUNDATION_STATUS.md) with actual commands/results.

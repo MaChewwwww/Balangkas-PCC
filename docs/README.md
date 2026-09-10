@@ -11,6 +11,7 @@ This is a code-free preparation baseline. Read [preparation boundary](PREPARATIO
 | [API integration](API_INTEGRATION.md) | Exact browser session, error, retry, asset, maintenance and WebSocket contract |
 | [Backend structure](BACKEND_STRUCTURE.md) | Onsite backend ownership boundaries and empty-folder blueprint |
 | [Configuration](CONFIGURATION.md) | Non-secret runtime configuration names, scope and fail-closed behavior |
+| [Local auth fixture catalog](../.env.accounts.example) | Tracked template for the ignored, development-only 24-account auth seed input |
 | [Solana Devnet readiness](SOLANA.md) | Devnet-only wallet, entry-fee, escrow, Core certificate, signer and evidence contract |
 | [Certificate issuance runbook](runbooks/SOLANA_CERTIFICATE_ISSUANCE.md) | Onsite Devnet-only Core NFT issuance, reconciliation and registry-void procedure |
 | [PayMongo test-mode readiness](PAYMONGO.md) | Test-only Hosted Checkout, webhook/reconciliation and no-funds-transfer boundary |
