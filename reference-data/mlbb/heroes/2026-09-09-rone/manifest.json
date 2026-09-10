@@ -1,0 +1,13 @@
+{
+  "catalog_version": "2026-09-09-rone",
+  "source": {
+    "provider": "Rone Arena API / RoneAI",
+    "repository": "https://github.com/ridwaanhall/rone-arena-api",
+    "catalog_url": "https://arena.rone.dev/api/heroes?size=1000&index=1&order=asc&lang=en",
+    "source_revision": "a116dbdb989d38789ebe7767a13f46fb17a5aa41",
+    "license": "BSD-3-Clause; retain RoneAI and Moonton attribution."
+  },
+  "imported_at": "2026-09-09T14:30:44.177512+00:00",
+  "hero_count": 133,
+  "attribution": "Hero data via Rone Arena API / RoneAI. Mobile Legends: Bang Bang assets and marks belong to Moonton; Balangkas is not affiliated with Moonton."
+}

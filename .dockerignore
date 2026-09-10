@@ -1,0 +1,13 @@
+**
+!frontend/
+!frontend/package.json
+!frontend/pnpm-lock.yaml
+!blockchain/
+!blockchain/package.json
+!blockchain/pnpm-lock.yaml
+!backend/
+!backend/requirements.lock
+!backend/requirements-ocr.lock
+!infra/
+!infra/docker/
+!infra/docker/*Dockerfile

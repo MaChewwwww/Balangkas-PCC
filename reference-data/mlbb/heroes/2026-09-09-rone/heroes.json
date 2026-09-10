@@ -1,0 +1,1069 @@
+{
+  "catalog_version": "2026-09-09-rone",
+  "heroes": [
+    {
+      "hero_id": "1",
+      "name": "Miya",
+      "aliases": [],
+      "portrait_path": "portraits/1.png",
+      "portrait_sha256": "f5fd84408905c82cf4668f5886a4d38581783555c48d5d2e7604f281d1b7995f",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_da894b37bfb5cadb32307f371f31918a.png"
+    },
+    {
+      "hero_id": "2",
+      "name": "Balmond",
+      "aliases": [],
+      "portrait_path": "portraits/2.png",
+      "portrait_sha256": "0881787fe9a951728f25911ab40422ae104946d64b80c131a502620812142b25",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_df9a6990b1946d045e4d3a46c90725cf.png"
+    },
+    {
+      "hero_id": "3",
+      "name": "Saber",
+      "aliases": [],
+      "portrait_path": "portraits/3.png",
+      "portrait_sha256": "da835d7bdf2d9f087814c94b1122272cd128c29f275c6f16b1ab391d01a02861",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_6bbfac806f29d29f17fea9e98d2d2fee.png"
+    },
+    {
+      "hero_id": "4",
+      "name": "Alice",
+      "aliases": [],
+      "portrait_path": "portraits/4.png",
+      "portrait_sha256": "f9c86a1922ac257f86c40650ae62f2c3c2f991a58351d2e2004797d698d5cc69",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_18300163a5a912a84adb52b8d59b4618.png"
+    },
+    {
+      "hero_id": "5",
+      "name": "Nana",
+      "aliases": [],
+      "portrait_path": "portraits/5.png",
+      "portrait_sha256": "461453f7161d35052a0cd439b7bbbfaac45c7d1a11b0f4d2297072116aea6e0c",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_ee1e0d80d87bb614a0c552ef028f85ce.png"
+    },
+    {
+      "hero_id": "6",
+      "name": "Tigreal",
+      "aliases": [],
+      "portrait_path": "portraits/6.png",
+      "portrait_sha256": "425ea4a14c61573b3fa0d6f74377d8a9949ca0ffb53354b30e6375b72f4ddaa2",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_8b30576754be1a4f8bebd09df8d6bec7.png"
+    },
+    {
+      "hero_id": "7",
+      "name": "Alucard",
+      "aliases": [],
+      "portrait_path": "portraits/7.png",
+      "portrait_sha256": "ed8ac6bb6cfeb7e974c5eb323de82b288e26ee823fafbbd0968c116040db8a03",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_0f51b6906e08897aa02330d65b0deeac.png"
+    },
+    {
+      "hero_id": "8",
+      "name": "Karina",
+      "aliases": [],
+      "portrait_path": "portraits/8.png",
+      "portrait_sha256": "808ecee92f2d42343b2fd3a6041344c34cc79d2829ffe8b94a41fa8c233c755c",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_f49394186dc0e55d545da8377be83280.png"
+    },
+    {
+      "hero_id": "9",
+      "name": "Akai",
+      "aliases": [],
+      "portrait_path": "portraits/9.png",
+      "portrait_sha256": "67b27d5fb7eac724063ac8fc7fd619a40bcde52369bf77803fd3ecf7d00e5443",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_28f223447f0174336ff0922d364d81d3.png"
+    },
+    {
+      "hero_id": "10",
+      "name": "Franco",
+      "aliases": [],
+      "portrait_path": "portraits/10.png",
+      "portrait_sha256": "cc913fde38fb6eb722fa4a82536e77c6166110fd46623d7b4a9c28deeeba80c5",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_9bed3c0095335606e0ce616c6e5a8553.png"
+    },
+    {
+      "hero_id": "11",
+      "name": "Bane",
+      "aliases": [],
+      "portrait_path": "portraits/11.png",
+      "portrait_sha256": "3402f4a197993ce31dc92a7a408310f3314a8617e4912aa1e42d79bd9030d50b",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_7e4e74bb161da0f477cc0d1819fa39e6.png"
+    },
+    {
+      "hero_id": "12",
+      "name": "Bruno",
+      "aliases": [],
+      "portrait_path": "portraits/12.png",
+      "portrait_sha256": "c8e86825e6de189fbe58e4bb57298dbfe7e2dadb9d0aab866d54474237b8cdeb",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_ff39deb9c6afec3d977fdbe9d86f78cb.png"
+    },
+    {
+      "hero_id": "13",
+      "name": "Clint",
+      "aliases": [],
+      "portrait_path": "portraits/13.png",
+      "portrait_sha256": "9d3d6f73a353a3f3b6eea515c48f1aa9337beccdac29bc8958addd7df5fed371",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_5a8345c69a4c9c611fdfce91089fe74a.png"
+    },
+    {
+      "hero_id": "14",
+      "name": "Rafaela",
+      "aliases": [],
+      "portrait_path": "portraits/14.png",
+      "portrait_sha256": "018a3915049386233305b85ec37caeb03a7cc7b5b8cc4b78a28e01841975b07c",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_68277dce415742c4a98883151c693a07.png"
+    },
+    {
+      "hero_id": "15",
+      "name": "Eudora",
+      "aliases": [],
+      "portrait_path": "portraits/15.png",
+      "portrait_sha256": "62f620524ed3ee9e0155489961be1bd6161697a659c2c831ef48135ce14b9064",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_87b2a655b254c136dce8976e21935a80.png"
+    },
+    {
+      "hero_id": "16",
+      "name": "Zilong",
+      "aliases": [],
+      "portrait_path": "portraits/16.png",
+      "portrait_sha256": "d0185d85bad6cd4029c9fe4af2816a74ccc92193f2ea326f4643343563024aae",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_9db57da4f0daef6d432676e4f19101ed.png"
+    },
+    {
+      "hero_id": "17",
+      "name": "Fanny",
+      "aliases": [],
+      "portrait_path": "portraits/17.png",
+      "portrait_sha256": "d2a2af5ac4f42a9e84a475cc6ef6c66c63ddac44747121b392342faa11a4370e",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_3391df36d6dcc54dd1c417098e15ec59.png"
+    },
+    {
+      "hero_id": "18",
+      "name": "Layla",
+      "aliases": [],
+      "portrait_path": "portraits/18.png",
+      "portrait_sha256": "43a37b6578a75e6b4a67156fabff39f314f5d4c7e79050c3a32a7d6f75f68f43",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_b2b38e9406ea0de0b866db7674feea0f.png"
+    },
+    {
+      "hero_id": "19",
+      "name": "Minotaur",
+      "aliases": [],
+      "portrait_path": "portraits/19.png",
+      "portrait_sha256": "eef30221ce80aea7eddcbe0f0f778b0cdb713af21165aa51fdf330e282330af6",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_3ecd2c0843df7ec85044dafff6bf4553.png"
+    },
+    {
+      "hero_id": "20",
+      "name": "Lolita",
+      "aliases": [],
+      "portrait_path": "portraits/20.png",
+      "portrait_sha256": "24f73035be588c4dd0852009c6ffbc9ded5673971a0117e273cb8814413f82c2",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_474cea36a4bfdc7bf7d94530853a99b2.png"
+    },
+    {
+      "hero_id": "21",
+      "name": "Hayabusa",
+      "aliases": [],
+      "portrait_path": "portraits/21.png",
+      "portrait_sha256": "f58b026d0efdad26b02bc73917c1273d75f27a7031386d6e0a0bc89e9ec186c4",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_9cc074562291a02644a0ddae28eeaa42.png"
+    },
+    {
+      "hero_id": "22",
+      "name": "Freya",
+      "aliases": [],
+      "portrait_path": "portraits/22.png",
+      "portrait_sha256": "7dd888af870de40f0135beb6c9bd52bd0c3b15230ec979b2b77298f75f169dbc",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_b9c34c88762ca8e66ccd4d84071bf0bc.png"
+    },
+    {
+      "hero_id": "23",
+      "name": "Gord",
+      "aliases": [],
+      "portrait_path": "portraits/23.png",
+      "portrait_sha256": "429dcc9bffb67ec369bbe8846ffc2609ce8c1f670bf21685ccee6399455c41fd",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_9513f5e10ec33f76747732eaf2082259.png"
+    },
+    {
+      "hero_id": "24",
+      "name": "Natalia",
+      "aliases": [],
+      "portrait_path": "portraits/24.png",
+      "portrait_sha256": "82931fab4b88defc1231bbee8aafac9cc97d7145d7f5febb572a62eb9965e9f3",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_fbb5065b6ff174d1a20ccf5b7f523514.png"
+    },
+    {
+      "hero_id": "25",
+      "name": "Kagura",
+      "aliases": [],
+      "portrait_path": "portraits/25.png",
+      "portrait_sha256": "b33d86206fd85d1d64dc71169b55d95ef62fc8dcf8b9bcc8bd8c6148ed179c0b",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_da424b020b8ac8235d64a1b8a09aa749.png"
+    },
+    {
+      "hero_id": "26",
+      "name": "Chou",
+      "aliases": [],
+      "portrait_path": "portraits/26.png",
+      "portrait_sha256": "7fc95ad99c4fd4fa0087f805be4912eacb46fef7cba89a16f9bd1bab9358b51a",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_158209b180032c4564b8f3bde8c48888.png"
+    },
+    {
+      "hero_id": "27",
+      "name": "Sun",
+      "aliases": [],
+      "portrait_path": "portraits/27.png",
+      "portrait_sha256": "5141e48888d3b63f8274141810e3fa19dbc3c586b8f09d2f945beb1713248368",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_117b5cdcc13232157075ce7b7f6177e9.png"
+    },
+    {
+      "hero_id": "28",
+      "name": "Alpha",
+      "aliases": [],
+      "portrait_path": "portraits/28.png",
+      "portrait_sha256": "fe85eaf62d36c18d246aa8a246cfdaf8c6e090bb9023259db840798cc17b199b",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_86c9f91f530727db6498f920d19180d1.png"
+    },
+    {
+      "hero_id": "29",
+      "name": "Ruby",
+      "aliases": [],
+      "portrait_path": "portraits/29.png",
+      "portrait_sha256": "fb42746e7c858709c8554944a4fa53e11ab7e4f266bc740291324eb3f66be573",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_4b96c75b136290576d849309722d4d20.png"
+    },
+    {
+      "hero_id": "30",
+      "name": "Yi Sun-shin",
+      "aliases": [],
+      "portrait_path": "portraits/30.png",
+      "portrait_sha256": "ef4afdb8bae9b457c3829abaeb2d820272a6eb5c7355a5bbe2adcbf9e7345913",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_961378be3f498d42c25b3defd1635ad1.png"
+    },
+    {
+      "hero_id": "31",
+      "name": "Moskov",
+      "aliases": [],
+      "portrait_path": "portraits/31.png",
+      "portrait_sha256": "590354eafc829c0e3752d0c5ccc281bfc5a9333e102033fda9a656e044927ccc",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_a60a866ab6752a7f66766e720da987ea.png"
+    },
+    {
+      "hero_id": "32",
+      "name": "Johnson",
+      "aliases": [],
+      "portrait_path": "portraits/32.png",
+      "portrait_sha256": "33fdee81e03f0ee1b17aff4b952b398c678882f0a2343be301fe9cf107344647",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_85ff988c6660b4d04f8dd3d40df988bb.png"
+    },
+    {
+      "hero_id": "33",
+      "name": "Cyclops",
+      "aliases": [],
+      "portrait_path": "portraits/33.png",
+      "portrait_sha256": "030d1ce1b20a059d0af8a69394bc03b0fe5d74c087ba6581a4bf7d7ce9343c1f",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_68da456f9c01b2f88d29ee320db181ed.png"
+    },
+    {
+      "hero_id": "34",
+      "name": "Estes",
+      "aliases": [],
+      "portrait_path": "portraits/34.png",
+      "portrait_sha256": "19f7cc91e79c6d19a98a307fc3c93161daffeee9497c2607b65aefbb60fdb438",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_ff4de3b0aabd1d2f6e184db1c831f6a9.png"
+    },
+    {
+      "hero_id": "35",
+      "name": "Hilda",
+      "aliases": [],
+      "portrait_path": "portraits/35.png",
+      "portrait_sha256": "4d6800c895a3ab44b05840add7d2ae0673e00a5389d9daabceb027bcbf9c61bf",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_acd700708dc515f5c63a08f8835a9941.png"
+    },
+    {
+      "hero_id": "36",
+      "name": "Aurora",
+      "aliases": [],
+      "portrait_path": "portraits/36.png",
+      "portrait_sha256": "0cf4dad82b47e5b092ae73d7408d5d7d487f3da7848e8b3a6c59904c2efb2647",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_f9b2be0150361018bb98f941b9667c42.png"
+    },
+    {
+      "hero_id": "37",
+      "name": "Lapu-Lapu",
+      "aliases": [],
+      "portrait_path": "portraits/37.png",
+      "portrait_sha256": "8f2ebd3a32306d0325074da7caa12ffc89b80b74a6fb01391e7c8ae62252a3ee",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_28036c4584c914c5aad4d2feeafb2452.png"
+    },
+    {
+      "hero_id": "38",
+      "name": "Vexana",
+      "aliases": [],
+      "portrait_path": "portraits/38.png",
+      "portrait_sha256": "1d62d64f4637b3b73f26d675ca187b914ac7fa794b97e360f211c2484a1eaa40",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_743edd1702084c4ed247908d698bca77.png"
+    },
+    {
+      "hero_id": "39",
+      "name": "Roger",
+      "aliases": [],
+      "portrait_path": "portraits/39.png",
+      "portrait_sha256": "1c484c78ad7365909226caa7eb1d18f4f973dc09cb272b8f25679ac34637bbd4",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_b40e578f13465b3ae99d0a9baac7ecc9.png"
+    },
+    {
+      "hero_id": "40",
+      "name": "Karrie",
+      "aliases": [],
+      "portrait_path": "portraits/40.png",
+      "portrait_sha256": "23231f039f514836b96137855291e09cb9c26d5786f2df04dafae3330a93bb68",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_294576f2bd0dcbcc9041031969d0eb09.png"
+    },
+    {
+      "hero_id": "41",
+      "name": "Gatotkaca",
+      "aliases": [],
+      "portrait_path": "portraits/41.png",
+      "portrait_sha256": "c951f458316ec9e2400b4dfcc7a449763f924be264ec9464716463c13f3f20ed",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_96f9dbbc096e0f0a28f9b9e587d06a9c.png"
+    },
+    {
+      "hero_id": "42",
+      "name": "Harley",
+      "aliases": [],
+      "portrait_path": "portraits/42.png",
+      "portrait_sha256": "cb12d604e235e2301bcbdcec1257bc3e02d3a9e2dff98a1260825e3139964b0b",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_3aa6964c07a70f9b125da447f320e1ac.png"
+    },
+    {
+      "hero_id": "43",
+      "name": "Irithel",
+      "aliases": [],
+      "portrait_path": "portraits/43.png",
+      "portrait_sha256": "c63e9c1fc5efed79e28c33bc8d073d3d915aedb181f40315ad74d96ec386f265",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_a65d1e2ced64fbfdfcefdcfba719b3fd.png"
+    },
+    {
+      "hero_id": "44",
+      "name": "Grock",
+      "aliases": [],
+      "portrait_path": "portraits/44.png",
+      "portrait_sha256": "35b0704cd0ec96c5b9235dfd7462610e942c1b44ea6107311cc24fd9dc9e40c9",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_f8b8c8964d3202b7b762947ac96f1ed3.png"
+    },
+    {
+      "hero_id": "45",
+      "name": "Argus",
+      "aliases": [],
+      "portrait_path": "portraits/45.png",
+      "portrait_sha256": "6c4a9d404ed015d84ff286fa49866a9c98364573c924076141e7d078f77c2aa7",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_0bd96658e5b8ec578226ea1622bd7231.png"
+    },
+    {
+      "hero_id": "46",
+      "name": "Odette",
+      "aliases": [],
+      "portrait_path": "portraits/46.png",
+      "portrait_sha256": "509cbfab05f0cb5814dd7dc4cb4d95aad89d8601b1e47397d51ffdf737c35902",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_d9251718a8894546ba04cfa9ca68dedc.png"
+    },
+    {
+      "hero_id": "47",
+      "name": "Lancelot",
+      "aliases": [],
+      "portrait_path": "portraits/47.png",
+      "portrait_sha256": "5d0fc96499eab0187a15c976a9698d316e992a7541fa90138d362184668e4ea7",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_dc4b821e49b904715172136017798da3.png"
+    },
+    {
+      "hero_id": "48",
+      "name": "Diggie",
+      "aliases": [],
+      "portrait_path": "portraits/48.png",
+      "portrait_sha256": "b4d0a8a8a2f0e1bea18ff751e6e138a61401972c7faa342ea115890f5b727863",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_b1bdf46136cb8a7903dae6d58e8349cb.png"
+    },
+    {
+      "hero_id": "49",
+      "name": "Hylos",
+      "aliases": [],
+      "portrait_path": "portraits/49.png",
+      "portrait_sha256": "ef48f4274bd2f9f854df1378face9f825aef748d4a9049abc2e6d0184ae84c09",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_195ad9af866afaab415ae23a6be13b45.png"
+    },
+    {
+      "hero_id": "50",
+      "name": "Zhask",
+      "aliases": [],
+      "portrait_path": "portraits/50.png",
+      "portrait_sha256": "9cc1e170cf15b22e6b741586963a3085cc6df15def35a16fa3dc5a319b4a5608",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_d8f170087cb2d5b71bb22a0a4664a927.png"
+    },
+    {
+      "hero_id": "51",
+      "name": "Helcurt",
+      "aliases": [],
+      "portrait_path": "portraits/51.png",
+      "portrait_sha256": "2c291ae04293168e12247493b5bffdec98770c26064d06da7ee33aa6cddc2b92",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_6abf0c552b59b8ca4cbc1af3662ef176.png"
+    },
+    {
+      "hero_id": "52",
+      "name": "Pharsa",
+      "aliases": [],
+      "portrait_path": "portraits/52.png",
+      "portrait_sha256": "7f90c71a6e11d0b7add13f50d2555872b5e33cef520127ec4a1169976bd8f4fa",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_10151d43910e62f7aa9ce08df481a20f.png"
+    },
+    {
+      "hero_id": "53",
+      "name": "Lesley",
+      "aliases": [],
+      "portrait_path": "portraits/53.png",
+      "portrait_sha256": "de2c2f6f9f329acf5b0a69846e28d1d1d8c17ec6f5b7a81290b4b1d3a603dc38",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_08770893183018333f54a98e63c41ee3.png"
+    },
+    {
+      "hero_id": "54",
+      "name": "Jawhead",
+      "aliases": [],
+      "portrait_path": "portraits/54.png",
+      "portrait_sha256": "71dac0c20d9fc5fbc2362e729faebd0874e42b28e62c02d820d0c0bb1d77d403",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_bd87c30b6c7de6ae3b5aa56162c48c8b.png"
+    },
+    {
+      "hero_id": "55",
+      "name": "Angela",
+      "aliases": [],
+      "portrait_path": "portraits/55.png",
+      "portrait_sha256": "a896c074e2df1dbd480173de8a0548eb772c2fe34e93f7394ff2cc95219e9794",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_c7e0183956b2c2fd6d3fa0b18fe46917.png"
+    },
+    {
+      "hero_id": "56",
+      "name": "Gusion",
+      "aliases": [],
+      "portrait_path": "portraits/56.png",
+      "portrait_sha256": "1dd3ec37caa67f8429d7b966d88b40b1636fc36f14c36970b778d7f61698a9d6",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_c6cd232de60da5372a7101a203e56554.png"
+    },
+    {
+      "hero_id": "57",
+      "name": "Valir",
+      "aliases": [],
+      "portrait_path": "portraits/57.png",
+      "portrait_sha256": "a53c57f695f3e2a74340f5decea1453cc88fb0e2cea1b6436f20a99459b9ff96",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_bf16690876761b80822df90eb3320d69.png"
+    },
+    {
+      "hero_id": "58",
+      "name": "Martis",
+      "aliases": [],
+      "portrait_path": "portraits/58.png",
+      "portrait_sha256": "53b84eed2bb0b816f43445172b2b87e9659efc437df35e1a40473a14b0944bbe",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_cc8124b0eb6ca22d950b000744d69fbf.png"
+    },
+    {
+      "hero_id": "59",
+      "name": "Uranus",
+      "aliases": [],
+      "portrait_path": "portraits/59.png",
+      "portrait_sha256": "64c15a079071f66e6ca4bae52cfd3c149fc27d2649cc1763c0fb94ae9643451b",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_2e15a0a506aaecd9b3de40a8cc9f7ec7.png"
+    },
+    {
+      "hero_id": "60",
+      "name": "Hanabi",
+      "aliases": [],
+      "portrait_path": "portraits/60.png",
+      "portrait_sha256": "790b54e8ecc8ca9d0ddab06696a4ac03797e3022f2adfbf0405766938433d5b1",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_8a9c1966feb34e85d7bdcc1ed01ffb5d.png"
+    },
+    {
+      "hero_id": "61",
+      "name": "Chang'e",
+      "aliases": [],
+      "portrait_path": "portraits/61.png",
+      "portrait_sha256": "c3370594e28d58bcfae573b6dbd9a734fbd091c8edd2d21bbd0f1a6c1ce5bb07",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_46cfe9c30e8a14f85b4d022496aca274.png"
+    },
+    {
+      "hero_id": "62",
+      "name": "Kaja",
+      "aliases": [],
+      "portrait_path": "portraits/62.png",
+      "portrait_sha256": "c5ac93d8ca281bf2eb2b15cdf948db66173ae991d6cbe2ba888c0c574d2b73a1",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_d558bb881e18a070eaeda1e1fdc248a8.png"
+    },
+    {
+      "hero_id": "63",
+      "name": "Selena",
+      "aliases": [],
+      "portrait_path": "portraits/63.png",
+      "portrait_sha256": "a19ac3b9007f17729e88cb201c40865ed14bfc75d075700b6b161b6899d8ccfe",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_c3f967121519ae40509c5b2fdf52b19d.png"
+    },
+    {
+      "hero_id": "64",
+      "name": "Aldous",
+      "aliases": [],
+      "portrait_path": "portraits/64.png",
+      "portrait_sha256": "06cbf0283bbdee6233af09c646a4cf5deb44c63078ea7d8e6a6102944ae5594e",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_0eb32187d08f14779585a8be53b83f01.png"
+    },
+    {
+      "hero_id": "65",
+      "name": "Claude",
+      "aliases": [],
+      "portrait_path": "portraits/65.png",
+      "portrait_sha256": "bf3338286ae702a7e3c0fcceefe4905145c12c3f2cf374b1505d2f0c9a2fc6ad",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_e1097b9d3e1d5e9f14600d32e8b18acd.png"
+    },
+    {
+      "hero_id": "66",
+      "name": "Vale",
+      "aliases": [],
+      "portrait_path": "portraits/66.png",
+      "portrait_sha256": "8ed4c7caa035d67c1ba5d6ca010842d0fb69532bc2bd6f0a294fbbe5dc68e2e1",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_2a7a8d1531a1c4f8524880413535348d.png"
+    },
+    {
+      "hero_id": "67",
+      "name": "Leomord",
+      "aliases": [],
+      "portrait_path": "portraits/67.png",
+      "portrait_sha256": "ac5078e775776f6cca0d2b00abf9af175046b414fc435cc7dd869f2cc79d01b5",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_554cdf13a7587fe08c5deed60132c61c.png"
+    },
+    {
+      "hero_id": "68",
+      "name": "Lunox",
+      "aliases": [],
+      "portrait_path": "portraits/68.png",
+      "portrait_sha256": "a65b22305dbfd6e035c113ea51b9011ca80f770c3c7b5a231dcf2bc8628339aa",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_e162688afdcaf3f6498af30badfe31c5.png"
+    },
+    {
+      "hero_id": "69",
+      "name": "Hanzo",
+      "aliases": [],
+      "portrait_path": "portraits/69.png",
+      "portrait_sha256": "c683193a88f360e522ddc7994b2825a6bad6ac5db7df2f0b561dbf140dbb3018",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_d2d28d2fcb060726fa27553920ca1a33.png"
+    },
+    {
+      "hero_id": "70",
+      "name": "Belerick",
+      "aliases": [],
+      "portrait_path": "portraits/70.png",
+      "portrait_sha256": "704f51738023deed758caf00256a0c890d577ee1f7f597e575cb2d732a7cbe86",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_5f2a9eca0bafd4ed8dc39a93c771b3af.png"
+    },
+    {
+      "hero_id": "71",
+      "name": "Kimmy",
+      "aliases": [],
+      "portrait_path": "portraits/71.png",
+      "portrait_sha256": "8e6db33b017bac71d8e669f29316907743082d6973ce01ba6cfd45910665589a",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_61295dfefd369004e5e4a7f4fc86647b.png"
+    },
+    {
+      "hero_id": "72",
+      "name": "Thamuz",
+      "aliases": [],
+      "portrait_path": "portraits/72.png",
+      "portrait_sha256": "c46223db96acb95048f6b9a10c2cf676603493f2ddfcdea6ea3867d3803d28ec",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_b5ad55e408b68acf6a86e7ff76f5f569.png"
+    },
+    {
+      "hero_id": "73",
+      "name": "Harith",
+      "aliases": [],
+      "portrait_path": "portraits/73.png",
+      "portrait_sha256": "9a088660c2805385ccbfba96c346ae8f6e47e6542356ec37af853b01b61eb32b",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_d228a823b477fdf6c458c829c2e62bcf.png"
+    },
+    {
+      "hero_id": "74",
+      "name": "Minsitthar",
+      "aliases": [],
+      "portrait_path": "portraits/74.png",
+      "portrait_sha256": "887cb8155790c58cec5d190a4962a57ac08f4a3dd532948f963abb35aa452da0",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_c5d24a1dad6cef21de2698a4ed1d80ce.png"
+    },
+    {
+      "hero_id": "75",
+      "name": "Kadita",
+      "aliases": [],
+      "portrait_path": "portraits/75.png",
+      "portrait_sha256": "cf64aeb7d2959df7752817fc9468ec06ad7e34842a4cede55654649217b9014f",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_42b40ae7741d2eb81148c8f1e1ff614c.png"
+    },
+    {
+      "hero_id": "76",
+      "name": "Faramis",
+      "aliases": [],
+      "portrait_path": "portraits/76.png",
+      "portrait_sha256": "d506f936ff4abf87d174ed5846ed3d31969b9405cbf88f192caf8eff93400639",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_04e575d648d7f7ac1174f4369595c3a2.png"
+    },
+    {
+      "hero_id": "77",
+      "name": "Badang",
+      "aliases": [],
+      "portrait_path": "portraits/77.png",
+      "portrait_sha256": "203f50ccd3895167ba9f7ae15d289408becf64ec0dca30653f91722e4e1581e5",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_9fb1784545a48aef42241fc7a719c575.png"
+    },
+    {
+      "hero_id": "78",
+      "name": "Khufra",
+      "aliases": [],
+      "portrait_path": "portraits/78.png",
+      "portrait_sha256": "20dbd301e5883b6239e26b59fde1ea61201a9ae52effbd57563d0198c12afda0",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_2fe99f4001211d18b3d2b95d0d3dc395.png"
+    },
+    {
+      "hero_id": "79",
+      "name": "Granger",
+      "aliases": [],
+      "portrait_path": "portraits/79.png",
+      "portrait_sha256": "7f3a3bb1122d757e870d024a799a19fe3fa9f9630d19a77bd80e4f6a00befdc3",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_a7729262d5b4abdc34ae5181e964c235.png"
+    },
+    {
+      "hero_id": "80",
+      "name": "Guinevere",
+      "aliases": [],
+      "portrait_path": "portraits/80.png",
+      "portrait_sha256": "9e5ea5edaffdfd1010386b6fe8127aeecc4a2cd926a4379e1a68f49309748861",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_901bdd5d4432a2c0290dfc71df615a5a.png"
+    },
+    {
+      "hero_id": "81",
+      "name": "Esmeralda",
+      "aliases": [],
+      "portrait_path": "portraits/81.png",
+      "portrait_sha256": "4093ec411fd1236930978fb53018019ff8df672d8acadc897d923b3412fcddb6",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_4661a64a2c6b724e7b67032fcbface27.png"
+    },
+    {
+      "hero_id": "82",
+      "name": "Terizla",
+      "aliases": [],
+      "portrait_path": "portraits/82.png",
+      "portrait_sha256": "1cbb801d0ba32febbeeadea55ed961ee9a34f42554200c0c8f08f39b23a45bc9",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_c4bb270c28c7be663f57e993b0d6d3d8.png"
+    },
+    {
+      "hero_id": "83",
+      "name": "X.Borg",
+      "aliases": [],
+      "portrait_path": "portraits/83.png",
+      "portrait_sha256": "e092128f30554e0a577065ae11748f8d13c6824ab1db6ed018a455fd63bab409",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_efe9c7ed8d8f84f1bb0f88a3e08de5fc.png"
+    },
+    {
+      "hero_id": "84",
+      "name": "Ling",
+      "aliases": [],
+      "portrait_path": "portraits/84.png",
+      "portrait_sha256": "9fd868537dd8416d580a569c13fdade6c3cbf486ab5607418967de2e6642d13a",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_017bade52b9fc94bbc12615de6d75c08.png"
+    },
+    {
+      "hero_id": "85",
+      "name": "Dyrroth",
+      "aliases": [],
+      "portrait_path": "portraits/85.png",
+      "portrait_sha256": "9cd2a346b387301cfcd2c4763065ca90978b58077b555e5394172165cc326a71",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_8ec13b59871b2862d773beac2d69fa3e.png"
+    },
+    {
+      "hero_id": "86",
+      "name": "Lylia",
+      "aliases": [],
+      "portrait_path": "portraits/86.png",
+      "portrait_sha256": "d658498a7c8dc50219d6859c571fd7fe8c879d791f51ebcf491845846db15226",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_706573f138055c3df3df94948b4f26bd.png"
+    },
+    {
+      "hero_id": "87",
+      "name": "Baxia",
+      "aliases": [],
+      "portrait_path": "portraits/87.png",
+      "portrait_sha256": "06976ae4ae4ed51d2830d476c2e67885864d7cd0c86cc3b84cc5ec4adfc4596f",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_80e408203869ca99302af195ac4f756c.png"
+    },
+    {
+      "hero_id": "88",
+      "name": "Masha",
+      "aliases": [],
+      "portrait_path": "portraits/88.png",
+      "portrait_sha256": "a2d152000df505b082fa73ba29c7ba705409c1a5ae63390eb01f4c4fb1681180",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_c97a314dc260dfad1311512ddc03f936.png"
+    },
+    {
+      "hero_id": "89",
+      "name": "Wanwan",
+      "aliases": [],
+      "portrait_path": "portraits/89.png",
+      "portrait_sha256": "4d3aaed7463ad4858810bff9cb776032d9cf80685d01dfa4de01056aff1331cb",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_44bfa1dc44deb8d7620605faaa9ffae7.png"
+    },
+    {
+      "hero_id": "90",
+      "name": "Silvanna",
+      "aliases": [],
+      "portrait_path": "portraits/90.png",
+      "portrait_sha256": "048846a15ff79da57c1a6f94db9ff783f56eced56a72963e2bd9d08b09f8f1a5",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_5e7b297af7c6e32a420b897aa4998071.png"
+    },
+    {
+      "hero_id": "91",
+      "name": "Cecilion",
+      "aliases": [],
+      "portrait_path": "portraits/91.png",
+      "portrait_sha256": "0a92b977a43ffefbb7ae59bec2140ecc3c3f6106bed877b7564cc1d933892527",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_045399c265021d47da6512e6de20b64f.png"
+    },
+    {
+      "hero_id": "92",
+      "name": "Carmilla",
+      "aliases": [],
+      "portrait_path": "portraits/92.png",
+      "portrait_sha256": "501f944cc9f0deadf65ea7a27bc80a999637a8b72d522d5430cf6a03d4bc6ba8",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_6fb8f120dafdcbc1b5da2a2667016ad5.png"
+    },
+    {
+      "hero_id": "93",
+      "name": "Atlas",
+      "aliases": [],
+      "portrait_path": "portraits/93.png",
+      "portrait_sha256": "a80581c648b98970e75caa9f1d96425cdc44f3bf9b17f58ca0e00b7d9eb809b0",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_d974ac796678180ff8724b88e192898b.png"
+    },
+    {
+      "hero_id": "94",
+      "name": "Popol and Kupa",
+      "aliases": [],
+      "portrait_path": "portraits/94.png",
+      "portrait_sha256": "1c2a25451220258f2a38a6842a3d4a052db4d6b670fde8939408b3778fcc5e7d",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_1acbb23b9a50f412104047a60eb18808.png"
+    },
+    {
+      "hero_id": "95",
+      "name": "Yu Zhong",
+      "aliases": [],
+      "portrait_path": "portraits/95.png",
+      "portrait_sha256": "820e6cdb3ac95a2b4387892eedb0be84bd91c0d6d944f1e382183bec2f1e722a",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_9823ce4fe5eb89c0082b24f6d5ea67f6.png"
+    },
+    {
+      "hero_id": "96",
+      "name": "Luo Yi",
+      "aliases": [],
+      "portrait_path": "portraits/96.png",
+      "portrait_sha256": "09dae79115edd49a2a51ca3f407452e05b55d3580771edc319d97272b266567f",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_103541726507f5ce102689f04fe215e8.png"
+    },
+    {
+      "hero_id": "97",
+      "name": "Benedetta",
+      "aliases": [],
+      "portrait_path": "portraits/97.png",
+      "portrait_sha256": "81dee289542024ad1baa65924e7973fbcfdea0f3c00b0ea1db4b6152c8cbf750",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_b4a5e537894bdc00787e80e4d3ada5dd.png"
+    },
+    {
+      "hero_id": "98",
+      "name": "Khaleed",
+      "aliases": [],
+      "portrait_path": "portraits/98.png",
+      "portrait_sha256": "f441f0756c135cb06b351df419687c6b7b6246f5fb5763297bec3e5838ef4944",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_540a6a9d343842674ce002082366ec9d.png"
+    },
+    {
+      "hero_id": "99",
+      "name": "Barats",
+      "aliases": [],
+      "portrait_path": "portraits/99.png",
+      "portrait_sha256": "167dd0eec84ab3fba4b3d51ae861c4062ff3a323989511a5ee8d0059459fe3d1",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_6495be044c2d28106e200f6918391d54.png"
+    },
+    {
+      "hero_id": "100",
+      "name": "Brody",
+      "aliases": [],
+      "portrait_path": "portraits/100.png",
+      "portrait_sha256": "05a3c4e49c8723d51afce62c3bfc00955ce9024d20d80f27c2a1a7fd20e3af32",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_f18e45a9a4cb45897e1f614593ff4497.png"
+    },
+    {
+      "hero_id": "101",
+      "name": "Yve",
+      "aliases": [],
+      "portrait_path": "portraits/101.png",
+      "portrait_sha256": "d725b74c4ad5f308d0d23743aace08a7760e2189ad92f73c6ff8cc7c489b97ca",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_d9b0a1d92b1c4b3643d6332fd66aa8e6.png"
+    },
+    {
+      "hero_id": "102",
+      "name": "Mathilda",
+      "aliases": [],
+      "portrait_path": "portraits/102.png",
+      "portrait_sha256": "c0af6d00e876e26bf3813848b1d5d7fc02e8a5484acea92ec784614b6b369246",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_24d08ed788a9f5984bcf3b732ddcaf04.png"
+    },
+    {
+      "hero_id": "103",
+      "name": "Paquito",
+      "aliases": [],
+      "portrait_path": "portraits/103.png",
+      "portrait_sha256": "5fbed745ad7b64759332a1353aa6d2c71bfe06bb8fbf9965a78434670d994f29",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_e2b6d9c6d82b4a27f0bb2710c8ead3e8.png"
+    },
+    {
+      "hero_id": "104",
+      "name": "Gloo",
+      "aliases": [],
+      "portrait_path": "portraits/104.png",
+      "portrait_sha256": "59d089808d96427e96ebef41923325c68f9aa05b84c0ccd067bdf35971551667",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_c472fe0233e5ef84a3ac9ba4a229d09f.png"
+    },
+    {
+      "hero_id": "105",
+      "name": "Beatrix",
+      "aliases": [],
+      "portrait_path": "portraits/105.png",
+      "portrait_sha256": "0081c4429fc5f57d72d5a39b848f5d5802edc7422261ebd172d82a371b396253",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_4687eca874feec9017b448a0b9110d65.png"
+    },
+    {
+      "hero_id": "106",
+      "name": "Phoveus",
+      "aliases": [],
+      "portrait_path": "portraits/106.png",
+      "portrait_sha256": "0742e77c0a3c6df042d12a72a53fb1f369e9cd08e922d0a2cc335ef3e6e9ab47",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_af21c0dd8b5308c27974bff900803a9a.png"
+    },
+    {
+      "hero_id": "107",
+      "name": "Natan",
+      "aliases": [],
+      "portrait_path": "portraits/107.png",
+      "portrait_sha256": "25306d02b93ed0aa193258f24855b9e9cb55bf3af873d11d92acc1d3e4d3c1e3",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_da02742f59013365923b216420bc4082.png"
+    },
+    {
+      "hero_id": "108",
+      "name": "Aulus",
+      "aliases": [],
+      "portrait_path": "portraits/108.png",
+      "portrait_sha256": "606345e53569ad09d82b09a986fbef2bf9bdac7a449c399e131137b86687e2e4",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_1366d775809e52ee6526b5b58d93cdff.png"
+    },
+    {
+      "hero_id": "109",
+      "name": "Aamon",
+      "aliases": [],
+      "portrait_path": "portraits/109.png",
+      "portrait_sha256": "cefcdf290d8bd0f4026e2f70b3df49285193c9cb3bb0fffdc8b38052dea5e51a",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_b3a7602fe7ffd1e54bf8ea79ceadfa72.png"
+    },
+    {
+      "hero_id": "110",
+      "name": "Valentina",
+      "aliases": [],
+      "portrait_path": "portraits/110.png",
+      "portrait_sha256": "87ad41549bde980e641e214f43d9bcaeb45db92bdba2bc947400f63a3ee4cce9",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_24837021ec9d7aaf41b13fa55b6d13c9.png"
+    },
+    {
+      "hero_id": "111",
+      "name": "Edith",
+      "aliases": [],
+      "portrait_path": "portraits/111.png",
+      "portrait_sha256": "d520ff254a2d21c5ff3dad7e5a528f0c099beadcee92f8bc6af9451a482cf02c",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_daab57918de01a6d5bb2ed6f45808a7e.png"
+    },
+    {
+      "hero_id": "112",
+      "name": "Floryn",
+      "aliases": [],
+      "portrait_path": "portraits/112.png",
+      "portrait_sha256": "b193f53b294c12510bd6d3ce5f8f73a0646036354372e6bf4f6ec1987d53e95c",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_5a57b91e4914cf071a3849e352e530a5.png"
+    },
+    {
+      "hero_id": "113",
+      "name": "Yin",
+      "aliases": [],
+      "portrait_path": "portraits/113.png",
+      "portrait_sha256": "6dfbbf7df723e97b98469e413f8c1a52547f34e12ba668eabb8e023f15e676ae",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_ee1c12c84f49514a30e405fb5c617796.png"
+    },
+    {
+      "hero_id": "114",
+      "name": "Melissa",
+      "aliases": [],
+      "portrait_path": "portraits/114.png",
+      "portrait_sha256": "47f2426937f6ccaab87155795189e281c6f788229a6bb20ae3cb0daae5c2fe5b",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_1fa7436301fea3f13fbcd4772051d22d.png"
+    },
+    {
+      "hero_id": "115",
+      "name": "Xavier",
+      "aliases": [],
+      "portrait_path": "portraits/115.png",
+      "portrait_sha256": "50718efffb8718b731ccb8f0d3ebd103a007bb3f1755049b3a9241c8d300ba06",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_df0a8dfc494f85ed9bbc4512cc1e5d3c.png"
+    },
+    {
+      "hero_id": "116",
+      "name": "Julian",
+      "aliases": [],
+      "portrait_path": "portraits/116.png",
+      "portrait_sha256": "a55c8ab8cc91d88b0e7e717c35c65f8331831c01181a1cfd8bf9906882e91c5b",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_5511ddc0ad2789b525f32ef572b017eb.png"
+    },
+    {
+      "hero_id": "117",
+      "name": "Fredrinn",
+      "aliases": [],
+      "portrait_path": "portraits/117.png",
+      "portrait_sha256": "1ec5cd364f87521dda3eab4a21476264ad4dc0fbb2e7cf6493c692ab1a41a000",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_dea170bfd5f26c41fb04e5edf72afedb.png"
+    },
+    {
+      "hero_id": "118",
+      "name": "Joy",
+      "aliases": [],
+      "portrait_path": "portraits/118.png",
+      "portrait_sha256": "909e60d3e44d80440d0f81d7056b4d2fc9ccad077d0694df0e915aff6e0321ff",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_d3a3a55c22000ae78732fed8cba2efef.png"
+    },
+    {
+      "hero_id": "119",
+      "name": "Novaria",
+      "aliases": [],
+      "portrait_path": "portraits/119.png",
+      "portrait_sha256": "b4dca4dba1f6b164edb90ae58c06fc5f523066a99757c5aba5b5432035ebf9f8",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_57eeea6d5bd8d21229de8df79751db9f.png"
+    },
+    {
+      "hero_id": "120",
+      "name": "Arlott",
+      "aliases": [],
+      "portrait_path": "portraits/120.png",
+      "portrait_sha256": "b5305ec107504b6955c1251d4390047ebdade8587a62128de6e9be8c07933de2",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_f666faa5ec6be5353f10dcd1d8997a42.png"
+    },
+    {
+      "hero_id": "121",
+      "name": "Ixia",
+      "aliases": [],
+      "portrait_path": "portraits/121.png",
+      "portrait_sha256": "733199b598c5c8e6f77b9f7691d1a0eb435fd9875bff85834499e9f008abd260",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_f070d82521ecd2e14d4ef3f25880830a.png"
+    },
+    {
+      "hero_id": "122",
+      "name": "Nolan",
+      "aliases": [],
+      "portrait_path": "portraits/122.png",
+      "portrait_sha256": "e5175f69aa1e4bd50880086b92a644e5af95ee5e919559cb039c63f0f6e33aae",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_9012ee9f73fbb4db4e1953e5fb5172e1.png"
+    },
+    {
+      "hero_id": "123",
+      "name": "Cici",
+      "aliases": [],
+      "portrait_path": "portraits/123.png",
+      "portrait_sha256": "9b5b84dec28c36ee692a150bf2a3a46bfaefecae7b78ea98bc7fbca048bc1e6b",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_60e3e11da30f404c77fff9e22d3bdc72.png"
+    },
+    {
+      "hero_id": "124",
+      "name": "Chip",
+      "aliases": [],
+      "portrait_path": "portraits/124.png",
+      "portrait_sha256": "42458086f8ab68d70060ad38c303b12d79331cd622e22ab8c7f4fea30c70fd44",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_79224d297f14377ad2eda8543432330d.png"
+    },
+    {
+      "hero_id": "125",
+      "name": "Zhuxin",
+      "aliases": [],
+      "portrait_path": "portraits/125.png",
+      "portrait_sha256": "1d671a06eb517f9853421dd0be3e12788950b1629b0a5204febb8e1d4f2c8728",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_595f85bc90df3889c711c6b1f02dc02d.png"
+    },
+    {
+      "hero_id": "126",
+      "name": "Suyou",
+      "aliases": [],
+      "portrait_path": "portraits/126.png",
+      "portrait_sha256": "264d1da13f2efe8636b54a3d84a7514fd72717b78a23fbace067f899b7b81a4c",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_5e4ca70172332dde18bb1dc158ccc5c8.png"
+    },
+    {
+      "hero_id": "127",
+      "name": "Lukas",
+      "aliases": [],
+      "portrait_path": "portraits/127.png",
+      "portrait_sha256": "7943ec654dee058161348fc9698c8d2bedb2ed74ed6747fa85cb7eb16752b105",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_63040edd0cf15b815fcbbb8b2d08d7f7.png"
+    },
+    {
+      "hero_id": "128",
+      "name": "Kalea",
+      "aliases": [],
+      "portrait_path": "portraits/128.png",
+      "portrait_sha256": "5d41bee05c37ab87c0aa9bc0c0c0a8938ce3dbb976709f87b8f587bc43069b15",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_4f3d4649e301c76daf20bd8811f3095c.png"
+    },
+    {
+      "hero_id": "129",
+      "name": "Zetian",
+      "aliases": [],
+      "portrait_path": "portraits/129.png",
+      "portrait_sha256": "7b77d49445f591ee53c8f8f0a5bfc91cdd3040c5170182faa08a69394b2ecefc",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_8d965f05f84621a51f799aeb8fb5f4c4.png"
+    },
+    {
+      "hero_id": "130",
+      "name": "Obsidia",
+      "aliases": [],
+      "portrait_path": "portraits/130.png",
+      "portrait_sha256": "657c06eb048f593bdc1a7105a66bbd4cef0817cdf81c00a2ad85ce6b99fe4cc5",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_9c3daef5625bfade5c4cb8a219845dd3.png"
+    },
+    {
+      "hero_id": "131",
+      "name": "Sora",
+      "aliases": [],
+      "portrait_path": "portraits/131.png",
+      "portrait_sha256": "5336e518a7c75d0597a046161ecc52272e187c444e5d27c9207797f2dab2c5c0",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_8143d7bbd4318d7c699908e808de885e.png"
+    },
+    {
+      "hero_id": "132",
+      "name": "Marcel",
+      "aliases": [],
+      "portrait_path": "portraits/132.png",
+      "portrait_sha256": "50788c6fb3de974d59b378a7f5a258d6ae4d2983c47150e93d9834b40edeca31",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_df7603c292198bf4aa7b551d401ea5c1.png"
+    },
+    {
+      "hero_id": "133",
+      "name": "Hirara",
+      "aliases": [],
+      "portrait_path": "portraits/133.png",
+      "portrait_sha256": "6371b10a764537450253341aefd8cb881177d87ba9e9bbb3ae0c97b52e0d167c",
+      "source_portrait_url": "https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_1_88_1205_1/100_71224844b111f09367df00e4f9b97753.png"
+    }
+  ]
+}

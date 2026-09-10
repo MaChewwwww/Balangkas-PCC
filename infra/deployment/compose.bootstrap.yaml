@@ -1,0 +1,11 @@
+services:
+  nginx-bootstrap:
+    profiles: [tls-bootstrap]
+    image: nginx:1.28-alpine
+    ports: ['80:80']
+    environment:
+      PCC_DOMAIN: ${PCC_DOMAIN:-pcc.example.invalid}
+      NGINX_ENVSUBST_FILTER: PCC_DOMAIN
+    volumes:
+      - ./infra/nginx/bootstrap.conf.template:/etc/nginx/templates/default.conf.template:ro
+      - ./certbot/www:/var/www/certbot:ro

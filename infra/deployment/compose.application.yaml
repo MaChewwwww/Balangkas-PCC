@@ -1,0 +1,67 @@
+# Inactive unless explicitly selected with the onsite profile.
+# Relative paths resolve from the FIRST Compose file (repository root).
+services:
+  frontend:
+    profiles: [onsite]
+    image: ${FRONTEND_IMAGE:-pcc-unbuilt-frontend:preparation}
+    pull_policy: never
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: '3000'
+      HOSTNAME: 0.0.0.0
+    expose: ['3000']
+    mem_limit: 768m
+  backend:
+    profiles: [onsite]
+    image: ${BACKEND_IMAGE:-pcc-unbuilt-backend:preparation}
+    pull_policy: never
+    restart: unless-stopped
+    env_file:
+      - path: .env.application
+        required: false
+    expose: ['8000']
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+      minio: {condition: service_healthy}
+    mem_limit: 1g
+  worker:
+    profiles: [onsite]
+    image: ${WORKER_IMAGE:-pcc-unbuilt-worker:preparation}
+    pull_policy: never
+    restart: unless-stopped
+    env_file:
+      - path: .env.application
+        required: false
+    environment:
+      OCR_CONCURRENCY: '1'
+    depends_on:
+      postgres: {condition: service_healthy}
+    volumes:
+      - ./secrets:/run/secrets:ro
+      - ./models:/models:ro
+    mem_limit: 4g
+    cpus: 2
+  nginx:
+    profiles: [onsite]
+    image: nginx:1.28-alpine
+    restart: unless-stopped
+    ports: ['80:80', '443:443']
+    environment:
+      PCC_DOMAIN: ${PCC_DOMAIN:-pcc.example.invalid}
+      NGINX_ENVSUBST_FILTER: PCC_DOMAIN
+    volumes:
+      - ./infra/nginx/application.conf.template:/etc/nginx/templates/default.conf.template:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
+      - ./certbot/www:/var/www/certbot:ro
+    depends_on: [frontend, backend]
+    mem_limit: 128m
+  certbot:
+    profiles: [certificate-maintenance]
+    image: certbot/certbot:v4.0.0
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: [certbot]
+    command: [--version]

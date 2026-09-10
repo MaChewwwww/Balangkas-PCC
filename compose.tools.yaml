@@ -1,0 +1,19 @@
+name: balangkas-pcc-tools
+services:
+  frontend-deps:
+    build:
+      context: .
+      dockerfile: infra/docker/frontend-deps.Dockerfile
+  backend-deps:
+    build:
+      context: .
+      dockerfile: infra/docker/backend-deps.Dockerfile
+  blockchain-deps:
+    build:
+      context: .
+      dockerfile: infra/docker/blockchain-deps.Dockerfile
+  ocr-deps:
+    profiles: [ocr-toolchain]
+    build:
+      context: .
+      dockerfile: infra/docker/ocr-deps.Dockerfile

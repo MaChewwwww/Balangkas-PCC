@@ -1,0 +1,12 @@
+# Separate Linux CPU toolchain; no trained model files downloaded.
+rfdetr==1.10.1
+paddleocr==3.7.0
+paddlepaddle
+numpy>=1.26,<2.4
+PyYAML==6.0.2
+transformers==5.16.1
+huggingface-hub
+torch
+torchvision
+opencv-python-headless
+onnxruntime

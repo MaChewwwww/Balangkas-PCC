@@ -1,0 +1,25 @@
+# Credentials and private runtime state
+.env
+.env.*
+!.env.example
+!.env.*.example
+secrets/
+*.pem
+*.key
+*keypair*.json
+# Generated dependencies and build outputs
+node_modules/
+.venv*/
+__pycache__/
+.pytest_cache/
+.next/
+dist/
+target/
+.artifacts/
+models/
+*.tsbuildinfo
+# Deployment/runtime state
+certbot/
+backups/
+data/
+*.log
