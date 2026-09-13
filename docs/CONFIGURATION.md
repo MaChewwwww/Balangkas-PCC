@@ -70,7 +70,7 @@ separate final-phase seed scope.
 Each numbered account has the exact pipe-delimited form
 `fixture_key|email|real_name|role`. The fixture key is a stable, catalog-owned
 identifier; every email must be unique after normalization and end in
-`@auth.seed.balangkas.invalid`. The shared password is a local test credential,
+`@balangkas.test`. The shared password is a local test credential,
 not a secret or provider credential. The checked-in catalog is a safe CI input;
 the ignored local copy may change that password without being committed.
 

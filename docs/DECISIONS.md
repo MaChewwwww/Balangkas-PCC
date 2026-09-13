@@ -30,6 +30,8 @@
 | ADR-026 | Staging OpenAPI is available by default | The user directs `PCC_OPENAPI_EXPOSED=true` for hackathon staging. The published contract must remain free of secrets, private examples, internal host paths, provider diagnostics and non-public schemas; a malformed value stops startup. |
 | ADR-027 | Development-only idempotent auth fixture catalog | `.env.accounts` is ignored local configuration with a committed `.env.accounts.example` for 24 synthetic identities: 20 players and four organizers. Onsite auth code may create only catalog-owned users with stable fixture keys and clearly classified `SEED_FIXTURE` sessions after full validation in one transaction. A matching rerun is a no-op; a foreign key/email conflict aborts without change. It never creates profiles, teams, tournament data, provider evidence, biometrics, wallets, payments or certificates, and it is rejected outside development. The comprehensive four-team tournament simulator is deferred until the final tournament phase. |
 
+| ADR-028 | Automatic staging deployment after approved PR merge | On 2026-09-14, the user replaced the manual staging rollout policy: after onsite activation, each approved PR merged into `staging` triggers merged-commit checks, publication of all three digest-pinned images, and automatic VPS deployment after those prerequisites succeed. No separate manual dispatch or release window is required. PR-only runs cannot deploy; failed checks/builds block rollout. Preserve deployment serialization, stale-release protection, backups, migrations, health verification and explicit recovery. See [CI/CD](CI_CD.md) and [DevOps](DEVOPS.md). This delivery-policy decision does not activate application development or perform a preparation-phase deployment. |
+
 ## PCC design safeguards
 
 | Safeguard | PCC target |
@@ -44,4 +46,4 @@
 
 ## Unresolved external facts
 
-VPS hostname/capacity and provider entitlements are not yet supplied. They are deployment prerequisites, not reasons to omit specifications. No official event-rule compliance certification is implied. Team/event timing comes from the user's accepted schedule.
+Staging VPS network identity and capacity are resolved: Azure FQDN `balangkas-pcc.malaysiawest.cloudapp.azure.com` (IP `172.197.219.24` in `malaysiawest`), 2 vCPU, 8 GiB RAM, deploy directory `/opt/balangkas-pcc`. External provider entitlements and live keys are authenticated per deployment task. No official event-rule compliance certification is implied. Team/event timing comes from the user's accepted schedule.

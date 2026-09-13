@@ -11,7 +11,7 @@ scope; a missed checkpoint is reported with its remaining work.
 | Order | Objective | Scope and exit condition |
 | --- | --- | --- |
 | 1 | Release the preparation gate | Confirm preparation checks, approved assets/reference data, environment templates, specifications, ownership, and the explicit onsite activation record. No application implementation is released by this gate. |
-| 2 | Establish CI/CD | After onsite authorization, create and exercise the specified pull-request CI, image-build, and manual staging-deploy flow in [CI/CD readiness](CI_CD.md). CI must be usable before feature work is called done; it does not deploy a feature automatically. |
+| 2 | Establish CI/CD | After onsite authorization, create and exercise the specified pull-request CI, image-build, and automatic staging-deploy flow in [CI/CD readiness](CI_CD.md). CI must be usable before feature work is called done; successful merged-commit checks and image publication automatically trigger staging deployment. |
 | 3 | Scaffold the complete application shape | Recreate the complete frontend layout, route shells, design tokens, and shared interaction patterns. Create the backend's thin module, transport, and configuration pattern only; do not overbuild feature domain logic that Robert will implement as full-stack slices. |
 
 ## Delivery cycles

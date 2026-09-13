@@ -4,11 +4,11 @@
 
 One Azure VPS runs Nginx, the connected Next.js client, FastAPI, worker, PostgreSQL/pgvector, Redis and MinIO in Compose. Only Nginx exposes 80/443. SSH is restricted to operators; database, Redis and MinIO stay private. This is a single failure domain, not high availability.
 
-The VPS hostname, sizing and network identity remain unset. Do not reuse externally supplied host credentials, deploy directories, GitHub secrets, TLS files or Devnet identities. Provision them only in an authorized deployment task.
+The staging VPS network identity is configured with Azure DNS FQDN `balangkas-pcc.malaysiawest.cloudapp.azure.com` (Azure Public IP `172.197.219.24` in region `malaysiawest`), deployment user `deploy` (port 22), and deployment directory `/opt/balangkas-pcc`. Do not reuse externally supplied host credentials, GitHub secrets, TLS files or Devnet identities. Provision them only in an authorized deployment task.
 
 ## Hackathon staging release
 
-The Azure VPS is the sole hackathon **staging** environment. `staging` is the integration and deployment branch; this project has no `main` promotion or separate production environment. A release begins only from an approved PR merged into `staging` and an authorized release window.
+The Azure VPS is the sole hackathon **staging** environment. `staging` is the integration and deployment branch; this project has no `main` promotion or separate production environment. A release begins only from an approved PR merged into `staging` with automatic deployment after required checks and image publishing succeed, as defined in [CI/CD readiness](CI_CD.md). No separate release window or manual dispatch is required for normal delivery.
 
 1. Build and test the merged `staging` commit. Publish frontend, backend and worker images, then record the source commit and each image's repository digest in a release record.
 2. Prepare the ignored deployment environment with image references in `repository@sha256:<digest>` form. A commit-SHA tag may aid discovery, but it is not a deployable identity. Verify every resolved reference matches the release record and retain the prior known-good digest set. If a release image is private on `ghcr.io`, set `GITHUB_USERNAME` to the account with package-read access and `GITHUB_PAT` to a GitHub **classic** PAT limited to `read:packages`; use it only for `docker login` on the VPS. It is not a Compose or application variable, build argument, release-record value or log field. Public GHCR images and non-GHCR registries do not require these variables. GitHub documents `read:packages` as the pull scope and the Docker `--password-stdin` login flow in its [Container registry guidance](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry).
@@ -20,7 +20,7 @@ The Azure VPS is the sole hackathon **staging** environment. `staging` is the in
 7. Recreate frontend/backend, confirm their health and migration compatibility, then recreate the worker after its dependent schema/configuration check passes. Nginx is reloaded last, after upstream health endpoints pass.
 8. Verify HTTPS, `/api/health`, public route, authenticated route, database migration head, worker logs and the running image digests. Reopen writes only after these checks pass; record the outcome against the release record.
 
-Do not perform application code edits or Git commits on the server. CI/CD automation may execute this sequence only after the application exists and an authorized deploy workflow is created. The preparation repository has no active deployment workflow; see the [CI/CD readiness contract](CI_CD.md) for the required GitHub Environment, credential boundary and manual-deploy design.
+Do not perform application code edits, Git pulls or Git commits on the server. CI/CD automation may execute this sequence only after the application exists and an authorized deploy workflow is created. The preparation repository has no active deployment workflow; see the [CI/CD readiness contract](CI_CD.md) for the required GitHub Environment, credential boundary and automatic deployment after merge.
 
 ## Backup and recovery
 

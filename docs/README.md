@@ -26,7 +26,7 @@ This is a code-free preparation baseline. Read [preparation boundary](PREPARATIO
 | [Storage and jobs](STORAGE_JOBS.md) | Object, worker and real-time behavior |
 | [Docker](DOCKER.md) | Local infrastructure and inactive application profiles |
 | [DevOps](DEVOPS.md) | Single-VPS rollout, backup and rollback |
-| [CI/CD readiness](CI_CD.md) | GitHub Environment, secret/variable, image and manual staging-deploy contract |
+| [CI/CD readiness](CI_CD.md) | GitHub Environment, secret/variable, image and automatic staging-deploy contract |
 | [Testing](TESTING.md) | Preparation and onsite validation |
 | [Design](DESIGN.md) | Public/portal visual and interaction preservation |
 | [Decision log](DECISIONS.md) | Accepted PCC choices and design safeguards |

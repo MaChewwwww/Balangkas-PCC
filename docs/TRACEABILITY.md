@@ -17,3 +17,5 @@ Read together with the self-contained [onsite reconstruction blueprint](screens/
 | FR-NOTIFY | [Notifications and activity](features/notifications-activity.md) | notifications-activity in screen catalogue | NOTIFY in data dictionary | AC-NOTIFY-01..05 | WP-NOTIFY |
 | FR-PUBLIC | [Public discovery and information](features/public-discovery.md) | public-discovery in screen catalogue | PUBLIC in data dictionary | AC-PUBLIC-01..05 | WP-PUBLIC |
 | NFR-02/NFR-08 | [Cross-feature breadcrumb context](screens/BREADCRUMB_CONTEXT.md) and shared [API protocol](API_SPEC.md#shared-protocol) | all context-capable portal details | permission-filtered detail projections only | AC-NAV-01..03 | every affected portal work package |
+
+Delivery decision ADR-028 maps to the [CI/CD contract](CI_CD.md), [VPS release sequence](DEVOPS.md#hackathon-staging-release), [onsite delivery acceptance AC-DELIVERY-01..03](TESTING.md#onsite-delivery-acceptance), and [operations readiness](FOUNDATION_STATUS.md). Workflow implementation remains onsite work.

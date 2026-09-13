@@ -1,24 +1,24 @@
 # CI/CD readiness contract
 
-**Status: preparation definition only.** No GitHub Environment, Actions workflow, repository/environment secret or variable, runner, registry image, or VPS release is created by this document. Configure the items below only after explicit onsite authorization to develop and deploy.
+**Status: preparation definition and staging environment configured.** The GitHub `staging` Environment, branch restriction to `staging`, connection secrets (`STAGING_SSH_PRIVATE_KEY`, `STAGING_SSH_KNOWN_HOSTS`, `STAGING_GHCR_PULL_TOKEN`), and variables (`STAGING_SSH_HOST`, `STAGING_SSH_USER`, `STAGING_SSH_PORT`, `STAGING_DEPLOY_DIRECTORY`, `STAGING_PUBLIC_ORIGIN`, `GHCR_USERNAME`) are configured for `MaChewwwww/Balangkas-PCC`. Actions workflows, image builds, and releases remain held at the preparation gate until explicit onsite authorization to develop and deploy.
 
-The Azure VPS is the single hackathon **staging** target. `staging` is the sole integration and release branch: there is no `main` promotion, production environment, or automatic deployment on pull-request merge.
+The Azure VPS is the single hackathon **staging** target. `staging` is the sole integration and release branch: there is no `main` promotion or production environment. After onsite activation, merging an approved PR into `staging` automatically starts checks, image publishing and deployment to the VPS; no separate deploy click is required.
 
 ## Delivery model
 
 | Stage | Trigger and scope | Required result | Must not do |
 | --- | --- | --- | --- |
 | CI | Pull request targeting `staging` | Run the focused unit, integration and Vitest checks available after onsite activation; use `.env.accounts.example` only for disposable auth-fixture tests; mock external providers | Access staging credentials, publish an image, load a developer's ignored account catalog, alter the VPS, or run browser E2E/visual-regression suites |
-| Build and publish | A successful merge into `staging` | Build the frontend, backend and worker images; publish them to the selected registry; record the source commit and immutable digest for each image | Deploy by tag, use a personal token for routine GHCR publishing, or treat a successful build as an authorized rollout |
-| Staging deploy | An authorized, manually dispatched deployment of a successful `staging` release | Verify the recorded commit/digest set, run the [staging release sequence](DEVOPS.md#hackathon-staging-release), and record the outcome | Accept arbitrary image references, deploy a pull request, bypass the deployment lock, or change application source on the VPS |
+| Build and publish | A push to `staging` resulting from an approved PR merge, after checks pass on that exact commit | Build the frontend, backend and worker images; publish them to the selected registry; record the source commit and immutable digest for each image | Deploy by tag, use a personal token for routine GHCR publishing, or deploy before all required checks and image publications succeed |
+| Staging deploy | Automatically after the same merged `staging` commit passes required checks and all three images are published | Verify the recorded commit/digest set, run the [staging release sequence](DEVOPS.md#hackathon-staging-release), and record the outcome | Accept arbitrary image references, deploy a pull request, bypass the deployment lock, or change application source on the VPS |
 
-The deploy workflow is deliberately manual (`workflow_dispatch`) so the team can choose when a hackathon build reaches the VPS. Direct, authorized SSH maintenance remains valid for urgent work, but follows the same digest, backup, write-quiescing, lock, verification and release-record rules through the [staging-maintenance skill](../.agents/skills/staging-maintenance/SKILL.md).
+The approved PR merge is the rollout trigger. The release workflow uses a push to `staging`, with deployment dependent on successful checks and image publishing in that run. Opening or updating a PR, closing it without merging, or a failed check/build never deploys. `workflow_dispatch` is not required for normal delivery. Direct, authorized SSH maintenance remains valid for urgent work, but follows the same digest, backup, write-quiescing, lock, verification and release-record rules through the [staging-maintenance skill](../.agents/skills/staging-maintenance/SKILL.md).
 
 ## GitHub Environment
 
 Create one GitHub Environment named `staging` during onsite setup. Restrict deployment branches to the exact `staging` branch. Do not create `development`, `production`, or `main` environments for this hackathon.
 
-For speed, the default is no required reviewer and no wait timer. The deploy is still an intentional human action because it is manually dispatched; only repository maintainers with deployment authority may run it. If the team later enables a protection rule, the job must use the `staging` Environment so its secrets remain unavailable until that rule passes. GitHub Environments and their secrets for a private repository require a plan that supports them; confirm this before relying on the pipeline. [GitHub's Environment documentation](https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments) defines the availability and branch/protection behavior.
+For speed, the default is no required reviewer and no wait timer. Approval and merge of the PR are the human release decision; normal delivery has no additional manual approval step. If the team later enables a protection rule, the job must use the `staging` Environment so its secrets remain unavailable until that rule passes. GitHub Environments and their secrets for a private repository require a plan that supports them; confirm this before relying on the pipeline. [GitHub's Environment documentation](https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments) defines the availability and branch/protection behavior.
 
 Set the Environment URL only after the real HTTPS public origin exists. It is a navigation aid, not an authority or substitute for the workflow health check.
 
@@ -68,11 +68,11 @@ When application development is explicitly activated, create the workflow files 
 
 1. Pin every third-party GitHub Action to a full commit SHA and give each job the smallest explicit permission set.
 2. Keep CI, image publishing and deploy jobs separate. Only the deploy job references the `staging` Environment or SSH/GHCR-pull secrets.
-3. Build images from the exact merged `staging` commit. Record the commit plus all three resolved registry digests before a deployment becomes selectable.
-4. Make the deploy workflow manual and reject any ref other than `staging`. It may select only a successful recorded release; it must not take free-form image tags or digests as user input.
+3. Build images from the exact merged `staging` commit. Record the commit plus all three resolved registry digests before its dependent deploy job can start.
+4. Automatically run the deploy job after successful merged-commit checks and publication of all three images in the same release workflow; reject any ref other than `staging`. Consume only that run's recorded commit/digest set, never free-form image inputs. Serialize staging deployments without cancelling an in-progress deployment. Under the VPS lock, reject a stale release that would replace a newer deployed commit; a queued release superseded by a newer staging head may be skipped. Rollbacks remain explicit operator recovery actions.
 5. Before connecting, install the pinned SSH known-hosts record and the temporary restricted PEM file. Do not print, transform, upload as an artifact, or persist either secret. For a private GHCR pull, relay the token only to `docker login --password-stdin` on the authenticated VPS session.
 6. On the VPS, acquire `/tmp/balangkas-pcc-deploy.lock`, back up and validate restore, quiesce writes, run migrations before the worker, roll out only the selected digest set, and complete the [DevOps verification sequence](DEVOPS.md#hackathon-staging-release). Preserve the prior known-good digest set for rollback.
-7. Publish a non-secret release outcome: source commit, image digests, migration result, health/HTTPS result, rollback target and operator/time. Never include environment values, key paths, tokens, provider responses, or user data.
+7. Publish a non-secret release outcome: source commit, image digests, migration result, health/HTTPS result, rollback target, triggering actor, workflow run and time. Never include environment values, key paths, tokens, provider responses, or user data.
 
 Focused unit, API/integration and Vitest checks are appropriate once code exists. For auth changes, CI copies the tracked `.env.accounts.example` only into a disposable test environment and proves the catalog's repeat-safe behavior; ignored local account files and staging never enter CI. Browser E2E and visual-regression automation remain out of scope; use the developer [manual UI report](screens/MANUAL_UI_REPORT.md) for UI verification.
 
@@ -81,9 +81,9 @@ Focused unit, API/integration and Vitest checks are appropriate once code exists
 1. Confirm explicit onsite development/deployment authorization and record activation as required by [the preparation boundary](PREPARATION.md).
 2. Confirm that the repository's GitHub plan supports private-repository Environments. Create and branch-restrict `staging` before creating a deploy workflow.
 3. Provision a fresh, restricted VPS deployment account and SSH key; obtain and verify the VPS host key out of band. Add the required Environment secrets and non-secret variables above without echoing their values.
-4. Create the build and deploy workflows only after the application and image definitions exist. Test CI on a pull request first; then build one `staging` release, record its exact digests, and manually deploy it.
+4. Create the build and deploy workflows only after the application and image definitions exist. Test CI on a pull request first; then build one `staging` release, record its exact digests, and verify that its dependent deployment starts automatically without a manual dispatch.
 5. Verify HTTPS, `/api/health`, a public route, an authenticated route, migrations, worker state and running image digests. Record the manual UI report and release outcome. Rehearse the documented digest rollback and backup restore before relying on the pipeline.
 
 ## Current preparation boundary
 
-This repository intentionally contains no Actions workflow and no configured GitHub Environment. The contract does not authorize creation of remote secrets, registry packages, VPS users, SSH keys, DNS/TLS settings, or deployments. Those are separate, explicitly authorized onsite tasks.
+The GitHub `staging` Environment, branch restriction to `staging`, and CI/CD secrets and variables are now provisioned. Actions workflow files and automated releases remain intentionally excluded during preparation. Creating workflows, building images, and performing releases are separate, explicitly authorized onsite tasks.

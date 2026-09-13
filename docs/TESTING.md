@@ -39,3 +39,11 @@ key/reserved-email collision fail before any partial write, and that a
 `SEED_FIXTURE` session is rejected outside development.
 
 No executable test suite is added during preparation. Onsite, add focused unit, API/integration and Vitest checks in proportion to changed behavior. Do not spend hackathon time creating automatic browser E2E or visual-regression suites; satisfy browser/UI coverage through the documented manual developer report, then update [readiness](FOUNDATION_STATUS.md) with actual commands/results.
+
+## Onsite delivery acceptance
+
+- AC-DELIVERY-01: Opening/updating a PR to `staging` runs CI without publishing images or accessing the VPS; closing an unmerged PR never deploys.
+- AC-DELIVERY-02: Merging an approved PR runs required checks against the merged commit, publishes all three images and automatically deploys exactly their recorded digests without a manual dispatch. Failed checks or image publication prevent deployment.
+- AC-DELIVERY-03: Overlapping releases cannot deploy concurrently or replace a newer deployed commit with a stale one. An active deployment is not cancelled by a later merge. Migration or health failure records a failed release and follows the write-quiescing and recovery rules in [DevOps](DEVOPS.md).
+
+These are onsite acceptance scenarios, not executable preparation tests. See ADR-028 in [Decisions](DECISIONS.md) and the authoritative [delivery contract](CI_CD.md).
