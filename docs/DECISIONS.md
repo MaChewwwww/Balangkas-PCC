@@ -32,6 +32,10 @@
 
 | ADR-028 | Automatic staging deployment after approved PR merge | On 2026-09-14, the user replaced the manual staging rollout policy: after onsite activation, each approved PR merged into `staging` triggers merged-commit checks, publication of all three digest-pinned images, and automatic VPS deployment after those prerequisites succeed. No separate manual dispatch or release window is required. PR-only runs cannot deploy; failed checks/builds block rollout. Preserve deployment serialization, stale-release protection, backups, migrations, health verification and explicit recovery. See [CI/CD](CI_CD.md) and [DevOps](DEVOPS.md). This delivery-policy decision does not activate application development or perform a preparation-phase deployment. |
 
+## CRUD-first delivery decision
+
+ADR-029 — On 2026-09-14, the user explicitly directed Robert to develop CRUD without face requirements first and revise affected modules later. This authorizes an onsite CRUD-first development pass followed by biometric integration and acceptance. It does not activate application coding now or remove biometrics from final requirements. Early domain development checks are CRUD evidence only; they never establish verified identity, wallet or provider evidence. Incomplete gated operations remain unavailable in staging. John owns the biometric capability; Robert retrofits its consumers, and Charlene reruns affected acceptance before final completion. See the [timeline](PROJECT_TIMELINE.md) and [execution board](HACKATHON_EXECUTION.md).
+
 ## PCC design safeguards
 
 | Safeguard | PCC target |

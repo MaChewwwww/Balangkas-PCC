@@ -47,6 +47,10 @@ Validate session and resource role before body-driven mutations. Apply field rul
 - **AC-TOURN-05:** Withdrawal is retained in history and cannot silently refund a payment.
 - **AC-TOURN-06:** Create/edit presents registration deadline, eligibility and conditional institution selection, plus requirements and conditional prompt in the existing operations form; missing or stale values cannot be replaced by descriptive text or a client-created lifecycle state.
 
+## Onsite delivery sequence
+
+Per ADR-029, Robert develops CRUD first without waiting for face requirements, then revises affected operations during the biometric integration pass. Early CRUD checks do not establish final verification or gated-journey acceptance. The final contracts above remain required. Track both milestones and the retrofit checks in the [execution board](../HACKATHON_EXECUTION.md).
+
 ## Onsite completion
 
 Implement the specified persistence and routes, bind the approved screen behavior to these contracts, add unit and integration tests for the scenarios above, and verify UI empty/error/loading/success states. Completion requires server evidence; local fixtures do not satisfy it. See [traceability](../TRACEABILITY.md).

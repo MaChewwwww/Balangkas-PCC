@@ -56,6 +56,10 @@ The backend validates the approved InsightFace model identity, use approval, rev
 - **AC-IDENT-11:** An enrollment retains only the embedding, consent and approved model/preprocessing/Human-capture-policy identities; no raw capture, detector output or browser report is persisted.
 - **AC-IDENT-12:** A wallet signature is accepted only once for the exact stored Solana Devnet challenge/user/address/origin/purpose; a signature for another chain, cluster, address, message, user, action, or expiry creates no wallet change.
 
+## Onsite delivery sequence
+
+Per ADR-029, Robert develops CRUD first without waiting for face requirements, then revises affected operations during the biometric integration pass. Early CRUD checks do not establish final verification or gated-journey acceptance. The final contracts above remain required. Track both milestones and the retrofit checks in the [execution board](../HACKATHON_EXECUTION.md).
+
 ## Onsite completion
 
 Implement the specified persistence and routes, bind the approved screen behavior to these contracts, add unit and integration tests for the scenarios above, and verify UI empty/error/loading/success states. Completion requires server evidence; local fixtures do not satisfy it. See [traceability](../TRACEABILITY.md).

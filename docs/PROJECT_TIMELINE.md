@@ -23,8 +23,8 @@ or substitutes fixture data for an accepted feature result.
 | Cycle | John | Robert | Design | QA / release checkpoint |
 | --- | --- | --- | --- | --- |
 | 1 | Build the Solana backend and infrastructure foundations, retaining the Devnet-only signer, evidence, and unavailable-state gates. | Deliver the first full-stack slices: Authentication and Community. | Aliah improves the landing page while the first feature slices are assembled. | Charlene tests each completed slice as it lands, using CI plus its focused acceptance/manual UI evidence before the slice is handed off. |
-| 2 | Build the MLBB match-extraction backend with its bounded local review flow. | Move to the Teams feature as the next full-stack slice. | Aya fine-tunes the design of Robert's completed Cycle 1 work. | Charlene validates the Team and completed extraction-facing states as they become testable; incomplete provider/model behavior stays visibly unavailable or pending. |
-| 3 and onward | Take the next dependency-ordered backend/infrastructure capability. | Take the next dependency-ordered full-stack feature. | Aya refines the prior completed feature cycle; Aliah continues landing-page ownership when that work is active. | Charlene tests every newly completed feature before the next feature is considered ready for integration or staging release. |
+| 2 | Build the MLBB match-extraction backend with its bounded local review flow. | Move to the Teams feature as the next full-stack slice. | Aliah fine-tunes the design of Robert's completed Cycle 1 work. | Charlene validates the Team and completed extraction-facing states as they become testable; incomplete provider/model behavior stays visibly unavailable or pending. |
+| 3 and onward | Take the next dependency-ordered backend/infrastructure capability. | Take the next dependency-ordered full-stack feature. | Aliah refines the prior completed feature cycle; Aliah continues landing-page ownership when that work is active. | Charlene tests every newly completed feature before the next feature is considered ready for integration or staging release. |
 
 Robert's subsequent slices proceed through the remaining required modules in
 dependency order, including tournament operations, match/history, scrimmages,
@@ -49,15 +49,25 @@ not become a substitute for live provider or chain evidence.
 
 ## Face recognition and completion rules
 
-Face recognition is deliberately last. The team first stabilizes ordinary
-authentication, profile, team, tournament, and match testing so biometric
-dependencies cannot block the main feature flow. Its final implementation must
-still satisfy the recorded browser capture, local model, privacy, exact
-duplicate-decision, unavailable-state, and acceptance requirements; it is not
-optional or replaced with a success mock.
+Per ADR-029, Robert develops and tests CRUD first without waiting for face
+recognition. Ordinary authentication, profile, team, tournament and match
+persistence, forms and actions are the first delivery pass. Biometric
+enforcement is added to affected modules in a later integration pass, with John
+owning the biometric capability and Robert connecting its consumers. Early
+development checks may exercise the unfinished domain flow independently of
+the face gate; they are recorded as CRUD evidence only. They cannot establish
+verified identity, a verified wallet or final gated-journey acceptance.
 
-A completed slice has persistence/migrations where needed, session-bound
+Face recognition remains required. The final pass must satisfy the browser
+capture, local model, privacy, exact duplicate-decision, unavailable-state and
+acceptance contracts. An incomplete gated path is not eligible for staging
+release as a working bypass. See the [execution board](HACKATHON_EXECUTION.md)
+for the retrofit checklist, time budgets, dependency owners and demo plan.
+
+A CRUD-ready slice has persistence/migrations where needed, session-bound
 authorization, focused unit/API/integration coverage, the required manual UI
 report, CI evidence, truthful pending/error states, and updated readiness
-documentation. Charlene's verification accompanies each feature completion,
-not a single testing pass at the end.
+documentation for the implemented CRUD behavior. Integration-complete status
+additionally requires every deferred biometric/provider dependency and the
+affected end-to-end manual acceptance to pass. Charlene records both milestones
+separately; passing CRUD does not claim the full feature is complete.

@@ -10,11 +10,20 @@ docker compose -f compose.staging.yaml config
 docker compose -f compose.tools.yaml config
 docker compose up -d --wait
 docker compose -f compose.tools.yaml build frontend-deps blockchain-deps backend-deps
+docker compose -f compose.tools.yaml --profile ocr-toolchain build ocr-deps
 ```
 
 Validate Markdown links, YAML parseability, dependency lock consistency, asset manifest checksums, source-manifest completeness, absence of prohibited application artifacts, and required feature/route/action coverage. A healthy infrastructure service does not prove a future API, migration or provider works.
 
 ## Onsite test layers
+
+ADR-029 permits CRUD-first development checks before biometric enforcement is
+integrated. Record those results as CRUD-ready only. At the later integration
+pass, rerun wallet linking and tournament registration with real capture and
+authorization, plus absent, expired, replayed and wrong-scope authorization
+cases. Confirm no temporary development bypass reaches a staging release and
+no pre-integration record is promoted into verification evidence. Use the
+[execution board](HACKATHON_EXECUTION.md) for the handoff checklist.
 
 | Layer | Required evidence |
 | --- | --- |

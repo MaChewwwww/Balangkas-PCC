@@ -19,3 +19,5 @@ Read together with the self-contained [onsite reconstruction blueprint](screens/
 | NFR-02/NFR-08 | [Cross-feature breadcrumb context](screens/BREADCRUMB_CONTEXT.md) and shared [API protocol](API_SPEC.md#shared-protocol) | all context-capable portal details | permission-filtered detail projections only | AC-NAV-01..03 | every affected portal work package |
 
 Delivery decision ADR-028 maps to the [CI/CD contract](CI_CD.md), [VPS release sequence](DEVOPS.md#hackathon-staging-release), [onsite delivery acceptance AC-DELIVERY-01..03](TESTING.md#onsite-delivery-acceptance), and [operations readiness](FOUNDATION_STATUS.md). Workflow implementation remains onsite work.
+
+ADR-029 maps FR-IDENT and FR-TOURN to separate CRUD-ready and integration-complete milestones in the [timeline](PROJECT_TIMELINE.md), [execution board](HACKATHON_EXECUTION.md), affected feature completion notes and [testing](TESTING.md). Final data/API/screen contracts remain unchanged; AC-IDENT-01..12 and affected registration, payment and certificate scenarios must pass after retrofit.

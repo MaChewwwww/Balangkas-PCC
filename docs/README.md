@@ -31,6 +31,7 @@ This is a code-free preparation baseline. Read [preparation boundary](PREPARATIO
 | [Design](DESIGN.md) | Public/portal visual and interaction preservation |
 | [Decision log](DECISIONS.md) | Accepted PCC choices and design safeguards |
 | [Traceability](TRACEABILITY.md) | Requirement to screen/data/acceptance/work-package map |
+| [Execution board](HACKATHON_EXECUTION.md) | 48-hour budgets, CRUD-first milestones, dependency owners and demo plan |
 | [Readiness](FOUNDATION_STATUS.md) | What is prepared versus unimplemented |
 | [Asset manifest](ASSET_MANIFEST.md) | Approved transfer provenance |
 
